@@ -1,6 +1,8 @@
 # Nagoya
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0251fa43-75ea-4387-a5a2-f5fea9fbc3e8/deploy-status)](https://app.netlify.com/sites/quarcs-data/deploys)
 
+[Site link](https://quarcs-data.netlify.app/)
+
 ## Table of Contents:
 - [Project Setup](#project-setup)
 - [Regular Setup](#regular-setup)
