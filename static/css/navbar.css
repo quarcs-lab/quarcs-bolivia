@@ -12,6 +12,10 @@ nav{
   
 }
 
+nav:first-child{
+  cursor: pointer;
+}
+
 nav div{
   display: flex;
   flex-direction: row;
