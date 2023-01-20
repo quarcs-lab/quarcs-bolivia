@@ -1,4 +1,5 @@
-baseURL = 'http://hugo-quickstart-template.netlify.com'
+baseURL = ''
 languageCode = 'en-us'
-title = 'Netlify + Hugo Quickstart'
-theme = 'netlify-basic'
+title = 'Nagoya Usard'
+theme = 'ananke'
+relativeURLs = true
