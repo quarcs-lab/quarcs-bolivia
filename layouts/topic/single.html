@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class = 'topic'>
+    <div>
+        <h1>Information about a particular topic: {{ .Title }}</h1>
+        <h1>Content and Comments</h1>
+            <ul>
+            <!-- Renders the li.html content view for each content/posts/*.md -->
+            {{ range .Resources }}
+                <li>
+                    <div>{{.}}</div>
+                </li>
+            {{ end }}
+            </ul>
+    </div>
+</section>
+{{ end }}
