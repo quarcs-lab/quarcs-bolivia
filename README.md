@@ -4,6 +4,7 @@
 [Site link](https://quarcs-data.netlify.app/)
 
 ## Table of Contents:
+- [Learning](#learning)
 - [Project Setup](#project-setup)
 - [Regular Setup](#regular-setup)
   - [Cloning + Install Packages](#1-cloning--install-packages)
@@ -11,6 +12,14 @@
 - [Styling](#styling)
 - [Testing](#testing)
   - [Included Default Testing](#included-default-testing)
+
+## Learning
+Hugo is a static site generator that makes a lot of default decisions for programmers for project structure. 
+
+
+This project uses a combination of content and Templating. Please read the below link to familiarize yourself with the project structure.
+https://cloudcannon.com/blog/the-ultimate-guide-to-hugo-sections/
+
 
 ## Project Setup
 We will be using a [Github Project](https://github.com/orgs/DSSD-Madison/projects/3) with 3 sections: Backlog, In Progress, and Done. Issues in the Backlog will represent segments of work to get done, or problems that need to be fixed.
@@ -63,3 +72,4 @@ We’ve included some tooling that helps us maintain these templates. This templ
 - [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
 - [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
 - [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
+
