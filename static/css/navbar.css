@@ -1,5 +1,4 @@
 nav{
-  background-color: transparent;
   width: calc(100% - 2rem);
   position: fixed;
   top: 0;
@@ -9,6 +8,8 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  z-index: 0;
   
 }
 

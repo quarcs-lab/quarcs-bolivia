@@ -1,15 +1,21 @@
 {{ define "main" }}
+
+
+{{- partial "banner.html" (dict "fill" "#568CE1" "heading" "Description of the Dataset") -}}
+
 <section class = 'topics'>
-    <div>
-        <h1>{{ .Title }}</h1>
-            <ul>
-            {{ range where (where .Pages "Section" "topics" ) "Params.type" "==" "topic" }}
-                <li>
-                    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                    <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
-                </li>
-            {{ end }}
-            </ul>
-    </div>
+
+    {{ range where (where .Pages "Section" "topics" ) "Params.type" "==" "topic" }}
+
+        {{$description := .Params.description}}
+        {{$title := .Params.title}}
+        {{$imageSource := .Params.imageSource}}
+
+        {{- partial "topic-card.html" (dict "title" $title "description" $description "imgSource" $imageSource) -}}
+
+
+    {{ end }}
+
 </section>
+
 {{ end }}
