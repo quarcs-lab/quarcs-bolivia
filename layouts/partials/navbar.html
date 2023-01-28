@@ -1,4 +1,4 @@
-<nav>
+<nav id = "nav">
   <div onclick="goBackHome()">
     <img src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo" class = "logo"> 
     <!-- no clue how the image src works so I kinda guessed and it worked- Ashwin -->
@@ -14,4 +14,13 @@
   function goBackHome() {
     window.location.href = "/";
   }
+
+  if("{{.Page.RelPermalink}}" === "/") {
+    document.querySelector("nav").style.background = "transparent";
+  }
+  else{
+    document.querySelector("nav").style.background = "white";
+  }
+
+
 </script>
