@@ -1,5 +1,5 @@
 
-<div class = "card">
+<div class = "card" onclick="handleExploreTopic()">
   <img src = "{{.imgSource}}" alt = {{.title}} >
 
   <div class = "card-body">
@@ -28,6 +28,12 @@
     border-radius: 5px;
 
     margin: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 
   .card img {
@@ -45,7 +51,8 @@
 <script>
 
   function handleExploreTopic() {
-    window.location.href = "/";
+    window.location.href = "{{ .link }}";
+    // console.log("{{ .link }}");
   }
 
 </script>

@@ -10,12 +10,25 @@
         {{$description := .Params.description}}
         {{$title := .Params.title}}
         {{$imageSource := .Params.imageSource}}
+        {{$link := .RelPermalink}}
 
-        {{- partial "topic-card.html" (dict "title" $title "description" $description "imgSource" $imageSource) -}}
+        {{- partial "topic-card.html" (dict "title" $title "description" $description "imgSource" $imageSource "link" $link) -}}
 
 
     {{ end }}
 
 </section>
+
+<style>
+    /* change for later */
+    .topics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    }
+
+</style>
 
 {{ end }}
