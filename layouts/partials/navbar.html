@@ -5,8 +5,8 @@
     <h3>GeoDS4Bolivia Database</h3>
   </div>
   <div>
-    <button class = "how-to-contribute-btn">How to To Contribute?</button>
-    <button class = "add-a-contribution-btn">Add a Contribution +</button>
+    <a class = "how-to-contribute-btn" href = "https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute">How to Contribute?</a>
+    <a class = "add-a-contribution-btn" href = "https://github.com/DSSD-Madison/Nagoya/wiki/Adding-a-Contribution">Add a Contribution</a>
   </div>
 </nav>
 
@@ -42,6 +42,25 @@
     margin: 0 0.25rem;
   }
 
+  nav a {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  font-weight: bold;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  width: 180px;
+  border: 1px solid #192333;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  
+  }
+
   nav button {
     box-sizing: border-box;
     display: flex;
@@ -62,6 +81,7 @@
 
   nav .how-to-contribute-btn{
     background-color: #FFFFFF;
+    color: #323B49;
   }
 
   nav .add-a-contribution-btn{
