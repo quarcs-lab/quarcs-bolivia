@@ -1,4 +1,4 @@
-<nav>
+<nav id = "nav">
   <div onclick="goBackHome()">
     <img src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo" class = "logo"> 
     <!-- no clue how the image src works so I kinda guessed and it worked- Ashwin -->
@@ -10,8 +10,85 @@
   </div>
 </nav>
 
+<style>
+  nav{
+    width: calc(100% - 2rem);
+    top: 0;
+    left: 0;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+  }
+
+  nav:first-child{
+    cursor: pointer;
+  }
+
+  nav div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  nav div *{
+    margin: 0 0.25rem;
+  }
+
+  nav button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-weight: bold;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    width: 169px;
+    border: 1px solid #192333;
+    border-radius: 8px;
+    cursor: pointer;
+
+  }
+
+  nav .how-to-contribute-btn{
+    background-color: #FFFFFF;
+  }
+
+  nav .add-a-contribution-btn{
+
+    background-color: #323B49;
+    color: white;
+      
+  }
+
+  nav .logo{
+    width: 10%;
+    height: 10%;
+  }
+
+</style>
+
 <script>
   function goBackHome() {
     window.location.href = "/";
   }
+
+  if("{{.Page.RelPermalink}}" === "/") {
+    document.querySelector("nav").style.background = "transparent";
+  }
+  else{
+    document.querySelector("nav").style.background = "white";
+  }
+
+
 </script>

@@ -1,0 +1,40 @@
+<div class = "banner">
+  <h1> {{ .heading }} {{ .context.Title}}</h1>
+</div>
+
+<script>
+
+document.querySelector('.banner').style.background = "{{ .fill }}";
+
+</script>
+
+<style>
+  .banner {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    position: relative;
+  } 
+
+  .banner::after {
+    content: '';
+    width: 0;
+    height: 0;  
+    border-style: solid;
+    border-width: 0 8rem 8rem 0;
+    border-color: transparent white transparent transparent;
+    right: 0;
+    position: absolute;
+
+  }
+
+
+  .banner h1 {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: bold;
+  }
+</style>

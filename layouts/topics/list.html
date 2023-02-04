@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+
+{{- partial "banner.html" (dict "fill" "#568CE1" "heading" "Description of the Dataset") -}}
+
+<section class = 'topics'>
+
+    {{ range where (where .Pages "Section" "topics" ) "Params.type" "==" "topic" }}
+
+        {{$description := .Params.description}}
+        {{$title := .Params.title}}
+        {{$imageSource := .Params.imageSource}}
+        {{$link := .RelPermalink}}
+
+        {{- partial "topic-card.html" (dict "title" $title "description" $description "imgSource" $imageSource "link" $link) -}}
+
+
+    {{ end }}
+
+</section>
+
+<style>
+    /* change for later */
+    .topics{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    }
+
+</style>
+
+{{ end }}
