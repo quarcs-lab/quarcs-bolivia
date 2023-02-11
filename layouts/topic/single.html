@@ -1,4 +1,3 @@
-
 {{ define "extraheaders" }}
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
 integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -8,9 +7,6 @@ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
 crossorigin=""></script>
 
 <script src="/js/map.js"></script>
-
-
-
 {{ end }}
 
 {{ define "main" }}
@@ -90,8 +86,9 @@ crossorigin=""></script>
 <style>
 
     #map {
-          width: 100vh;
-          height: 100vh;
+          width: 96%; 
+          height: 90vh;
+          align-self: center;
         }
 
     .topic {
