@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "navbar.html" . -}}
-        <div id="content">
-            {{- block "main" . }}{{- end }}
-        </div>
-    </body>
+<html lang="en-US">
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "navbar.html" . -}}
+    {{- block "main" . }}{{- end }}
+  </body>
+
+  <style>
+    :root {
+      --main-family: "Inter", sans-serif;
+      --button-border-radius: 1rem;
+    }
+
+    html {
+      font-family: var(--main-family);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+
+      overflow: hidden;
+    }
+  </style>
 </html>

@@ -1,4 +1,4 @@
-<nav id = "nav">
+<nav id="nav">
   <div onclick="goBackHome()">
     <img src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo" class = "logo"> 
     <!-- no clue how the image src works so I kinda guessed and it worked- Ashwin -->
@@ -11,54 +11,47 @@
 </nav>
 
 <style>
-  nav{
-    width: calc(100% - 2rem);
-    top: 0;
-    left: 0;
-    padding: 1rem;
+  nav {
+    height: 92px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute; 
-    top: 0;
-    left: 0;
-    z-index: 9999;
-
   }
 
   nav:first-child{
     cursor: pointer;
   }
 
-  nav div{
+  nav div {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    margin: 1rem;
   }
 
 
-  nav div *{
+  nav div * {
     margin: 0 0.25rem;
   }
 
   nav a {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  font-weight: bold;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  width: 180px;
-  border: 1px solid #192333;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-weight: bold;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    width: 180px;
+    border: 1px solid #192333;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   nav button {
@@ -79,19 +72,19 @@
 
   }
 
-  nav .how-to-contribute-btn{
+  nav .how-to-contribute-btn {
     background-color: #FFFFFF;
     color: #323B49;
   }
 
-  nav .add-a-contribution-btn{
+  nav .add-a-contribution-btn {
 
     background-color: #323B49;
     color: white;
       
   }
 
-  nav .logo{
+  nav .logo {
     width: 10%;
     height: 10%;
   }

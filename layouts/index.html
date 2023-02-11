@@ -1,111 +1,170 @@
 {{ define "main" }}
-<!-- This is where the first page/home will be -->
-<section class = 'home'>
-  <div class="left-side-content">
-    <h1>
+<section class="content">
+  <div class="left">
+    <div class="title">
       Regional development through the lens of spatial data science
-    </h1>
-
-    <h3>
-      A database with <span class = "purple">geographical datasets</span> centered around the process of <span class = "green">sustainable development</span> across <span class = "light-blue">subnational regions and countries</span>.
-    </h3>
-
-    <a href = "/topics" class="explore">
-      <u>Explore</u> ⟶
-    </a>
-
-
+    </div>
+    <div class="subtitle-container">
+      <div class="subtitle">
+        A database with
+        <span class="purple">geographical datasets</span> centered around the
+        process of <span class="green">sustainable development</span> across
+        <span class="light-blue">subnational regions and countries</span>.
+      </div>
+    </div>
+    <a href="/topics" class="explore"> <u>Explore</u> ⟶ </a>
   </div>
-
-
-  <div class="right-side-content">
-    <img src="/images/cover.png" alt="homepage image" class = "image">
+  <div class="right">
+    <img src="/images/cover.png" alt="homepage image" class="image" />
   </div>
-
+  <div class="circle1"></div>
+  <div class="circle2"></div>
 </section>
 
-<style> 
-  
-.home {
+<style>
+  /* Overriding navbar styling to allow for correct background */
+  nav {
+    z-index: 1;
 
-  --purple: #D0BFFF;
-  --green: #25843A;
-  --light-blue: #568CE1;
+    position: absolute;
+    left: 0;
+    top: 0;
 
-  background-color: var(--purple);
-  display: flex;
-}
-
-.purple {
-  color: var(--purple);
-}
-
-.green {
-  color: var(--green);
-}
-
-.light-blue {
-  color: var(--light-blue);
-}
-
-.home .left-side-content{
-  width: 60%;
-  background-color: white;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-}
-
-.home .left-side-content > * {
-  margin: 1rem 2rem;
-}
-
-.home .left-side-content h1{
-  font-size: 50px;
-  text-align: center;
-
-}
-
-.home .left-side-content h3{
-  font-size: 30px;
-  font-weight: 400;
-  text-align: center;
-}
-
-.home .right-side-content {
-  width: 40%;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.home .right-side-content img {
-  max-width: 80%;
-  border: 5px solid #171F41;
-
-}
-
-.home .explore{
-  font-size: 100px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none  !important;
-  color: black !important;
-  transition: transform 0.5s ease-in-out;
+    width: 100vw;
   }
 
-.home .explore:hover{
-  transform: scale(1.1);
+  .content {
+    --purple: #d0bfff;
+    --green: #25843a;
+    --light-blue: #568ce1;
+
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+  }
+
+  .content .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 64px;
+    gap: 16px;
+
+    flex: 5;
+    order: 0;
+    align-self: stretch;
+
+    background-color: white;
+  }
+
+  .content .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 5;
+    order: 1;
+    align-self: stretch;
+
+    background-color: var(--purple);
+  }
+
+  .title {
+    z-index: 1;
+
+    letter-spacing: -2px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 125%;
+
+    /* Neutrals/N900 */
+    color: #192333;
+  }
+
+  .subtitle-container {
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.5);
+    border: 16px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background-clip: padding-box;
+  }
+
+  .subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 125%;
+
+    /* Neutrals/N900 */
+    color: #192333;
+  }
+
+  .explore {
+    z-index: 1;
+
+    text-decoration: none;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 150%;
+
+    /* Neutrals/N900 */
+    color: #192333;
+
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .explore:hover {
+    transform: scale(1.1);
+  }
+
+  .purple {
+    color: var(--purple);
+  }
+
+  .green {
+    color: var(--green);
+  }
+
+  .light-blue {
+    color: var(--light-blue);
+  }
+
+  .image {
+    max-width: 80%;
+    border: 5px solid #171f41;
+  }
+
+  .circle1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -164px;
+    bottom: -140px;
+
+    border-radius: 50%;
+    background: rgba(171, 198, 240, 0.5);
+  }
+
+  .circle2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 259px;
+    bottom: -389px;
+
+    border-radius: 50%;
+    background: rgba(171, 198, 240, 0.5);
   }
 </style>
 {{ end }}
