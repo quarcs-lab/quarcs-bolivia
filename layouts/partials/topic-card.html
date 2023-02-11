@@ -1,5 +1,5 @@
 
-<div class = "card" onclick="handleExploreTopic()">
+<a class = "card" href="{{ .link }}">
   <img src = "{{.imgSource}}" alt = {{.title}} >
 
   <div class = "card-body">
@@ -7,7 +7,7 @@
     <p>{{.description}}</p>
   </div>
 
-</div>
+</a>
 
 <style>
 
@@ -21,9 +21,12 @@
     max-width: 15rem;
     height: 20rem;
 
+    text-decoration: none;
+
     /* Neutrals/N0 */
 
     background: #FFFFFF;
+    color: #000000;
     box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 
@@ -47,14 +50,5 @@
   }
 
 </style>
-
-<script>
-
-  function handleExploreTopic() {
-    window.location.href = "{{ .link }}";
-    // console.log("{{ .link }}");
-  }
-
-</script>
 
 
