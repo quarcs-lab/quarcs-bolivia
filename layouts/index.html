@@ -126,7 +126,7 @@
     /* Neutrals/N900 */
     color: #192333;
 
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.25s ease-in-out;
   }
 
   .explore:hover {
@@ -172,4 +172,19 @@
     background: rgba(171, 198, 240, 0.5);
   }
 </style>
+
+<script>
+  const scale1 = 25;
+  const scale2 = 50;
+
+  window.addEventListener('mousemove', (function(e) {
+    /* left: -164px; bottom: -140px; */
+    const circle1 = document.querySelector(".circle1");
+    /* left: 259px; bottom: -389px; */
+    const circle2 = document.querySelector(".circle2");
+  
+    circle1.style.transform = `translate(${e.clientX / scale2}px, ${e.clientY / scale1}px)`;
+    circle2.style.transform = `translate(${e.clientY / scale1}px, ${e.clientX / scale2}px)`;
+  }));
+</script>
 {{ end }}
