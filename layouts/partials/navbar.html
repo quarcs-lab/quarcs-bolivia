@@ -1,67 +1,52 @@
-<nav id = "nav">
-  <div onclick="goBackHome()">
-    <img src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo" class = "logo"> 
-    <!-- no clue how the image src works so I kinda guessed and it worked- Ashwin -->
-    <h3>GeoDS4Bolivia Database</h3>
+<nav class="nav">
+  <div class="nav-left" onclick="goBackHome()">
+    <img class="nav-logo" src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo"> 
+    <div class="nav-header">GeoDS4Bolivia Database</div>
   </div>
-  <div>
-    <a class = "how-to-contribute-btn" href = "https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute">How to Contribute?</a>
-    <a class = "add-a-contribution-btn" href = "https://github.com/DSSD-Madison/Nagoya/wiki/Adding-a-Contribution">Add a Contribution</a>
+  <div class="nav-right">
+    <a class="how-to-contribute-btn" href="https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute">How to Contribute?</a>
+    <a class="add-a-contribution-btn" href="https://github.com/DSSD-Madison/Nagoya/wiki/Adding-a-Contribution">Add a Contribution</a>
   </div>
 </nav>
 
 <style>
-  nav{
-    width: calc(100% - 2rem);
-    top: 0;
-    left: 0;
-    padding: 1rem;
+  .nav {
+    height: 92px;
+
+    flex-shrink: 0;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: absolute; 
-    top: 0;
-    left: 0;
-    z-index: 9999;
-
+    align-items: stretch;
   }
 
-  nav:first-child{
+  .nav-left {
     cursor: pointer;
   }
 
-  nav div{
+  .nav-left, .nav-right {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    padding: 0 1rem;
+    gap: 1rem;
   }
 
+  .nav-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
 
-  nav div *{
-    margin: 0 0.25rem;
+    color: #192333;
+  }
+
+  .nav-logo {
+    height: 60px;
   }
 
   nav a {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  font-weight: bold;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  width: 180px;
-  border: 1px solid #192333;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  
-  }
-
-  nav button {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -72,30 +57,24 @@
     flex: none;
     order: 0;
     flex-grow: 0;
-    width: 169px;
+    width: 180px;
     border: 1px solid #192333;
     border-radius: 8px;
     cursor: pointer;
-
+    text-decoration: none;
   }
 
-  nav .how-to-contribute-btn{
+  nav .how-to-contribute-btn {
     background-color: #FFFFFF;
     color: #323B49;
   }
 
-  nav .add-a-contribution-btn{
+  nav .add-a-contribution-btn {
 
     background-color: #323B49;
     color: white;
       
   }
-
-  nav .logo{
-    width: 10%;
-    height: 10%;
-  }
-
 </style>
 
 <script>
@@ -104,10 +83,10 @@
   }
 
   if("{{.Page.RelPermalink}}" === "/") {
-    document.querySelector("nav").style.background = "transparent";
+    document.querySelector(".nav").style.background = "transparent";
   }
   else{
-    document.querySelector("nav").style.background = "white";
+    document.querySelector(".nav").style.background = "white";
   }
 
 
