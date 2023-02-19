@@ -22,5 +22,17 @@
   <div class="map">
   </div>
 
+<div class="story-content">
+  <h1>Stories</h1>
+</div>
+{{ range .Resources }}
+  <div class="story-content">
+    <h2>{{ .Params.title }}</h2>
+    <h3>Author: {{ .Params.Author }}</h3>
+  </div>
+  <!-- <button type="button">Download data</button> -->
+  {{ .Content }}
+{{ end }}
+
 
 {{ end }}
