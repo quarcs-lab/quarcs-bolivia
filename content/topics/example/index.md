@@ -7,80 +7,17 @@ weight: 100
 ---
 {{< wrapper >}}
 
-<section class = 'topic'>
-    <div class = "map">
-        <img src = "https://www.google.com/maps/vt/data=UPr4ysHJ-FNXbw-oySKF5dRh8dZK5xqtUDQEPqlSvHrnA4LEvX4Ue8xNflIMSFqrD0Km1KK_g8FA4aP-bzezsQuZSBFfWBP0rx9KlpDcflhuqSvd71d7C1KxbhRunzOFeitlQ6D-SGQzbveZnXBoNH9jWMRBL0ykUGllNY67GdvS5DiRLO_9bPfFcq3xwyb3Ol3K9WP4p8m4k5mL_ka2D4qnFkNbC64uBY6HvjJ2WCNBpw7EDr23TbtxeshgPzTVXQ"> 
-    </div>   
-
-    <div class="topic-content">
-        <h1>Relevant Variables and Data</h1>
-        <button type="button">Download data</button>
-        <table>
-            <tr>
-              <th>Company</th>
-              <th>Contact</th>
-              <th>Country</th>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Centro comercial Moctezuma</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-            </tr>
-            <tr>
-              <td>Ernst Handel</td>
-              <td>Roland Mendel</td>
-              <td>Austria</td>
-            </tr>
-            <tr>
-              <td>Island Trading</td>
-              <td>Helen Bennett</td>
-              <td>UK</td>
-            </tr>
-            <tr>
-              <td>Laughing Bacchus Winecellars</td>
-              <td>Yoshi Tannamuri</td>
-              <td>Canada</td>
-            </tr>
-            <tr>
-              <td>Magazzini Alimentari Riuniti</td>
-              <td>Giovanni Rovelli</td>
-              <td>Italy</td>
-            </tr>
-          </table>
-
-        <h1>Stories</h1>
-        <h2>{{ .Params.title }}</h2>
-        <h3>Author: {{ .Params.Author }}</h3>
-        <button type="button">Download data</button>
-        <p>Once upon a time, in a small village, the population was steadily increasing. However, the village did not have enough 
-          resources to sustain the growing number of people. The villagers started to experience food and water scarcity, 
-          leading to conflicts and unhappiness. The wise village leader realized that something needed to be done to control the population growth. 
-          He encouraged families to have fewer children and also provided education and job opportunities to the women, which helped in reducing the birth rate. 
-          Slowly, the village became self-sufficient and the population stabilized, leading to peace and prosperity for all.</p>
-       <img src = "https://wcs.smartdraw.com/chart/img/basic-bar-graph.png?bn=15100111862"> 
-       <p>Once upon a time, in a small village, the population was steadily increasing. However, the village did not have enough 
-        resources to sustain the growing number of people. The villagers started to experience food and water scarcity, 
-        leading to conflicts and unhappiness. The wise village leader realized that something needed to be done to control the population growth. 
-        He encouraged families to have fewer children and also provided education and job opportunities to the women, which helped in reducing the birth rate. 
-        Slowly, the village became self-sufficient and the population stabilized, leading to peace and prosperity for all.</p>
-    </div>
-
-    <body onload="loadMap()"></body>
-    <div id='map'></div>
-
-</section>
-
-
+<body onload="loadMap()"></body>
+<div id='map'></div>
+<div class="topic-content">
+    <h1>Relevant Variables and Data</h1>
+    <button type="button">Download data</button>
+</div>
 
 <style>
 
     #map {
-          width: 96%; 
+          width: 100%; 
           height: 90vh;
           align-self: center;
         }
@@ -112,18 +49,7 @@ weight: 100
     font-size: 2rem;
     }
 
-    .topic-content h3{
-    margin-top: 0%;
-    margin-left: 1rem;
-    font-size: 1rem;
-    }
-
-    .topic-content p{
-    width: 60rem;
-    font-size: 1rem;
-    }
-
-    .topic-content button {
+    .topic-content button{
     color: white;
     background-color: #394D6B;
     padding: 0%;
@@ -135,23 +61,41 @@ weight: 100
     cursor: pointer;
     }
 
-    .topic-content table {
-    font-family: arial, sans-serif;
+    table {
     border-collapse: collapse;
-    width: 50rem;
     }
 
-    .topic-content img {
-    width: 50rem;
-    }
-
-    .topic-content td, .topic-content th {
+    td, th {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
     }
 
-    .topic-content tr:nth-child(even) {
+    tr:nth-child(even) {
     background-color: #dddddd;
     }
+
 </style>
+
+{{</ wrapper >}}
+
+{{< table "table table-striped table-bordered" >}}
+
+| **Fact** | **Information** |
+| --- | --- |
+| Official Name | Plurinational State of Bolivia |
+| Capital | La Paz (administrative) and Sucre (constitutional) |
+| Population | 11.8 million (2021 estimate) |
+| Area | 1,098,581 sq km (424,164 sq mi) |
+| Official Languages | Spanish, Quechua, Aymara and 36 other indigenous languages |
+| Currency | Boliviano (BOB) |
+| Government | Unitary presidential constitutional republic |
+| President | Luis Arce |
+| GDP | $44.1 billion (2020 estimate) |
+| Major Industries | Mining, agriculture, natural gas, and tourism |
+| National Symbol | Andean condor |
+| National Anthem | "Bolivian National Anthem" (Himno Nacional de Bolivia) |
+
+
+{{< /table >}}
+
