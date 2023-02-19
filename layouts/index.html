@@ -30,7 +30,7 @@
     left: 0;
     top: 0;
 
-    width: 100%;
+    width: 100vw;
   }
 
   .content {
@@ -47,6 +47,8 @@
 
     position: relative;
     overflow: hidden;
+    width: 100%;
+
   }
 
   .content .left {
@@ -85,8 +87,11 @@
     letter-spacing: -2px;
     font-style: normal;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 125%;
+
+    padding-top: 5vh;
+
 
     /* Neutrals/N900 */
     color: #192333;
@@ -104,7 +109,7 @@
   .subtitle {
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 125%;
 
     /* Neutrals/N900 */
@@ -120,7 +125,7 @@
 
     font-style: normal;
     font-weight: 700;
-    font-size: 120px;
+    font-size: 7.5rem;
     line-height: 150%;
 
     /* Neutrals/N900 */
@@ -152,10 +157,10 @@
 
   .circle1 {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    left: -164px;
-    bottom: -140px;
+    width: 37.5rem;
+    height: 37.5rem;
+    left: -10.25rem;
+    bottom: -8.75rem;
 
     border-radius: 50%;
     background: rgba(171, 198, 240, 0.5);
@@ -163,14 +168,211 @@
 
   .circle2 {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    left: 259px;
-    bottom: -389px;
+    width: 37.5rem;
+    height: 37.5rem;
+    left: 16.188rem;
+    bottom: -24.313rem;
 
     border-radius: 50%;
     background: rgba(171, 198, 240, 0.5);
   }
+
+  @media screen and (orientation: landscape) and (max-height: 427px){
+    .title{
+      padding-top: 0vh;
+      font-size:  25px;
+    }
+
+    .subtitle{
+      font-size: 16px;
+    }
+
+    .explore{
+      font-size: 32px;
+    }
+
+    .circle1{
+      left: calc(-0.2 * 100vw);
+      bottom: calc(-0.1 * 100vw);
+    }
+
+    .circle2{
+      left: calc(0.2 * 100vw);
+      bottom: calc(-0.3 * 100vw);
+    }
+
+
+  }
+
+  @media screen and (max-width: 2560px) and (min-width: 1921px) {
+    
+    .image {
+      max-width: 62.5%;
+      border: 5px solid #171f41;
+    }
+  }
+
+  @media screen and (max-width: 1920px) and (min-width: 1441px){
+    .title{
+      padding-top: 12vh;
+    }
+  }
+
+  @media screen and (max-width: 1441px) and (min-width: 1025px) {
+    .explore {
+      font-size: 65px;
+    }
+
+    .title {
+      padding-top: 12vh;
+      font-size: 37px;
+    }
+
+    .subtitle {
+      font-size: 30px;
+    }
+
+    .circle1{
+      left: calc(-0.2 * 100vw);
+      bottom: calc(-0.1 * 100vw);
+    }
+
+    .circle2{
+      left: calc(-0.01 * 100vw);
+      bottom: calc(-0.2 * 100vw);
+    }
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 770px) {
+        
+      .explore {
+        font-size: 60px;
+      }
+  
+      .title {
+        padding-top: 12vh;
+        font-size: 34px;
+      }
+  
+      .subtitle {
+        font-size: 25px;
+      }
+  
+  
+      .circle1{
+        left: calc(-0.25 * 100vw);
+        bottom: calc(-0.3 * 100vw);
+      }
+  
+      .circle2{
+        left: 3vw;
+        bottom: calc(-0.4 * 100vw);
+      }
+  }
+
+  @media screen and (max-width: 769px) and (min-width: 427px){
+
+    .explore {
+      font-size: 65px;
+    }
+
+    .title {
+      font-size: 45px;
+    }
+
+    .subtitle {
+      font-size: 30px;
+    }
+
+    .content .right { 
+      display: none;
+      width: 0;
+    }
+
+    .content .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      padding: 0 16px;
+      flex: 5;
+      order: 0;
+      align-self: center;
+      height: 100vh;
+      width: calc(100% - 32px);
+    }
+
+    .circle1{
+      left: calc(-0.25 * 100vw);
+      bottom: calc(-0.3 * 100vw);
+    }
+
+    .circle2{
+      left: 3vw;
+      bottom: calc(-0.4 * 100vw);
+    }
+
+   
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 426px) { 
+    .content {
+      flex-direction: column;
+    }
+
+    .content .right { 
+      display: none;
+      width: 0;
+    }
+
+    .content .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      padding: 0 16px;
+      flex: 5;
+      order: 0;
+      align-self: center;
+      height: 100vh;
+      width: calc(100% - 32px);
+    }
+
+    .explore {
+      font-size: 50px;
+    }
+
+    .title {
+      font-size: 27px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+    }
+
+    .subtitle-container{
+      background: rgba(242, 240, 240, 0.5);
+      border: 16px solid rgba(240, 240, 240, 0.5);
+    }
+
+    .circle1 {
+      width: calc(1.25 * 100vw);
+      height: calc(1.25 * 100vw);
+      left: calc(-0.5 * 100vw);
+      bottom: calc(-0.35 * 100vw);
+    }
+
+    .circle2 {
+      width: calc(1.25 * 100vw);
+      height: calc(1.25 * 100vw);
+      left: calc(0.1 * 100vw);
+      bottom: calc(-0.6 * 100vw);
+    }
+
+  }
+
 </style>
 
 <script>

@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav>
   <div class="nav-left" onclick="goBackHome()">
     <img class="nav-logo" src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo"> 
     <div class="nav-header">GeoDS4Bolivia Database</div>
@@ -10,10 +10,10 @@
 </nav>
 
 <style>
-  .nav {
+  nav {
     height: 92px;
-
     flex-shrink: 0;
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
@@ -28,9 +28,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    padding: 0 1rem;
-    gap: 1rem;
+    margin: 0 1rem;
   }
 
   .nav-header {
@@ -57,7 +55,6 @@
     flex: none;
     order: 0;
     flex-grow: 0;
-    width: 180px;
     border: 1px solid #192333;
     border-radius: 8px;
     cursor: pointer;
@@ -73,7 +70,36 @@
 
     background-color: #323B49;
     color: white;
-      
+    margin-left: 0.25rem;
+
+  }
+
+
+  @media screen and (max-width: 768px) {
+
+    .nav-header {
+      font-size: 1rem;
+    }
+
+    .nav-logo {
+      height: 75px;
+    }
+
+    nav a {
+      width: inherit;
+      padding: auto 1rem;
+    }
+
+    .add-a-contribution-btn {
+      display: none;
+    }
+
+    @media screen and (max-width: 426px) { 
+      nav .nav-right {
+        display: none;
+      }
+    }
+
   }
 </style>
 
@@ -88,6 +114,6 @@
   else{
     document.querySelector(".nav").style.background = "white";
   }
-
+  
 
 </script>
