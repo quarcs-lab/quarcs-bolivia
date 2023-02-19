@@ -5,7 +5,7 @@
 
 <section class = 'topics'>
 
-    {{ range where (where .Pages "Section" "topics" ) "Params.type" "==" "topic" }}
+    {{ range where (where .Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
 
         {{$description := .Params.description}}
         {{$title := .Params.title}}

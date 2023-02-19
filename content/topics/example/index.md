@@ -2,7 +2,8 @@
 type: topic
 title: Example
 description: A description of the dataset and the relavent topic
-imageSource: https://t3.ftcdn.net/jpg/00/92/53/56/360_F_92535664_IvFsQeHjBzfE6sD4VHdO8u5OHUSc6yHF.jpg
+imageSource: https://static.vecteezy.com/system/resources/previews/007/527/194/original/example-icon-stamp-logo-design-template-free-vector.jpg
+weight: 100
 ---
 {{< wrapper >}}
 

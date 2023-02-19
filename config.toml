@@ -1,5 +1,4 @@
 baseURL = ''
 languageCode = 'en-us'
 title = 'Nagoya Usard'
-theme = 'ananke'
 relativeURLs = true
