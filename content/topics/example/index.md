@@ -2,7 +2,8 @@
 type: topic
 title: Example
 description: A description of the dataset and the relavent topic
-dataSource: https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson
+imageSource: https://static.vecteezy.com/system/resources/previews/007/527/194/original/example-icon-stamp-logo-design-template-free-vector.jpg
+weight: 100
 ---
 {{< wrapper >}}
 
