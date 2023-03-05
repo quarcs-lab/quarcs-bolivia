@@ -5,7 +5,7 @@
 
 <section class = 'topics'>
 
-    {{ range where (where .Pages "Section" "topics" ) "Params.type" "==" "topic" }}
+    {{ range where (where .Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
 
         {{$description := .Params.description}}
         {{$title := .Params.title}}
@@ -27,7 +27,9 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 0.5rem;
   }
+
 
 </style>
 
