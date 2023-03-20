@@ -1,13 +1,24 @@
-<a class="card" href="{{ .link }}">
-  <img src="{{.imgSource}}" alt="{{.title}}" />
+<a class="card" href="{{ .Scratch.Get "url"}}">
+  <img src="{{ .Scratch.Get "imageSource" }}" alt="{{ .Scratch.Get "title" }}" />
 
   <div class="card-body">
-    {{ if (not .hideTitle) }}
-      <div class="card-title">{{.title}}</div>
-      <div class="card-description">{{.description}}</div>
+    {{ if (not (.Scratch.Get "hideTitle")) }}
+      <div class="card-title">{{ .Scratch.Get "title" }}</div>
+      <div class="card-description">{{ .Scratch.Get "description" }}</div>
     {{ else }}
-      <div class="card-description-large">{{.description}}</div>
+      <div class="card-description-large">{{ .Scratch.Get "description" }}</div>
     {{ end }}
-    
+  </div>
+
+  <div class="card-footer">
+    {{ $scratch := newScratch }}
+    {{ range $tag := .Params.tags }}
+      {{ $scratch.Set "tag" $tag }}
+      {{- partial "tag.html" $tag -}}
+    {{- end -}}
   </div>
 </a>
+
+<script>
+  console.log("{{ .Params.tags | jsonify (dict "indent" " ") }}");
+</script>

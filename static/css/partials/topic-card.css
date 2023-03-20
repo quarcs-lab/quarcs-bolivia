@@ -7,8 +7,8 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 24rem;
   margin: 1rem;
+  max-height: 30rem;
   max-width: 15rem;
   padding: 0px;
   text-decoration: none;
@@ -48,9 +48,17 @@
   font-weight: normal;
 }
 
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.25rem;
+}
+
 @media screen and (max-width: 768px) {
   .card {
-    height: 30rem;
+    max-height: 40rem;
     max-width: 20rem;
     width: 20rem;
   }
