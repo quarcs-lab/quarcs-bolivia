@@ -2,7 +2,7 @@
   <img src="{{.imgSource}}" alt="{{.title}}" />
 
   <div class="card-body">
-    {{ if .title }}
+    {{ if (not .hideTitle) }}
       <div class="card-title">{{.title}}</div>
       <div class="card-description">{{.description}}</div>
     {{ else }}

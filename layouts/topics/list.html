@@ -7,13 +7,13 @@
 <section class = 'topics'>
 
     {{ range where (where .Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
-
-        {{$description := .Params.description}}
         {{$title := .Params.title}}
+        {{$hideTitle := .Params.hideTitle}}
+        {{$description := .Params.description}}
         {{$imageSource := .Params.imageSource}}
         {{$link := .RelPermalink}}
 
-        {{- partial "topic-card.html" (dict "title" $title "description" $description "imgSource" $imageSource "link" $link) -}}
+        {{- partial "topic-card.html" (dict "title" $title "hideTitle" $hideTitle "description" $description "imgSource" $imageSource "link" $link) -}}
 
 
     {{ end }}
