@@ -21,7 +21,7 @@ nav {
 }
 
 .nav-right {
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 }
 
 .nav-header {
@@ -54,9 +54,14 @@ nav a {
   text-decoration: none;
 }
 
-nav .how-to-contribute-btn {
-  background-color: #FFFFFF;
-  color: #323B49;
+.how-to-contribute-btn {
+  background-color: #323B49;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.how-to-contribute-btn:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
