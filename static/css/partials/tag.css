@@ -1,0 +1,28 @@
+.tag {
+  align-items: center;
+  background: #3D6BB1;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.selected {
+  background: rgb(25, 25, 172);
+  ;
+}
+
+.tag p {
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+  background: rgb(25, 25, 172);
+}
+
+.hidden {
+  display: none;
+}
