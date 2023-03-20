@@ -20,6 +20,10 @@ nav {
   margin: 0 1rem;
 }
 
+.nav-right {
+  margin: 0 2rem;
+}
+
 .nav-header {
   font-style: normal;
   font-weight: 700;
@@ -53,14 +57,6 @@ nav a {
 nav .how-to-contribute-btn {
   background-color: #FFFFFF;
   color: #323B49;
-}
-
-nav .add-a-contribution-btn {
-
-  background-color: #323B49;
-  color: white;
-  margin-left: 0.25rem;
-
 }
 
 @media screen and (max-width: 768px) {
