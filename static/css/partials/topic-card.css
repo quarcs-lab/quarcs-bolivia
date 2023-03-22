@@ -18,6 +18,10 @@
   /* Neutrals/N0 */
 }
 
+.card.hidden {
+  display: none;
+}
+
 .card:hover {
   transform: scale(1.1);
 }
@@ -49,11 +53,14 @@
 }
 
 .card-footer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.25rem;
+  justify-content: space-between;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
