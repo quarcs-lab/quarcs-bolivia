@@ -36,14 +36,14 @@
   cards.forEach(e => {
     const tagNames = [...e.getElementsByClassName(TAG_CLASS_NAME)].map(t => t.innerText);
     tagNames.forEach(t => {
-      if (t in tagsToCards) [...tagsToCards[t], e]
+      if (t in tagsToCards) tagsToCards[t] = [...tagsToCards[t], e]
       else tagsToCards[t] = [e];
     })
   });
 
   console.log(tagsToCards);
 
-  const tags = [...document.getElementsByClassName(TAG_CLASS_NAME)];
+  const tags = Object.keys(tagsToCards);
 
   const hideAllTopics = () => cards.forEach(e => e.classList.add(HIDE_CLASS_NAME));
   const showAllTopics = () => cards.forEach(e => e.classList.remove(HIDE_CLASS_NAME));
@@ -65,6 +65,8 @@
     hideAllTopics();
     tagsToCards[newButton.innerText].forEach(e => e.classList.remove(HIDE_CLASS_NAME));
 
+    console.log(tagsToCards[newButton.innerText]); 
+
     currentButton = newButton;
   };
 
@@ -72,7 +74,7 @@
   tags.forEach(t => {
     const button = document.createElement("button");
     button.classList.add(FILTER_BUTTON_CLASS_NAME);
-    button.innerText = t.innerText;
+    button.innerText = t;
     button.onclick = () => filterTopics(button);
 
     filterParent.appendChild(button);
