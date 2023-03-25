@@ -18,9 +18,8 @@
 {{ define "main" }}
 {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "Topic: " "context" .) -}}
 <section class="topic">
+  <div class="map"></div>
   <div>{{ .Content }}</div>
-  <div class="map">
-  </div>
 
 <div class="story-content">
   <h1>Stories</h1>
