@@ -1,3 +1,7 @@
+/**
+ * map.js uses leaflet to render the geojson file.
+ * Leaflet is currently brought in from the headers in the layout in the extraheaders section.
+ */
 
 const map = L.map('map').setView([-16.2902, -63.5887], 6);
 
