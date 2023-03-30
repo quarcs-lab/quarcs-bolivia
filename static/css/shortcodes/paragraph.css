@@ -1,0 +1,17 @@
+.paragraph {
+  font-size: 1rem;
+  padding: 0.25rem;
+  text-align: left;
+}
+
+.paragraph-small {
+  font-size: 0.5rem;
+}
+
+.paragraph-medium {
+  font-size: 1rem;
+}
+
+.paragraph-large {
+  font-size: 1.5rem;
+}
