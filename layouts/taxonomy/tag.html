@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ $tag := .Params.tags }}
+{{- partial "banner.html" (dict "fill" "#568CE1" "heading" "Global Tag:" "context" . "description" "A global search throughout all datasets for topics of a particular tag") -}}
+
+<section class='tag-container'>
+
+    {{ range where (where .Data.Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
+        {{$title := .Params.title}}
+        {{$hideTitle := .Params.hideTitle}}
+        {{$description := .Params.description}}
+        {{$imageSource := .Params.imageSource}}
+        {{$link := .RelPermalink}}
+
+        {{- partial "topic-card.html" (dict "title" $title "hideTitle" $hideTitle "description" $description "imgSource" $imageSource "link" $link) -}}
+
+
+    {{ end }}
+
+</section>
+
+<style>
+    /* change for later */
+  .tag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+</style>
+
+{{ end }}

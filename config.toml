@@ -2,3 +2,5 @@ baseURL = ''
 languageCode = 'en-us'
 title = 'Nagoya Usard'
 relativeURLs = true
+[taxonomies]
+  tag = 'tags'

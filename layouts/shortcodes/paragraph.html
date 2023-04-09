@@ -1,0 +1,3 @@
+<p class="paragraph paragraph-{{ with .Get "class" }}{{.}}{{end}}">
+  {{ .Inner | markdownify }}
+</p>

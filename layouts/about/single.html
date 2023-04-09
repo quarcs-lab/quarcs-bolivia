@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{- partial "banner.html" (dict "fill" "#6A589C" "heading" "About Us!") -}}
+
+<section class="about">
+    <div class="image-container">
+        <img src="/images/DSSD-Madison.svg" class="logo">
+        <img src="/images/nav-logo.png" class="logo">
+    </div>
+    <h1 class="about-text"> This webpage was constructed by a group of students at 
+        <a href="https://madison.dssdglobal.org/">DSSD Madison</a> and DSSD George Washington in 
+        collaboration with Professor Mendez of Nagoya University. 
+        <a href="https://github.com/DSSD-Madison/Nagoya">Here</a> is the Github Repository for the webpage. 
+    </h1>
+</section>
+
+<style>
+  .about {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+    align-items: center;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .logo {
+    height: 10rem;
+  }
+
+  .about-text {
+    text-align: center;
+    width: 60%;
+  }
+</style>
+{{ end }}
