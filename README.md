@@ -36,7 +36,7 @@ PRs will be reviewed by at least one project member before merging. When a PR is
 ## Local Setup
 
 Dependencies
-- Hugo, Go, and Git - You'll need the extended version of Hugo along with Hugo modules support - https://gohugo.io/installation/
+- Hugo, Go, and Git - You'll need the extended version of Hugo - https://gohugo.io/installation/
 
 Clone this repo with one of these options:
 - Click the 'Use this template' button at the top of the page
