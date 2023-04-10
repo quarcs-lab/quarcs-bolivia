@@ -1,17 +1,17 @@
 ---
 title: Factors Relating to Child Mortality
 author: Luke Welsh
-
+date: 2023-02-18
 ---
 
 This story investigates how a few factors relate to child mortality rates.
 
-{{ <wrapper> }}
-<iframe title="Embedded cell output" src="https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/aa4bd3c87d9b4222b0e3c03895374ef3?height=346.72918701171875" height="346.72918701171875" width="500"/>
-<iframe title="Embedded cell output" src="https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/f1278fed86fd435c84419ea9a8457eef?height=274.3645935058594" height="274.3645935058594" width="500"/>  
-{{ <\wrapper> }}
+{{< columns 2 >}}
+{{< deepnote src="https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/aa4bd3c87d9b4222b0e3c03895374ef3?height=346.72918701171875" >}}
+||
+{{< deepnote src="https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/f1278fed86fd435c84419ea9a8457eef?height=274.3645935058594" >}}
+{{</ columns >}}
 
-  
 I see a variety of features that are closely correlated. I can interpret these features in different groups.
 
 First, the indexes (SDG1 & SDG3 Indexes, and Bolivia Index Ranking) are likely to be created from other variables, which I am unable to find information on. I can speculate that the variables used to create the indexes may be the best predictors for Child Mortality Rate. However, without knowing what goes in, I should not look further into this.
