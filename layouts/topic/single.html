@@ -29,31 +29,33 @@
   <div>{{ .Content }}</div>
 
   {{/*  List of stories under the topic  */}}
-  <div class="stories-header">Stories</div>
-  <div class="stories-subheader">Blog post-like tidbits written by people like you.</div>
-  <div class="stories-container">
-    <div class="stories">
-      {{ range .Resources }}
-        {{/* Story must have an author, title, and date to be visible */}}
-        {{ if and .Params.title .Params.author .Params.date }}
-          <div class="story">
-            <div class="story-header">
-              <div class="story-title">{{ .Params.title }}</div>
-              <div class="story-meta">
-                <div class="story-info">
-                  <div>By: {{ .Params.author }}</div>
-                  <div>{{ .Params.date.Format "Jan 2, 2006" }}</div>
+  <div>
+    <div class="stories-header">Stories</div>
+    <div class="stories-subheader">Blog post-like tidbits written by people like you.</div>
+    <div class="stories-container">
+      <div class="stories">
+        {{ range .Resources }}
+          {{/* Story must have an author, title, and date to be visible */}}
+          {{ if and .Params.title .Params.author .Params.date }}
+            <div class="story">
+              <div class="story-header">
+                <div class="story-title">{{ .Params.title }}</div>
+                <div class="story-meta">
+                  <div class="story-info">
+                    <div>By: {{ .Params.author }}</div>
+                    <div>{{ .Params.date.Format "Jan 2, 2006" }}</div>
+                  </div>
+                  {{ if .Params.data }}<a class="download-data-button" href="{{ .Params.data }}">Download data</a>{{end}}
                 </div>
-                {{ if .Params.data }}<a class="download-data-button" href="{{ .Params.data }}">Download data</a>{{end}}
+              </div>
+              
+              <div class="story-content">
+                {{ .Content }}
               </div>
             </div>
-            
-            <div class="story-content">
-              {{ .Content }}
-            </div>
-          </div>
-        {{end}}
-      {{ end }}
+          {{end}}
+        {{ end }}
+      </div>
     </div>
   </div>
 </section>
