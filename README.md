@@ -1,7 +1,7 @@
 # Nagoya
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0251fa43-75ea-4387-a5a2-f5fea9fbc3e8/deploy-status)](https://app.netlify.com/sites/quarcs-data/deploys)
 
-[Check out the site here](https://quarcs-data.netlify.app/)
+### Check out the site at https://quarcs-data.netlify.app/.
 
 ## Table of Contents:
 - [Contributing Stories](#contributing-stories)
@@ -9,11 +9,6 @@
   - [Learning](#learning)
   - [Project Management](#project-management)
   - [Local Setup](#local-setup)
-    - [Cloning + Running Locally](#1-cloning-+-running-locally)
-    - [Deploying](#2-deploying)
-  - [Styling](#styling)
-  - [Testing](#testing)
-    - [Included Default Testing](#included-default-testing)
   
 # Contributing Stories
 Interested in contributing a story to the project? Check out the wiki documentation [here](https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Stories).
@@ -41,16 +36,11 @@ PRs will be reviewed by at least one project member before merging. When a PR is
 ## Local Setup
 
 Dependencies
-- `Hugo` - You'll need the extended version along with Hugo modules support - https://gohugo.io/installation/
-- `Go`
-- `Git`
+- Hugo, Go, and Git - You'll need the extended version of Hugo - https://gohugo.io/installation/
 
-- Clone this repo with one of these options:
-
-  - Click the 'Use this template' button at the top of the page
-  - Or via the command line `git clone https://github.com/DSSD-Madison/Nagoya.git`
-
-- Start the Hugo sever & check it out:
-
- - `hugo server -D`
- - go to [http://localhost:1313/](http://localhost:1313/)
+Clone this repo with one of these options:
+- Click the 'Use this template' button at the top of the page
+- Or via the command line `git clone https://github.com/DSSD-Madison/Nagoya.git`
+Start the Hugo sever & check it out:
+- `hugo server -D`
+- go to [http://localhost:1313/](http://localhost:1313/)
