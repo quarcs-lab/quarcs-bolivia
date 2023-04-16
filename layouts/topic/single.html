@@ -45,7 +45,10 @@
                     <div>By: {{ .Params.author }}</div>
                     <div>{{ .Params.date.Format "Jan 2, 2006" }}</div>
                   </div>
-                  {{ if .Params.data }}<a class="download-data-button" href="{{ .Params.data }}">Download data</a>{{end}}
+                  <div class="story-button">
+                    {{ if .Params.data }}<a class="download-data-button" href="{{ .Params.data }}">Download data</a>{{end}}
+                    {{ if .Params.deepnote }}<a class="deepnote-link-button" href="{{ .Params.deepnote }}">Link to Deepnote</a>{{end}}
+                  </div>
                 </div>
               </div>
               
@@ -153,6 +156,13 @@
     padding: 1rem 0;
   }
 
+  .story-button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
   .download-data-button {
     display: block;
     box-sizing: border-box;
@@ -168,6 +178,27 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+  }
+
+  .deepnote-link-button {
+    display: block;
+    box-sizing: border-box;
+    height: 2rem;
+    width: fit-content;
+    padding: 0 0.5rem;
+    font-size: 0.90rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2rem;
+    color: white;
+    background-color: #2b394d;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .deepnote-link-button:hover {
+    background-color: #394D6B;
   }
 
   .download-data-button:hover {

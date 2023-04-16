@@ -2,6 +2,8 @@
 title: Factors Relating to Child Mortality
 author: Luke Welsh
 date: 2023-02-18
+data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+deepnote: "https://deepnote.com/workspace/nagoya-37706a5f-ac0c-475f-a705-6cb1d48afb20/project/Nagoya-0106b077-076a-4293-bd5e-ee96c5019ca7/notebook/graphing_bolivia-b0a17adb60f14867b8dd621a1f3072d5"
 ---
 
 This story investigates how a few factors relate to child mortality rates.
