@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ $category := .Params.categories }}
+{{- partial "banner.html" (dict "fill" "#568CE1" "heading" "Global Category:" "context" . "description" "A global search throughout all stories under a particular category") -}}
+
+<section class='category-container'>
+  
+</section>
+
+<style>
+  /* change for later */
+  .category-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+</style>
+
+{{ end }}

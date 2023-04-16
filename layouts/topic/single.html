@@ -37,6 +37,13 @@
         <h2 class="story-title">{{ .Params.title }}</h2>
         <h3 class="story-author">Author: {{ .Params.author }}</h3>
         <a class="download-data-button" href="{{ .Params.data }}">Download data</a>
+        {{ if .Params.categories }}
+        <div class="story-categories">
+          {{ range $category := .Params.categories }}
+            {{- partial "tag.html" $category -}}
+          {{- end -}}
+        </div>
+        {{ end }}
         {{ .Content }}
       </div>
     {{ end }}
@@ -111,6 +118,16 @@
     padding: 1rem 2rem;
     margin-top: 1rem;
     border-radius: 4px;
+  }
+
+  .story-categories {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+    width: 100%;
   }
 
   table {

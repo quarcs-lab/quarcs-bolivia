@@ -3,4 +3,5 @@ languageCode = 'en-us'
 title = 'Nagoya Usard'
 relativeURLs = true
 [taxonomies]
+  category = 'categories'
   tag = 'tags'

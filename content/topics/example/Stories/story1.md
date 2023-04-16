@@ -2,6 +2,7 @@
 title: My Story on Sustainability Benchmarks
 author: Will Kung
 data: https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson
+categories: ["test1"]
 ---
 
 {{< paragraph class="large" >}}
