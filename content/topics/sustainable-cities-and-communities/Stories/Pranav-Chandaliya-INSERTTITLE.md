@@ -13,7 +13,7 @@ A group of researchers wanted to understand differences found in municipalities 
 {{</ paragraph >}}
 
 
-{{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing%20Low%20and%20High%20sustainable%20Development%20index.png" alt="Comparing Low and High sustainable Development index" >}}
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing%20Low%20and%20High%20sustainable%20Development%20index.png" alt="Comparing Low and High sustainable Development index" >}}
 
 
 {{< paragraph class="large" >}}
@@ -21,7 +21,7 @@ Next, they wanted to use the same factors to investigate areas with low sustaina
 {{</ paragraph >}}
 
 
-{{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing%20Urbanization%20rate%2C%20Literacy%20rate%20%26%20Electricity%20Coverage.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing%20Urbanization%20rate%2C%20Literacy%20rate%20%26%20Electricity%20Coverage.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
 
 {{< paragraph class="large" >}}
 This analysis highlights the importance of urbanization to advance sustainable development, while also emphasizing the need to address other factors such as access to electricity and education. The correlation matrix helps to provide a clear understanding of the relationships between these variables and their impact on sustainable development, ultimately aiding in the development of more effective policies and strategies to promote sustainable development.
