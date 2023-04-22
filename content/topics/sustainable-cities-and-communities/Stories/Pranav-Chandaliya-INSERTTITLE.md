@@ -4,6 +4,6 @@ author: Pranav Chandaliya
 date: 2023-04-22
 ---
 
-{{< image class="small" src="https://github.com/DSSD-Madison/Nagoya/blob/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Data-Table.jpg" alt="Data Table" >}}
+{{< image class="small" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Data-Table.jpg" alt="Data Table" >}}
 
 
