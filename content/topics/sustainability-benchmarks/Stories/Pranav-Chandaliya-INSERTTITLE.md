@@ -3,6 +3,7 @@ title: Comparing Urbanization, Literacy, and Electricity Coverage in Areas of Hi
 author: Pranav Chandaliya
 date: 2023-04-22
 ---
+![Data Table](Pranav-Chandaliya-Images/Data-Table.jpg)
 
-{{< image class="small" src="Pranav-Chandaliya-Images/Data Table.jpg" alt="Data Table" >}}
+
 
