@@ -4,8 +4,15 @@ author: Pranav Chandaliya
 date: 2023-04-22
 ---
 
+Varibles Used :
 
-{{< image class="small" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Data-Table.jpg" alt="Data Table" >}}
+| Variable | Description |
+|----------|-------------|
+| mun | Municipality |
+| imds | Municipal Sustainable Development Index |
+| sdg4_6_lr | Literacy rate for (>= 15 years), 2012 (%) |
+| sdg7_1_ec | Electricity coverage, 2012 (% of population) |
+| urbano_2012 | Urbanization rate, 2012 |
 
 
 {{< paragraph class="large" >}}
