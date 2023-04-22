@@ -4,7 +4,8 @@ author: Pranav Chandaliya
 date: 2023-04-22
 ---
 
-Varibles Used :
+## **Varibles Used :**
+
 
 | Variable | Description |
 |----------|-------------|
