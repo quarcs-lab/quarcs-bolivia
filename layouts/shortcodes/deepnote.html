@@ -1,0 +1,5 @@
+<iframe 
+  class="deepnote {{ if .Get "class" }}deepnote-{{ with .Get "class" }}{{.}}{{end}}{{end}}"
+  title="embedded cell output"
+  src="{{ with .Get "src" }}{{.}}{{end}}"
+></iframe>
