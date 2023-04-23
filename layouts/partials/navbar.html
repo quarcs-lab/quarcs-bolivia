@@ -11,15 +11,17 @@
 </nav>
 
 <script>
-  function goBackHome() {
-    window.location.href = "/";
-  }
+  
 
   if("{{.Page.RelPermalink}}" === "/") {
     document.querySelector(".nav").style.background = "transparent";
   }
   else{
     document.querySelector(".nav").style.background = "white";
+  }
+
+  function goBackHome() {
+    window.location.href = "/";
   }
   
 

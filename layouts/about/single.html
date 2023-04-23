@@ -1,44 +1,65 @@
-{{ define "main" }}
-{{- partial "banner.html" (dict "fill" "#6A589C" "heading" "About Us!") -}}
+{{- define "main" -}}
+  {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "About Us") -}}
 
-<section class="about">
+  <section class="about">
     <div class="image-container">
-        <img src="/images/DSSD-Madison.svg" class="logo">
-        <img src="/images/nav-logo.png" class="logo">
+      <img src="/images/DSSD-Madison.svg" alt="DSSD Madison logo" class="logo">
+      <img src="/images/nav-logo.png" alt="Navigation logo" class="logo">
     </div>
-    <h1 class="about-text"> This webpage was constructed by a group of students at 
-        <a href="https://madison.dssdglobal.org/">DSSD Madison</a> and DSSD George Washington in 
-        collaboration with Professor Mendez of Nagoya University. 
-        <a href="https://github.com/DSSD-Madison/Nagoya">Here</a> is the Github Repository for the webpage. 
-    </h1>
-</section>
+    <div class="about-text">
+      <p>This webpage was constructed by a team of students from <a href="https://madison.dssdglobal.org/" target="_blank" rel="noopener">DSSD Madison</a> 
+        and DSSD George Washington, in collaboration with Professor Mendez of Nagoya University. 
+      </p>
+      <p>
+        We are passionate about creating software projects that contribute to the UN's sustainable development goals, which address environmental, economic, and social issues. As part of our mission, we work with global non-profits through our parent organization, and create a local impact through outreach programs. Our team also helps students build their careers by providing them with a platform to showcase their skills and collaborate with like-minded individuals. If you're interested in working with us or learning more about our initiatives, please feel free to reach out to us via email. 
+      </p>  
+      <p>
+        Additionally, you can find the Github repository for this webpage linked <a href="https://github.com/DSSD-Madison/Nagoya" target="_blank" rel="noopener">here</a>.
+      </p>
+    </div>
+  </section>
 
-<style>
-  .about {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4rem 0;
-    align-items: center;
-  }
 
-  .image-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4rem;
-    padding-bottom: 4rem;
-  }
+  <style>
+    .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 4rem 0;
+    }
 
-  .logo {
-    height: 10rem;
-  }
+    .image-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 4rem;
+      padding-bottom: 2rem;
+    }
 
-  .about-text {
-    text-align: center;
-    width: 60%;
-  }
-</style>
-{{ end }}
+    .logo {
+      height: 15rem;
+    }
+
+    .about-text {
+      text-align: left;
+      max-width: 90%;
+      font-weight: normal;
+    }
+
+    .about-text p {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    @media screen and (max-width: 427px){
+      .logo{
+        height: 8rem ;
+      }
+    }
+
+
+  </style>
+{{- end -}}
