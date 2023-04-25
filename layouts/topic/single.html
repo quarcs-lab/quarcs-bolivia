@@ -49,6 +49,11 @@
                     {{ if .Params.data }}<a class="download-data-button" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
                     {{ if .Params.deepnote }}<a class="download-data-button" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
                   </div>
+                  <div class="story-categories">
+                    {{ range $category := .Params.categories }}
+                      {{- partial "tag.html" $category -}}
+                    {{- end -}}
+                  </div>
                 </div>
               </div>
               
@@ -207,6 +212,16 @@
 
   .download-data-button:hover {
     background-color: #394D6B;
+  }
+
+  .story-categories {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+    width: 100%;
   }
 
   table {
