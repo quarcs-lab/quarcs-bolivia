@@ -29,43 +29,123 @@
   <div>{{ .Content }}</div>
 
   {{/*  List of stories under the topic  */}}
-  <div class="stories">
+  <div>
     <div class="stories-header">Stories</div>
-    {{ range .Resources }}
-      <div class="story-content">
-        {{/*  Each story must have a title, author, and data  */}}
-        <h2 class="story-title">{{ .Params.title }}</h2>
-        <h3 class="story-author">Author: {{ .Params.author }}</h3>
-        <a class="download-data-button" href="{{ .Params.data }}">Download data</a>
-        {{ if .Params.categories }}
-        <div class="story-categories">
-          {{ range $category := .Params.categories }}
-            {{- partial "tag.html" $category -}}
-          {{- end -}}
-        </div>
+    <div class="stories-subheader">Blog post-like tidbits written by people like you.</div>
+    <div class="stories-container">
+      <div class="stories">
+        {{ range .Resources }}
+          {{/* Story must have an author, title, and date to be visible */}}
+          {{ if and .Params.title .Params.author .Params.date }}
+            <div class="story">
+              <div class="story-header">
+                <div class="story-title">{{ .Params.title }}</div>
+                <div class="story-meta">
+                  <div class="story-info">
+                    <div>By: {{ .Params.author }}</div>
+                    <div>{{ .Params.date.Format "Jan 2, 2006" }}</div>
+                  </div>
+                  <div class="story-button">
+                    {{ if .Params.data }}<a class="download-data-button" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
+                    {{ if .Params.deepnote }}<a class="download-data-button" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
+                  </div>
+                  <div class="story-categories">
+                    {{ range $category := .Params.categories }}
+                      {{- partial "tag.html" $category -}}
+                    {{- end -}}
+                  </div>
+                </div>
+              </div>
+              
+              <div class="story-content">
+                {{ .Content }}
+              </div>
+            </div>
+          {{end}}
         {{ end }}
-        {{ .Content }}
       </div>
-    {{ end }}
+    </div>
   </div>
 </section>
 
 <script>
-  loadMap();
+  //loadMap();
 </script>
 
 <style>
-  .topic {
+  .stories-container {
+    display: grid;
+    place-items: center;
+  }
+
+  .stories {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    padding: 2rem 4rem;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: min(80rem, 90%);
+  }
+
+  .stories-header {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.125;
+    margin: 1rem 0 0.25rem 0;
+  }
+
+  .stories-subheader {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #394D6B;
+  }
+
+  .story {
+    background-color: #fafafa;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+  }
+
+  .story-header {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .story-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .story-meta {
+    margin: 0.45rem 0 1rem 0;
+    color: #394D6B;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .story-info {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  .story-content {
+    font-size: 1.05rem;
+    letter-spacing: 0.0075rem;
   }
 
   #map {
     width: 100%; 
     height: 80vh;
     align-self: center;
+  }
+
+  .topic {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 4rem;
   }
 
   .topic-content {
@@ -81,43 +161,57 @@
     padding: 1rem 0;
   }
 
+  .story-button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
   .download-data-button {
+    display: block;
     box-sizing: border-box;
     color: white;
     background-color: #394D6B;
     border-radius: 4px;
-    width: 8rem;
-    padding: 0.15rem 0.5rem;
+    min-width: 9rem;
+    max-width: fit-content;
     text-align: center;
     text-decoration: none;
-    font-size:1rem;
-    margin-bottom: 1rem;
+    line-height: 2rem;
+    color: white;
+    background-color: #2b394d;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    max-height: 2rem;
+  }
+
+  .deepnote-link-button {
+    display: block;
+    box-sizing: border-box;
+    color: white;
+    background-color: #394D6B;
+    border-radius: 4px;
+    max-width: fit-content;
+    text-align: center;    
+    text-align: center;
+    text-decoration: none;
+    line-height: 2rem;
+    color: white;
+    background-color: #2b394d;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-height: 2rem;
+  }
+
+  .deepnote-link-button:hover {
+    background-color: #394D6B;
   }
 
   .download-data-button:hover {
-    background-color: #2b394d;
-  }
-
-  .stories {
-    box-sizing: border-box;
-    padding: 1rem 2rem;
-    margin-top: 1rem;
-  }
-
-  .stories-header {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.125;
-    padding: 1rem 0 0.25rem 0;
-  }
-
-  .story-content {
-    background-color: #f5f5f5;
-    padding: 1rem 2rem;
-    margin-top: 1rem;
-    border-radius: 4px;
+    background-color: #394D6B;
   }
 
   .story-categories {
@@ -142,20 +236,6 @@
 
   tr:nth-child(even) {
     background-color: #dddddd;
-  }
-
-  .story-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 0;
-    margin: 0.75rem 0;
-  }
-
-  .story-author {
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0;
-    margin: 0.75rem 0;
-  }
+  }  
 </style>
 {{ end }}
