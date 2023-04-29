@@ -111,7 +111,7 @@ A Gini coefficient of 0 represents perfect equality, where everyone has the same
 
 
 
-{{< image class="medium" src="https://github.com/DSSD-Madison/Nagoya/blob/5e0691b6fc77563748b8d71a3f363c85e0030e52/content/topics/reduced-inequalities/Story/Inequality%20in%20Years%20of%20Education%20by%20%25%20of%20non-Spanish%20Speakers.png" alt="SDG 10 Bar Plot" >}}
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/5e0691b6fc77563748b8d71a3f363c85e0030e52/content/topics/reduced-inequalities/Story/Inequality%20in%20Years%20of%20Education%20by%20%25%20of%20non-Spanish%20Speakers.png" alt="Inequality Education Bar Chart" >}}
 
 
 
