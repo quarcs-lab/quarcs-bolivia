@@ -40,15 +40,16 @@ Both scatterplot graphs also show strong negative correlation between healthcare
 {{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Beibarys/content/topics/good-health-and-wellbeing/stories/images/image3.png" alt="Correlation Matrix" >}}
 
 {{< paragraph class="large" >}}
-Barplot visualization was used to analyze the differences in patterns of health variables in 5 cities with the highest levels of sustainable development and 5 cities with the lowest levels of sustainable development. It was determined that there is a significant difference in instances of chronic malnutration and mortality rates among children between highly developed and least developed cities in Bolivia. 
-Cities with the lowest rates of sustainable development have much higher rates of children mortality and chronic malnutrition than cities with the highest sustainable development.
+Barplot visualization was used to analyze the differences in patterns of health variables in 5 cities with the highest levels of sustainable development and 5 cities with the lowest levels of sustainable development. It was determined that there is a significant difference in instances of chronic malnutrition and mortality rates among children between highly developed and least developed cities in Bolivia. 
+Cities with the lowest rates of sustainable development have much higher rates of children mortality and chronic malnutrition than cities with the highest levels of sustainable development.
 {{</ paragraph >}}	
 
 {{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Beibarys/content/topics/good-health-and-wellbeing/stories/images/image4.png" alt="Correlation Matrix" >}}
 
 {{< paragraph class="large" >}}
-Next, researchers wanted to understand to what extent a lack of access to basic three services and high poverty rate causes a high instances of child mortality and chronic malnutrition in least developed cities of Bolivia. Furthermore, it was lso important to understand if no-poverty and access to three basic services indexes are high in the most developed cities.
-Using the bar plot visualization, it was showed that cities with the high sustainable development have relatively high access to three sanitation, water and energy. Furthermore, the poverty is very low in the most developed areas. Oppositely, cities with the lowest rate of sustainable development suffer from a big lack of access to three basic serviced and a high poverty. High poverty rates and lack of access to life services causes high instances of child mortality rates and chronic malnutrition rates.
+Next, researchers wanted to understand to what extent a lack of access to basic three services and high poverty rate causes a high instances of child mortality and chronic malnutrition in least developed cities of Bolivia. Furthermore, it was also important to understand if no-poverty and access to three basic services indexes are high in the most developed cities.
+
+Using the bar plot visualization, it was showed that cities with the high sustainable development have relatively high access to sanitation, water and energy. Along with that, the no-poverty index is very high in the most developed areas, which shows that cities with the highest sustainable development levels have low rates of poverty by population. Oppositely, cities with the lowest rate of sustainable development suffer from a lack of access to three basic services and a high poverty, as contribution to the no-poverty goal is very low in such cities. High poverty rates and lack of access to life-important services causes high instances of child mortality rates and chronic malnutrition rates.
 {{</ paragraph >}}
 
 {{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Beibarys/content/topics/good-health-and-wellbeing/stories/images/image5.png" alt="Correlation Matrix" >}}
