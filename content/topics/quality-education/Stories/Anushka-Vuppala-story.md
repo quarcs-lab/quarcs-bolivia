@@ -4,6 +4,7 @@ author: Anushka Vuppala
 date: 2023-04-29
 ---
 
+## **Varibles Used :**
 | Variable | Description |
 |----------|-------------|
 | sdg4_4_phe | Population with higher education (>= 19 years), 2012 (%) |
@@ -38,8 +39,8 @@ The secondary school data provides more interesting insights than the primary sc
 Although Bolivia has access to computer resources and highly qualified teachers, the proportion of individuals with advanced education and the literacy rate persist at low levels. Therefore, while Bolivia has the potential to scale up its education system, several challenges need to be addressed to ensure that more students can benefit from quality education.
 
 
-<h5>** REFERENCES: **</h5>
-<ol>
-<li><em>Bolivia Education - Bolivia School. </em> (n.d.). BoliviaBella.com. Retrieved April 22, 2023, from <em>https://www.boliviabella.com/education.html </em> </li>
+## **References :**
 
-<li><em>Top 4 Reasons Education in Bolivia Lags. </em> (2015, February 26). The Borgen Project. Retrieved April 22, 2023, from <em> https://borgenproject.org/top-4-reasons-education-in-boliva-lags/ </em> </li>
+- *Bolivia Education - Bolivia School.* (n.d.). BoliviaBella.com. Retrieved April 22, 2023, from *https://www.boliviabella.com/education.html* 
+
+- *Top 4 Reasons Education in Bolivia Lags.* (2015, February 26). The Borgen Project. Retrieved April 22, 2023, from *https://borgenproject.org/top-4-reasons-education-in-boliva-lags/*
