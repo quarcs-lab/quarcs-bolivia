@@ -4,7 +4,7 @@ author: Anushka Vuppala
 date: 2023-04-29
 ---
 
-## **Varibles Used :**
+## **Variables Used :**
 | Variable | Description |
 |----------|-------------|
 | sdg4_4_phe | Population with higher education (>= 19 years), 2012 (%) |
