@@ -23,7 +23,7 @@ One intriguing finding in Bolivia is that municipalities with large non-Spanish 
 
 
 
-{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Vermacontent/topics/reduced-inequalities/Story/Scatter_SDG_10_NonSpanishSPeaker.png" alt="SDG 10 Scatter Plot" >}}
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Verma/content/topics/reduced-inequalities/Story/Scatter_SDG_10_NonSpanishSPeaker.png" alt="SDG 10 Scatter Plot" >}}
 
 
 
@@ -49,7 +49,7 @@ One intriguing finding in Bolivia is that municipalities with large non-Spanish 
 
 When we contrast SDG 10 values for the municipalities with the highest and lowest percentages of non-Spanish speakers, the contrast is even more pronounced.
 
-
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Verma/content/topics/reduced-inequalities/Story/SDG10 score barplot.png" alt="SDG 10 Bar Plot" >}}
 
 
 
@@ -57,9 +57,11 @@ The geographical distribution of the non-Spanish speaking population can be seen
 
 
 
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Verma/content/topics/reduced-inequalities/Story/saved.png" alt="SDG 10 Bar Plot" >}}
 
 
 
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Verma/content/topics/reduced-inequalities/Story/Literacyrate.jpeg" alt="SDG 10 Bar Plot" >}}
 
 
 
@@ -84,6 +86,7 @@ To gain a better understanding of the impact of language barriers on healthcare 
 
 
 
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Verma/content/topics/reduced-inequalities/Story/Infant Mortality Rate by % of non-Spanish Speakers .png" alt="SDG 10 Bar Plot" >}}
 
 
 
@@ -108,6 +111,7 @@ A Gini coefficient of 0 represents perfect equality, where everyone has the same
 
 
 
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Verma/content/topics/reduced-inequalities/Story/Inequality in Years of Education by % of non-Spanish Speakers.png" alt="SDG 10 Bar Plot" >}}
 
 
 
