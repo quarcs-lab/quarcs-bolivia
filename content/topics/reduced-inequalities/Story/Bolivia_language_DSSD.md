@@ -23,6 +23,7 @@ One intriguing finding in Bolivia is that municipalities with large non-Spanish 
 
 
 
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/Akshay-Vermacontent/topics/reduced-inequalities/Story/Scatter_SDG_10_NonSpanishSPeaker.png" alt="SDG 10 Scatter Plot" >}}
 
 
 
