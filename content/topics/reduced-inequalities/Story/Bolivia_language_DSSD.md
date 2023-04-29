@@ -59,11 +59,11 @@ The geographical distribution of the non-Spanish speaking population can be seen
 
 
 <p float="left">
-{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Akshay_Verma/content/topics/reduced-inequalities/Story/saved.jpeg" alt="non-Spanish speaking population" >}}
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Akshay_Verma/content/topics/reduced-inequalities/Story/saved.jpeg" alt="non-Spanish speaking population" , width = "100">}}
 
 
 
-{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Akshay_Verma/content/topics/reduced-inequalities/Story/Literacyrate.jpeg" alt="Literacy Rate Map" >}}
+{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Akshay_Verma/content/topics/reduced-inequalities/Story/Literacyrate.jpeg" alt="Literacy Rate Map", width = "100" >}}
 </p>
 
 
