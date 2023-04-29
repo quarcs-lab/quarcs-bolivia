@@ -5,16 +5,6 @@ date: 2023-04-29
 ---
 
 ## **Varibles Used :**
-
-
-| Variable | Description |
-|----------|-------------|
-| mun | Municipality |
-| imds | Municipal Sustainable Development Index |
-| sdg4_6_lr | Literacy rate for (>= 15 years), 2012 (%) |
-| sdg7_1_ec | Electricity coverage, 2012 (% of population) |
-| urbano_2012 | Urbanization rate, 2012 |
-
 | Variable Name | Description |
 | :-- | :-: |
 | <b>imds</b>|Municipal Sustainable Development Index|
