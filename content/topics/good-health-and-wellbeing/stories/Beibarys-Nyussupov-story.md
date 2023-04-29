@@ -10,7 +10,7 @@ date: 2023-04-29
 | <b>imds</b>|Municipal Sustainable Development Index|
 |<b>sdg2_2_cmc</b>|Chronic malnutrition in children (< 5 years), 2016 (%)|
 |<b>sdg3_2_mrc</b>|Children mortality rate in (< 5 years), 2016 (per. 1,000 live births)|
-|<b>index_sdg1</b>|SDG1 Index|
+|<b>index_sdg1</b>|Rate of contribution to the no poverty goal|
 |<b>sdg1_4_abs</b>|Access to the 3 basic services, 2012 (% of households)|
 
 
@@ -23,8 +23,8 @@ A researchers tried to understand the difference in health area in cities with v
 
 
 {{< paragraph class="large" >}}
-The heatmap visualization was used to identify healthcare variables that are strongly correlated with sustainable development index. It was determined that Children mortality rate and Chronic Malnutrition rates in children are variables that have the strongest and negative correlation with Municipal Sustainable development index in Bolivia areas.
-Furthemore it was also identified that both Children mortality and Chronic Malnutrition rates have both strong and negative relationship with Access to 3 basic services (sanitation, water and energy) and No poverty index. As these variables increase, instances of healthcare issues decrease in Bolivia.
+The heatmap visualization was used to identify healthcare variables that strongly correlated with sustainable development index. It was determined that Children mortality rate and Chronic Malnutrition rates in children are variables that have the strongest and negative correlation with Municipal Sustainable development index in Bolivia areas.
+Furthemore it was also identified that both Children mortality and Chronic Malnutrition rates have strong and negative relationship with Access to 3 basic services (sanitation, water and energy) and No poverty index (sdg1). As these variables increase, instances of healthcare issues decrease in Bolivia.
 {{</ paragraph >}}
 
 
@@ -32,7 +32,7 @@ Furthemore it was also identified that both Children mortality and Chronic Malnu
 
 {{< paragraph class="large" >}}
 Two scatterplot diagrams were created to show the negative relationship between health care indicators (child mortality & malnutrition) and municipal sustainable development index in Bolivia.
-Both scatterplot graphs also show strong negative correlations between healthcare indicators and sustainable development index in Bolivia.
+Both scatterplot graphs also show strong negative correlation between healthcare indicators and sustainable development index in Bolivia.
 {{</ paragraph >}}
 
 
@@ -40,14 +40,14 @@ Both scatterplot graphs also show strong negative correlations between healthcar
 {{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Beibarys/content/topics/good-health-and-wellbeing/stories/images/image3.png" alt="Correlation Matrix" >}}
 
 {{< paragraph class="large" >}}
-Barplot visualization was used to analyze the differences in patters of health variables in 5 cities with the highest levels of sustainable development and in 5 cities with the lowest levels of sustainable development. It was determined that there is a significant difference in instances of chronic malnutration and mortality rates among children between highly developed and least developed cities in Bolivia. 
+Barplot visualization was used to analyze the differences in patterns of health variables in 5 cities with the highest levels of sustainable development and 5 cities with the lowest levels of sustainable development. It was determined that there is a significant difference in instances of chronic malnutration and mortality rates among children between highly developed and least developed cities in Bolivia. 
 Cities with the lowest rates of sustainable development have much higher rates of children mortality and chronic malnutrition than cities with the highest sustainable development.
 {{</ paragraph >}}	
 
 {{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Beibarys/content/topics/good-health-and-wellbeing/stories/images/image4.png" alt="Correlation Matrix" >}}
 
 {{< paragraph class="large" >}}
-Next, researchers wanted to understand to what extent a lack of access to basic three services and high poverty causes a high instances of child mortality and chronic malnutrition in least developed cities of Bolivia. Furthermore, it was lso important to understand if no-poverty and access to three basic services indexes are high in the most developed cities.
+Next, researchers wanted to understand to what extent a lack of access to basic three services and high poverty rate causes a high instances of child mortality and chronic malnutrition in least developed cities of Bolivia. Furthermore, it was lso important to understand if no-poverty and access to three basic services indexes are high in the most developed cities.
 Using the bar plot visualization, it was showed that cities with the high sustainable development have relatively high access to three sanitation, water and energy. Furthermore, the poverty is very low in the most developed areas. Oppositely, cities with the lowest rate of sustainable development suffer from a big lack of access to three basic serviced and a high poverty. High poverty rates and lack of access to life services causes high instances of child mortality rates and chronic malnutrition rates.
 {{</ paragraph >}}
 
