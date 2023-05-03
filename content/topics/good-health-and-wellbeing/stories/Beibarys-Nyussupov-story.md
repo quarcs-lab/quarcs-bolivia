@@ -30,7 +30,7 @@ Furthemore it was also identified that both Children mortality and Chronic Malnu
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Beibarys/content/topics/good-health-and-wellbeing/stories/images/image2.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
+{{< image class="medium" src="content/topics/good-health-and-wellbeing/stories/images/image2.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
 
 {{< paragraph class="large" >}}
 Two scatterplot diagrams were created to show the negative relationship between health care indicators (child mortality & malnutrition) and municipal sustainable development index in Bolivia.
