@@ -23,7 +23,7 @@ A group of researchers wanted to understand differences found in municipalities 
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="topics\sustainable-cities-and-communities\Stories\Pranav-Chandaliya-Images\Comparing Low and High sustainable Development index.png" alt="Comparing Low and High sustainable Development index" >}}
+{{< image class="medium" src="topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing Low and High sustainable Development index.png" alt="Comparing Low and High sustainable Development index" >}}
 
 
 {{< paragraph class="large" >}}
@@ -31,7 +31,7 @@ Next, they wanted to use the same factors to investigate areas with low sustaina
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="opics\sustainable-cities-and-communities\Stories\Pranav-Chandaliya-Images\Comparing Urbanization rate, Literacy rate & Electricity Coverage.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
+{{< image class="medium" src="topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing Urbanization rate, Literacy rate & Electricity Coverage.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
 
 {{< paragraph class="large" >}}
 This analysis highlights the importance of urbanization to advance sustainable development, while also emphasizing the need to address other factors such as access to electricity and education. The correlation matrix helps to provide a clear understanding of the relationships between these variables and their impact on sustainable development, ultimately aiding in the development of more effective policies and strategies to promote sustainable development.
@@ -39,7 +39,7 @@ This analysis highlights the importance of urbanization to advance sustainable d
 
 
 
-{{< image class="large" src="topics\sustainable-cities-and-communities\Stories\Pranav-Chandaliya-Images\Correlation matrix.jpg" alt="Correlation Matrix" >}}
+{{< image class="large" src="topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Correlation matrix.jpg" alt="Correlation Matrix" >}}
 
 {{< paragraph class="large" >}}
 The researcher found that all the factors they were interested in had similar levels of importance, but urbanization had the strongest correlation with sustainable development, followed by electricity coverage and literacy rates. However, the differences between these correlations were relatively small.
