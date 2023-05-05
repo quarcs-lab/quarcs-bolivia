@@ -2,6 +2,8 @@
 title: Comparing Urbanization, Literacy, and Electricity Coverage in Areas of High and Low of Sustainable Development in Bolivia
 author: Pranav Chandaliya
 date: 2023-04-22
+data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+categories: ['Urbanization','Literacy', 'Electricity' ,'Sustainable Development']
 ---
 
 ## **Varibles Used :**
@@ -21,7 +23,7 @@ A group of researchers wanted to understand differences found in municipalities 
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing%20Low%20and%20High%20sustainable%20Development%20index.png" alt="Comparing Low and High sustainable Development index" >}}
+{{< image class="medium" src="topics\sustainable-cities-and-communities\Stories\Pranav-Chandaliya-Images\Comparing Low and High sustainable Development index.png" alt="Comparing Low and High sustainable Development index" >}}
 
 
 {{< paragraph class="large" >}}
@@ -29,7 +31,7 @@ Next, they wanted to use the same factors to investigate areas with low sustaina
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Comparing%20Urbanization%20rate%2C%20Literacy%20rate%20%26%20Electricity%20Coverage.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
+{{< image class="medium" src="opics\sustainable-cities-and-communities\Stories\Pranav-Chandaliya-Images\Comparing Urbanization rate, Literacy rate & Electricity Coverage.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
 
 {{< paragraph class="large" >}}
 This analysis highlights the importance of urbanization to advance sustainable development, while also emphasizing the need to address other factors such as access to electricity and education. The correlation matrix helps to provide a clear understanding of the relationships between these variables and their impact on sustainable development, ultimately aiding in the development of more effective policies and strategies to promote sustainable development.
@@ -37,7 +39,7 @@ This analysis highlights the importance of urbanization to advance sustainable d
 
 
 
-{{< image class="large" src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/story/pranav-chandaliya/content/topics/sustainable-cities-and-communities/Stories/Pranav-Chandaliya-Images/Correlation%20matrix.jpg" alt="Correlation Matrix" >}}
+{{< image class="large" src="topics\sustainable-cities-and-communities\Stories\Pranav-Chandaliya-Images\Correlation matrix.jpg" alt="Correlation Matrix" >}}
 
 {{< paragraph class="large" >}}
 The researcher found that all the factors they were interested in had similar levels of importance, but urbanization had the strongest correlation with sustainable development, followed by electricity coverage and literacy rates. However, the differences between these correlations were relatively small.
