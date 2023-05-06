@@ -28,20 +28,24 @@ We then decided to plot network coverage and electricity coverage as a scatter p
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="/topics/sustainable-cities-and-communities/stories/Pranav-Chandaliya-Images/1.png" alt="Comparing Low and High sustainable Development index" >}}
+{{< image class="medium" src="/topics/reduced-inequalities/Rodrigues-images/correlation-matrix.png" alt="Correlation Matrix" >}}
+
+{{< image class="medium" src="topics/reduced-inequalities/Rodrigues-images/relationship-scatterplots.png" alt="Comparing Electricity Coverage to other Variables" >}}
 
 
 {{< paragraph class="large" >}}
 After graphing the scatter plots, we decided to provide a map overview of electricity coverage. This map shows the percentage of electricity each part of the country has access to and shows a better distribution of electricity between neighboring cities. One city can have 100 percent coverage, but the bordering city has 50 percent coverage. For instance, the city of Riberalta has an electricity coverage of 100 percent, while its bordering city Sena has a coverage of 20. This is because Sena is part of a reserve and is not occupied by many people. The graph brings to light how varying parts of Bolivia are able to have electricity because of outside factors and others cannot. 
 {{</ paragraph >}}
 
-{{< image class="medium" src="/topics/sustainable-cities-and-communities/stories/Pranav-Chandaliya-Images/1.png" alt="Comparing Low and High sustainable Development index" >}}
-
+{{< image class="medium" src="/topics/reduced-inequalities/Rodrigues-images/electricity-coverage-geographic.png"" alt="Geographic map of Electricity Coverage in Bolivia" >}}
 
 
 {{< paragraph class="large" >}}
 Then we graphed network coverage, which showed very different results. While most parts of Bolivia have electricity coverage, network coverage is not as prevalent in the same cities. This suggests that the government of Bolivia deems electricity coverage more essential to the people of Bolivia. 
 {{</ paragraph >}}
+
+{{< image class="medium" src="/topics/reduced-inequalities/Rodrigues-images/network-coverage-geographic.png"" alt="Geographic map of Network Coverage in Bolivia" >}}
+
 
 {{< paragraph class="large" >}}
 We decided to plot the amount of Kuaa computers delivered against electricity coverage and network coverage, in addition to creating a histogram for this variable. These are computers delivered to schools by the government, which contain audiobooks and other educational resources. They have been dubbed “Kuaa”, meaning “knowledge” in the indigenous language Guarani. These graphs conveyed that no strong patterns or correlations can be seen regarding the Kuaa computers, which was also depicted in the correlation matrix. From these graphs, we can ascertain that for most regions, very few (between zero and ten) computers were delivered. A small number of regions received twenty or more computers.
@@ -50,6 +54,11 @@ We decided to plot the amount of Kuaa computers delivered against electricity co
 {{< paragraph class="large" >}}
 We then plotted bar graphs to see the amount of electricity coverage and network coverage across the nation. It is clear that there is higher electricity coverage than network coverage across the various regions. This makes sense since electricity is required in order for a region to receive mobile network coverage. In addition, electricity is a vital part of a developing country’s infrastructure, while phone network coverage may not be deemed necessary.
 {{</ paragraph >}}
+
+{{< image class="medium" src="/topics/reduced-inequalities/Rodrigues-images/electricity-network-kuaa-bargraphs.png"" alt="Barplots of Correlated Variables" >}}
+
+{{< image class="medium" src="/topics/reduced-inequalities/Rodrigues-images/services-imds-scatterplots.png" alt="Scatterplots of Basic Services" >}}
+
 
 {{< paragraph class="large" >}}
 As seen from these graphs, the lack of electricity and network coverage in certain cities shows how access to these technologies affects the quality of life and hinders communities from advancing to renewable energy and helping save the environment, and advancing society. In the major cities, it is clear that having these advantages allows better municipal sustainable development and access to the three basic services: drinking water, hygiene, and sanitation. The results are clear in the cities that have access to these luxuries, but despite these efforts, some communities are facing challenges because there is so much potential for growth and be accessible to all. We graphed the Municipal Sustainable development index and basic services with electricity coverage. It is clear that as electricity rises, the accessibility of services and the ability to be sustainable increases and becomes higher in use and more accessible. 
