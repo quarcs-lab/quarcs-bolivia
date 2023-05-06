@@ -30,7 +30,7 @@ We then decided to plot network coverage and electricity coverage as a scatter p
 
 {{< image class="medium" src="/topics/affordable-and-clean-energy/Rodrigues-images/correlation-matrix.png" alt="Correlation Matrix" >}}
 
-{{< image class="medium" src="topics/affordable-and-clean-energy/Rodrigues-images/relationship-scatterplots.png" alt="Comparing Electricity Coverage to other Variables" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/Rodrigues-images/relationship-scatterplots.png" alt="Comparing Electricity Coverage to other Variables" >}}
 
 
 {{< paragraph class="large" >}}
