@@ -37,7 +37,7 @@ We then decided to plot network coverage and electricity coverage as a scatter p
 After graphing the scatter plots, we decided to provide a map overview of electricity coverage. This map shows the percentage of electricity each part of the country has access to and shows a better distribution of electricity between neighboring cities. One city can have 100 percent coverage, but the bordering city has 50 percent coverage. For instance, the city of Riberalta has an electricity coverage of 100 percent, while its bordering city Sena has a coverage of 20. This is because Sena is part of a reserve and is not occupied by many people. The graph brings to light how varying parts of Bolivia are able to have electricity because of outside factors and others cannot. 
 {{</ paragraph >}}
 
-{{< image class="medium" src="/topics/affordable-and-clean-energy/Rodrigues-images/electricity-coverage-geographic.png alt="Geographic map of Electricity Coverage in Bolivia" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/Rodrigues-images/electricity-coverage-geographic.png" alt="Geographic map of Electricity Coverage in Bolivia" >}}
 
 
 {{< paragraph class="large" >}}
