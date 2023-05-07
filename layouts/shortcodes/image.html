@@ -1,5 +1,5 @@
 <img 
-  class="image image-{{ with .Get "class" }}{{.}}{{end}}"
+  class="image {{ if .Get "class" }}image-{{ with .Get "class" }}{{.}}{{end}}{{end}}"
   src="{{ with .Get "src" }}{{.}}{{end}}"
   alt="{{ with .Get "alt" }}{{.}}{{end}}"
 />

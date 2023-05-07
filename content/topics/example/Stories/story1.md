@@ -1,7 +1,9 @@
 ---
 title: My Story on Sustainability Benchmarks
 author: Will Kung
+date: 2023-03-15
 data: https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson
+categories: ["population", "growth"]
 ---
 
 {{< paragraph class="large" >}}

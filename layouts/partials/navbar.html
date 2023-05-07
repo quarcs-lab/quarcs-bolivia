@@ -6,20 +6,22 @@
   
   <div class="nav-right">
     <a class="about-btn" href="/about">About</a>
-    <a class="how-to-contribute-btn" href="https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute">How to Contribute?</a>
+    <a class="how-to-contribute-btn" href="https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Stories">How to Contribute?</a>
   </div>
 </nav>
 
 <script>
-  function goBackHome() {
-    window.location.href = "/";
-  }
+  
 
   if("{{.Page.RelPermalink}}" === "/") {
     document.querySelector(".nav").style.background = "transparent";
   }
   else{
     document.querySelector(".nav").style.background = "white";
+  }
+
+  function goBackHome() {
+    window.location.href = "/";
   }
   
 
