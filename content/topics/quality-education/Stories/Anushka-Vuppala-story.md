@@ -34,7 +34,7 @@ Our analysis reveals that most states in Bolivia have a high proportion of quali
  
 We also draw a similar plot for qualified teachers in secondary school below:
 
-{{< image src="/topics/quality-education/Stories/images/IMG3.png" alt="Qualified teachers in secondary level" width="48" >}}
+{{< image src="/topics/quality-education/Stories/images/IMG3.png" alt="Qualified teachers in secondary level" >}}
 
 The secondary school data provides more interesting insights than the primary school data. In comparison to the primary schools, the numbers of qualified teachers in secondary schools are generally lower in each state, and even the capital city of La Paz has a lower median. This could be due to factors such as widespread poverty and teachers going on strikes to demand higher wages and better working conditions, leaving schools with limited resources. Additionally, most schools in Bolivia do not provide meals, require uniforms, or offer school buses and extracurricular activities. Furthermore, the language of instruction in most schools is Spanish, which may hinder students from acquiring English proficiency, a disadvantage in the global education arena. *(Bolivia Education - Bolivia School, n.d.)*
  
