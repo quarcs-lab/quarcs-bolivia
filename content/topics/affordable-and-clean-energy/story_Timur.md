@@ -2,6 +2,8 @@
 title: Ensuring access to affordable, reliable, sustainable, and modern energy for all
 author: Abdygulov Timur
 date: 2023-04-22
+data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+categories: ['CO2 emissions','Literacy', 'Electricity consumption' ,'Electricity coverage']
 ---
 
 ## **Varibles Used :**
@@ -20,7 +22,7 @@ Bolivia is a country with diverse climate regions that present challenges for pr
 {{</ paragraph >}}
 
 
-{{< image src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Timur/content/topics/affordable-and-clean-energy/Stories/CO2emission.png" alt="avg CO2 emission pre capita by department" width="60%" height="30%" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images_Tim/CO2emission.png" alt="avg CO2 emission pre capita by department" >}}
 
 
 {{< paragraph class="large" >}}
@@ -28,7 +30,8 @@ Despite widespread access to electricity, power outages remain a challenge in Bo
 {{</ paragraph >}}
 
 
-{{< image src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Timur/content/topics/affordable-and-clean-energy/Stories/electcovar.png" alt="electrical coverage" width="60%" height="30%" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images_Tim/electcovar.png" alt="electrical coverage" >}}
+
 
 {{< paragraph class="large" >}}
 The geographical and climatic diversity in Bolivia present challenges in ensuring reliable and equitable access to electricity. The data on electricity consumption by region and CO2 emissions per capita underscore the importance of considering regional differences in energy access and consumption when formulating energy policies.
@@ -36,7 +39,8 @@ The geographical and climatic diversity in Bolivia present challenges in ensurin
 
 
 
-{{< image src="https://raw.githubusercontent.com/DSSD-Madison/Nagoya/Story/Timur/content/topics/affordable-and-clean-energy/Stories/electconsum.png" alt="electrical consumption" width="60%" height="30%" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images_Tim/electconsum.png" alt="electrical consumption" >}}
+
 
 {{< paragraph class="large" >}}
 To achieve sustainable energy goals, Bolivia must continue to make targeted efforts and investments. Addressing challenges such as power outages, promoting sustainable energy practices, and reducing emissions will contribute to the country's economic, social, and environmental development.
