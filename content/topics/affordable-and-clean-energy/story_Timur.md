@@ -39,7 +39,7 @@ The geographical and climatic diversity in Bolivia present challenges in ensurin
 
 
 
-{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images/electconsum.png" alt="electrical consumption" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images/elecconsum.png" alt="electrical consumption" >}}
 
 
 {{< paragraph class="large" >}}
