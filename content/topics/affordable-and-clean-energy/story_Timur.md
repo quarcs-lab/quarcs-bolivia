@@ -1,9 +1,9 @@
 ---
-title Ensuring access to affordable, reliable, sustainable, and modern energy for all
-author Abdygulov Timur
-date 2023-04-22
-data "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
-categories ['CO2 emissions','Literacy', 'Electricity consumption' ,'Electricity coverage']
+title: Ensuring access to affordable, reliable, sustainable, and modern energy for all
+author: Abdygulov Timur
+date: 2023-04-22
+data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+categories: ['CO2 emissions','Literacy', 'Electricity consumption' ,'Electricity coverage']
 ---
 
 ## **Varibles Used **
