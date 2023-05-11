@@ -6,7 +6,7 @@ data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bol
 categories: ['CO2 emissions','Literacy', 'Electricity consumption' ,'Electricity coverage']
 ---
 
-## **Varibles Used :**
+## **Varibles Used **
 
 
 | Variable | Description |
@@ -22,7 +22,7 @@ Bolivia is a country with diverse climate regions that present challenges for pr
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images_Tim/CO2emission.png" alt="avg CO2 emission pre capita by department" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images/CO2emission.png" alt="avg CO2 emission pre capita by department" >}}
 
 
 {{< paragraph class="large" >}}
@@ -30,7 +30,7 @@ Despite widespread access to electricity, power outages remain a challenge in Bo
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images_Tim/electcovar.png" alt="electrical coverage" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images/electcovar.png" alt="electrical coverage" >}}
 
 
 {{< paragraph class="large" >}}
@@ -39,7 +39,7 @@ The geographical and climatic diversity in Bolivia present challenges in ensurin
 
 
 
-{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images_Tim/electconsum.png" alt="electrical consumption" >}}
+{{< image class="medium" src="/topics/affordable-and-clean-energy/stories/images/electconsum.png" alt="electrical consumption" >}}
 
 
 {{< paragraph class="large" >}}
