@@ -2,7 +2,7 @@
 title: Comparing child mortality and child malnutrition in High and Low sustainable development areas in Bolivia
 author: Beibarys Nyussupov
 date: 2023-04-29
-data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+data: "/data/GeoDS4Bolivia.geojson"
 categories: ['Poverty', 'Healthcare', 'Childcare', 'Sustainable Development']
 ---
 

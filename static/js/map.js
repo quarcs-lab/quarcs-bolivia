@@ -18,7 +18,7 @@ const map = L.map('map', {
 });
 
 
-fetch("https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson")
+fetch("/data/GeoDS4Bolivia.geojson")
     .then(response => response.json())
     .then(data => L.geoJson(data, {
         onEachFeature: function (feature, layer) {

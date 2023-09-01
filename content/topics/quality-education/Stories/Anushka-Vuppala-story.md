@@ -2,7 +2,7 @@
 title: Education in Bolivia
 author: Anushka Vuppala
 date: 2023-04-29
-data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+data: "/data/GeoDS4Bolivia.geojson"
 categories: ['Education', 'Literacy Rate', 'Teachers']
 ---
 

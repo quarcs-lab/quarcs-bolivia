@@ -2,7 +2,7 @@
 title: Language Barriers as a Key Factor in Inequality of Access to Healthcare, Economic Opportunity, and Education in Bolivia
 author: Akshay Verma
 date: 2023-04-29
-data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+data: "/data/GeoDS4Bolivia.geojson"
 categories: ['Inequality','Non Spanish Speakers', 'Language' ,'Gini']
 ---
 

@@ -2,7 +2,7 @@
 title: The effect of Electricity Coverage on basic services and infrastructure in Bolivia
 author: Athena Rodrigues, Bella Kong, and Seva Soni
 date: 2023-05-06
-data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+data: "/data/GeoDS4Bolivia.geojson"
 categories: ['Urbanization', 'Electricity' ,'Sustainable Development', 'Network Coverage', 'Basic Services']
 ---
 

@@ -2,7 +2,7 @@
 title: Comparing Urbanization, Literacy, and Electricity Coverage in Areas of High and Low of Sustainable Development in Bolivia
 author: Pranav Chandaliya
 date: 2023-04-22
-data: "https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson"
+data: "/data/GeoDS4Bolivia.geojson"
 categories: ['Urbanization','Literacy', 'Electricity' ,'Sustainable Development']
 ---
 
