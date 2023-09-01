@@ -1,14 +1,22 @@
 /**
  * map.js uses leaflet to render the geojson file.
+ * Hooks into a div with id "map" to render the map.
  * Leaflet is currently brought in from the headers in the layout in the extraheaders section.
  */
 
-const map = L.map('map').setView([-16.2902, -63.5887], 6);
-
+const bolivia_coordinates = L.latLng(-16.2902, -63.5887);
+const zoom = 6;
 const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  maxZoom: 19,
+  attribution: '© OpenStreetMap'
 });
-osm.addTo(map);
+
+const map = L.map('map', {
+  center: bolivia_coordinates,
+  zoom: zoom,
+  layers: [osm]
+});
+
 
 fetch("https://raw.githubusercontent.com/DSSD-Madison/Nagoya/main/data/GeoDS4Bolivia.geojson")
     .then(response => response.json())

@@ -1,0 +1,20 @@
+baseURL: ''
+languageCode: en-us
+title: Nagoya University Student Accessible Research Database
+relativeURLs: true
+params:
+  hugoLeaflet:
+    css:
+      - href: "https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        params:
+          integrity: "sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin: ""
+    js:
+      - src: "https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        params:
+          integrity: "sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin: ""
+      - src: "/js/map.js"
+  taxonomies:
+    category: categories
+    tags: tags
