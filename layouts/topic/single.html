@@ -3,7 +3,7 @@
 {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "Topic: " "context" .) -}}
 <section class="topic">
   {{/*  Standard layout for topic page, must include map, header, and link to data  */}}
-  <div id="map"></div>
+  <div id="map" lat="-16.2902" lng="-63.5887" zoom="6" dataPath="/data/GeoDS4Bolivia.geojson"></div>
   <div class="topic-content">
     <div class="topic-data-header">Variables and Data</div>
     <a class="download-data-button" href="/data/GeoDS4Bolivia.geojson">Download data</a>
