@@ -17,7 +17,7 @@ const zoom = parseInt(mapElement.getAttribute("data-zoom"));
 const dataPath = mapElement.getAttribute("data-path");
 const vars = JSON.parse(mapElement.getAttribute("data-vars"));
 const choroplethVar = mapElement.getAttribute("data-choropleth-var");
-const choroplethGrades = JSON.parse(mapElement.getAttribute("data-choropleth-grades"));
+const choroplethGrades = JSON.parse(mapElement.getAttribute("data-choropleth-grades")).map(Number);
 
 const getColor = d => {
   // Colors taken from plasma color map 
