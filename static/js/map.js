@@ -21,13 +21,13 @@ const choroplethGrades = JSON.parse(mapElement.getAttribute("data-choropleth-gra
 
 const getColor = d => {
   // Colors taken from plasma color map 
-  const colors = ['#f0f921', '#f89640', '#cc4878', '#7e04a8', '#0d0887']
+  const colors = ['#f0f921', '#f89640', '#cc4878', '#7e04a8', '#0d0887'];
 
   for (let i = choroplethGrades.length - 1; i >= 0; i--) {
-    if (d > choroplethGrades[i]) return colors[i]
+    if (d > choroplethGrades[i]) return colors[i];
   }
 
-  return '#ffffff'
+  return '#ffffff';
 };
 
 const map = L.map("map", {
@@ -45,8 +45,20 @@ const tooltip = L.tooltip({
   opacity: 0.95
 });
 
-const legend = (() => {
-  const control = L.control({position: 'bottomright'});
+(() => {
+  const info = L.control({position: 'topright'});
+  const div = L.DomUtil.create('div', 'info');
+
+  info.onAdd = () => {
+    div.innerHTML = `Choropleth on <b>${choroplethVar}</b>`;
+    return div;
+  }
+  
+  info.addTo(map);
+})();
+
+(() => {
+  const legend = L.control({position: 'bottomright'});
   const div = L.DomUtil.create('div', 'info legend');
 
   const updateLegend = grades => {
@@ -54,20 +66,19 @@ const legend = (() => {
 
     for (var i = 0; i < grades.length - 1; i++) {
       div.innerHTML +=
-          '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-          grades[i] + '&ndash;' + grades[i + 1] + '<br>';
+          `<i style="background: ${getColor(grades[i] + 1)}"></i>${grades[i]}&ndash;${grades[i + 1]}<br>`;
     }
   }
 
-  control.onAdd = () => {
+  legend.onAdd = () => {
       updateLegend(choroplethGrades);
       return div;
   };
   
-  control.addTo(map);
+  legend.addTo(map);
 })();
 
-fetch(dataPath.concat('/datamap.geojson'))
+fetch(dataPath)
   .then(response => response.json())
   .then(data => {
     let geoJson;
@@ -99,8 +110,6 @@ fetch(dataPath.concat('/datamap.geojson'))
         });
 
         layer.bringToFront();
-
-        console.table(feature)
 
         let tooltipHtml = `<table>`;
 
