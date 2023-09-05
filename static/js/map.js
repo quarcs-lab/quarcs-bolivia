@@ -3,26 +3,31 @@
  * Hooks into a div with id "map" to render the map.
  * Leaflet is currently brought in from the headers in the layout in the extraheaders section.
  * 
- * Use attributes [lat, lng, zoom, dataPath] to customize map
+ * Use attributes data-[lat, lng, zoom, data-path, vars, choropleth-var, choropleth-grades] to customize map
+ * vars is a JSON string array
+ * choropleth-grades is a JSON number array with 5 variables
  * Ex: <div id="map" lat="-16.2902" lng="-63.5887" zoom="6" dataPath="/data/GeoDS4Bolivia.geojson"></div>
  */
 
 const mapElement = document.getElementById("map");
 
-const lat = Number(mapElement.getAttribute("lat"));
-const lng = Number(mapElement.getAttribute("lng"));
-const zoom = parseInt(mapElement.getAttribute("zoom"));
-const dataPath = mapElement.getAttribute("dataPath");
+const lat = Number(mapElement.getAttribute("data-lat"));
+const lng = Number(mapElement.getAttribute("data-lng"));
+const zoom = parseInt(mapElement.getAttribute("data-zoom"));
+const dataPath = mapElement.getAttribute("data-path");
+const vars = JSON.parse(mapElement.getAttribute("data-vars"));
+const choroplethVar = mapElement.getAttribute("data-choropleth-var");
+const choroplethGrades = JSON.parse(mapElement.getAttribute("data-choropleth-grades"));
 
 const getColor = d => {
-  return d > 1000 ? '#800026' :
-         d > 500  ? '#BD0026' :
-         d > 200  ? '#E31A1C' :
-         d > 100  ? '#FC4E2A' :
-         d > 50   ? '#FD8D3C' :
-         d > 20   ? '#FEB24C' :
-         d > 10   ? '#FED976' :
-                    '#FFEDA0';
+  // Colors taken from plasma color map 
+  const colors = ['#f0f921', '#f89640', '#cc4878', '#7e04a8', '#0d0887']
+
+  for (let i = choroplethGrades.length - 1; i >= 0; i--) {
+    if (d > choroplethGrades[i]) return colors[i]
+  }
+
+  return '#ffffff'
 };
 
 const map = L.map("map", {
@@ -34,55 +39,42 @@ const map = L.map("map", {
   })]
 });
 
-const info = (() => {
-  const control = L.control();
-  const div = L.DomUtil.create('div', 'info');
-
-  control.onAdd = () => {
-    control.update();
-    return div;
-  };
-  
-  control.update = (props) => {
-    console.table(props);
-    div.innerHTML = '<h4>View information</h4>' +  (props ?
-        '<b>' + props.shapeName + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
-        : 'Hover over a state');
-  };
-
-  control.addTo(map);
-
-  return control;
-})();
+const tooltip = L.tooltip({
+  sticky: true,
+  className: 'info',
+  opacity: 0.95
+});
 
 const legend = (() => {
   const control = L.control({position: 'bottomright'});
+  const div = L.DomUtil.create('div', 'info legend');
+
+  const updateLegend = grades => {
+    div.innerHTML = "";
+
+    for (var i = 0; i < grades.length - 1; i++) {
+      div.innerHTML +=
+          '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+          grades[i] + '&ndash;' + grades[i + 1] + '<br>';
+    }
+  }
 
   control.onAdd = () => {
-      const div = L.DomUtil.create('div', 'info legend');
-      const grades = [0, 10, 20, 50, 100, 200, 500, 1000];
-  
-      // loop through our density intervals and generate a label with a colored square for each interval
-      for (var i = 0; i < grades.length; i++) {
-          div.innerHTML +=
-              '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-              grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-      }
-  
+      updateLegend(choroplethGrades);
       return div;
   };
   
   control.addTo(map);
 })();
 
-fetch(dataPath)
+fetch(dataPath.concat('/datamap.geojson'))
   .then(response => response.json())
   .then(data => {
     let geoJson;
 
     const style = feature => {
         return {
-            fillColor: getColor(feature.properties.density),
+            fillColor: getColor(feature.properties[choroplethVar]),
             weight: 2,
             opacity: 1,
             color: 'white',
@@ -94,11 +86,10 @@ fetch(dataPath)
     const onEachFeature = (feature, layer) => {
       const resetHighlight = e => {
         geoJson.resetStyle(e.target);
-        info.update();
       }
     
       const highlightFeature = e => {
-        var layer = e.target;
+        const layer = e.target;
     
         layer.setStyle({
             weight: 5,
@@ -106,14 +97,33 @@ fetch(dataPath)
             dashArray: '',
             fillOpacity: 0.7
         });
-    
+
         layer.bringToFront();
-        info.update(layer.feature.properties);
+
+        console.table(feature)
+
+        let tooltipHtml = `<table>`;
+
+        for (let variable of vars) {
+          tooltipHtml += 
+          `
+          <tr>
+            <td><b>${variable}<b></td>
+            <td>${feature.properties[variable]}</td>
+          </tr>
+          `
+        }
+
+        tooltipHtml += `</table>`;
+        
+        layer.getTooltip().setContent(tooltipHtml);
       }
     
       const zoomToFeature = e => {
         map.fitBounds(e.target.getBounds());
       }
+
+      layer.bindTooltip(tooltip);
     
       layer.on({
           mouseover: highlightFeature,
@@ -124,6 +134,7 @@ fetch(dataPath)
     
     geoJson = L.geoJson(data, {
       style: style,
-      onEachFeature: onEachFeature
+      onEachFeature: onEachFeature,
+      pointToLayer: (feature, latlng) => L.circleMarker(latlng)
     }).addTo(map);
   });
