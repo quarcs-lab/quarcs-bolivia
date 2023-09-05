@@ -2,11 +2,11 @@
 <html lang="en-US">
   <head>
     {{- partial "headers.html" . -}}
-    {{- block "extraheaders" . }}{{- end}}
+    {{- block "head" . }}{{- end}}
   </head>
   <body>
     {{- partial "navbar.html" . -}}
-    {{- block "main" . }}{{- end }}
+    {{- block "body" . }}{{- end }}
   </body>
 
   <style>
