@@ -16,6 +16,17 @@
   <div class="topic-content">
     <div class="topic-data-header">Variables and Data</div>
     <a class="download-data-button" href="/data/GeoDS4Bolivia.geojson">Download data</a>
+    {{ $rows := readFile "static/data/GeoDS4Bolivia/datadefinitions.csv" | transform.Unmarshal }}
+    {{ $vars := .Params.vars }}
+    <table>
+      {{ range $rows }}
+        {{ if in $vars (index . 0) }}
+          <tr>
+            {{ range . }} <td>{{ . }}</td> {{ end }}
+          </tr>
+        {{ end }}
+      {{ end }}
+    </table>
   </div>
 
   {{/*  Customizable section, populated using content and shortcodes  */}}
