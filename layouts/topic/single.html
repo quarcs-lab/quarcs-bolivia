@@ -1,6 +1,10 @@
 {{ define "main" }}
 {{ partial "leaflet-loader" . }}
 {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "Topic: " "context" .) -}}
+{{ $rows := readFile "static/data/GeoDS4Bolivia/datadefinitions.csv" | transform.Unmarshal }}
+{{ $vars := .Params.vars }}
+{{ $choroplethVar := .Params.choroplethVar }}
+{{ $choroplethGrades := .Params.choroplethGrades }}
 <section class="topic">
   {{/*  Standard layout for topic page, must include map, header, and link to data  */}}
   <div 
@@ -9,15 +13,13 @@
     data-lng='-63.5887'
     data-zoom='6'
     data-path='/data/GeoDS4Bolivia'
-    data-vars='{{ jsonify .Params.vars }}'
-    data-choropleth-var='{{ .Params.choroplethVar }}'
-    data-choropleth-grades='{{ jsonify .Params.choroplethGrades }}'
+    data-vars='{{ jsonify $vars }}'
+    data-choropleth-var='{{ $choroplethVar }}'
+    data-choropleth-grades='{{ jsonify $choroplethGrades }}'
     ></div>
   <div class="topic-content">
     <div class="topic-data-header">Variables and Data</div>
     <a class="download-data-button" href="/data/GeoDS4Bolivia.geojson">Download data</a>
-    {{ $rows := readFile "static/data/GeoDS4Bolivia/datadefinitions.csv" | transform.Unmarshal }}
-    {{ $vars := .Params.vars }}
     <table>
       {{ range $rows }}
         {{ if in $vars (index . 0) }}
@@ -28,9 +30,6 @@
       {{ end }}
     </table>
   </div>
-
-  {{/*  Customizable section, populated using content and shortcodes  */}}
-  <div>{{ .Content }}</div>
 
   {{/*  List of stories under the topic  */}}
   <div>
@@ -72,11 +71,72 @@
   </div>
 </section>
 
-<script>
-  //loadMap();
-</script>
-
 <style>
+  #map {
+    width: 100%; 
+    height: 80vh;
+    align-self: center;
+  }
+
+  .topic {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 4rem;
+  }
+
+  .topic-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .topic-data-header {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.125;
+  }
+
+  .download-data-button {
+    display: block;
+    box-sizing: border-box;
+    color: white;
+    background-color: #394D6B;
+    border-radius: 4px;
+    min-width: 9rem;
+    max-width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    line-height: 2rem;
+    color: white;
+    background-color: #2b394d;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-height: 2rem;
+  }
+
+  .download-data-button:hover {
+    background-color: #394D6B;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }  
+
+
   .stories-container {
     display: grid;
     place-items: center;
@@ -119,6 +179,23 @@
     font-weight: 600;
   }
 
+  .story-button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .story-categories {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
   .story-meta {
     margin: 0.45rem 0 1rem 0;
     color: #394D6B;
@@ -137,109 +214,5 @@
     font-size: 1.05rem;
     letter-spacing: 0.0075rem;
   }
-
-  #map {
-    width: 100%; 
-    height: 80vh;
-    align-self: center;
-  }
-
-  .topic {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem 4rem;
-  }
-
-  .topic-content {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .topic-data-header {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.125;
-    padding: 1rem 0;
-  }
-
-  .story-button {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    margin: 0.5rem 0;
-  }
-
-  .download-data-button {
-    display: block;
-    box-sizing: border-box;
-    color: white;
-    background-color: #394D6B;
-    border-radius: 4px;
-    min-width: 9rem;
-    max-width: fit-content;
-    text-align: center;
-    text-decoration: none;
-    line-height: 2rem;
-    color: white;
-    background-color: #2b394d;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    max-height: 2rem;
-  }
-
-  .deepnote-link-button {
-    display: block;
-    box-sizing: border-box;
-    color: white;
-    background-color: #394D6B;
-    border-radius: 4px;
-    max-width: fit-content;
-    text-align: center;    
-    text-align: center;
-    text-decoration: none;
-    line-height: 2rem;
-    color: white;
-    background-color: #2b394d;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    max-height: 2rem;
-  }
-
-  .deepnote-link-button:hover {
-    background-color: #394D6B;
-  }
-
-  .download-data-button:hover {
-    background-color: #394D6B;
-  }
-
-  .story-categories {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    padding: 0.5rem 0;
-    width: 100%;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  td, th {
-    border: 1px solid black;
-    text-align: left;
-    padding: 8px;
-  }
-
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }  
 </style>
 {{ end }}
