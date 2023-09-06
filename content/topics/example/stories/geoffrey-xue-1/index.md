@@ -26,5 +26,5 @@ I also find this table to be interesting, perhaps to show particularly interesti
 Finally, I wanted to share a link to a deepnote code chunk and render that I've been working on to share some key insights.
 {{</ paragraph >}}
 
-{{< deepnote src="https://embed.deepnote.com/076d71f5-53bf-4bc8-9b03-889bcc71b262/d74f010cb60f41758a0e1c574e299cda/1d3223f3d3334d0b856c28ab22a6a023?height=128.79999923706055" >}}
+{{< deepnote src="https://embed.deepnote.com/076d71f5-53bf-4bc8-9b03-889bcc71b262/d74f010cb60f41758a0e1c574e299cda/1d3223f3d3334d0b856c28ab22a6a023?height=128.79999923706055" w="16" h="3" >}}
 

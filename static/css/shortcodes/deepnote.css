@@ -1,17 +1,16 @@
 .deepnote {
   display: block;
-  width: 35rem;
-  aspect-ratio: 8/7;
+  width: 75%;
 }
 
 .deepnote-small {
-  height: 25rem;
+  width: 50%;
 }
 
 .deepnote-medium {
-  height: 35rem;
+  width: 75%;
 }
 
 .deepnote-large {
-  height: 45rem;
+  width: 100%;
 }

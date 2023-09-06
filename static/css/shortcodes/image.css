@@ -1,15 +1,15 @@
-/* .image {
-  height: 30rem;
+.image {
+  width: 75%;
 }
 
 .image-small {
-  height: 20rem;
+  width: 50%;
 }
 
 .image-medium {
-  height: 30rem;
+  width: 75%;
 }
 
 .image-large {
-  height: 40rem;
-} */
+  width: 100%;
+}
