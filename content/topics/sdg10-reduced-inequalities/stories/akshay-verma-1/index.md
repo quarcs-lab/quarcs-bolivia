@@ -25,7 +25,7 @@ One intriguing finding in Bolivia is that municipalities with large non-Spanish 
 
 
 
-{{< image class="medium" src="/topics/reduced-inequalities/Stories/Image_folder/Scatter_SDG_10_NonSpanishSPeaker.png" alt="SDG 10 Scatter Plot" >}}
+{{< image class="medium" src="stories/akshay-verma-1/Scatter_SDG_10_NonSpanishSPeaker.png" alt="SDG 10 Scatter Plot" >}}
 
 
 
@@ -51,7 +51,7 @@ One intriguing finding in Bolivia is that municipalities with large non-Spanish 
 
 When we contrast SDG 10 values for the municipalities with the highest and lowest percentages of non-Spanish speakers, the contrast is even more pronounced.
 
-{{< image class="medium" src="/topics/reduced-inequalities/Stories/Image_folder/SDG10_barplot.png" alt="SDG 10 Bar Plot" >}}
+{{< image class="medium" src="stories/akshay-verma-1/SDG10_barplot.png" alt="SDG 10 Bar Plot" >}}
 
 
 
@@ -61,7 +61,7 @@ The geographical distribution of the non-Spanish speaking population can be seen
 
 
 
-{{< image class="small" src="/topics/reduced-inequalities/Stories/Image_folder/Map.png" alt="non-Spanish speaking population" >}}
+{{< image class="small" src="stories/akshay-verma-1/Map.png" alt="non-Spanish speaking population" >}}
 
 
 
@@ -85,7 +85,7 @@ To gain a better understanding of the impact of language barriers on healthcare 
 
 
 
-{{< image class="medium" src="/topics/reduced-inequalities/Stories/Image_folder/Infant_Mortality_Rate by_non_Spanish_Speakers.png" alt="Infant Mortality Rate Bar Chart" >}}
+{{< image class="medium" src="stories/akshay-verma-1/Infant_Mortality_Rate by_non_Spanish_Speakers.png" alt="Infant Mortality Rate Bar Chart" >}}
 
 
 
@@ -110,7 +110,7 @@ A Gini coefficient of 0 represents perfect equality, where everyone has the same
 
 
 
-{{< image class="medium" src="/topics/reduced-inequalities/Stories/Image_folder/Inequality_Years_of_Education_by_non_Spanish_Speakers.png" alt="Inequality Education Bar Chart" >}}
+{{< image class="medium" src="stories/akshay-verma-1/Inequality_Years_of_Education_by_non_Spanish_Speakers.png" alt="Inequality Education Bar Chart" >}}
 
 
 
