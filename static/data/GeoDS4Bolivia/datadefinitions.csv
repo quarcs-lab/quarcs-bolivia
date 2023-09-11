@@ -1,0 +1,140 @@
+Variable,Label
+poly_id,Polygon ID
+asdf_id,ASDF ID
+mun,Municipality
+mun_id,Municipality ID
+dep,Department
+dep_id,Department ID
+dep_mun,Department-municipality
+shapeID,Municipality Geoquery Polygon ID
+imds,Municipal Sustainable Development Index
+rank_imds,Bolivia Index Ranking
+population_2020,Population 2020
+urbano_2012,"Urbanization rate, 2012 (% of population)"
+sdg1_1_eepr,"Extreme energy poverty rate, 2016 (% of houses)"
+sdg1_1_ubn,"Unsatisfied basic needs, 2012 (% of population)"
+sdg1_2_mpi,"Multidimensional poverty index, 2012"
+sdg1_4_abs,"Access to the 3 basic services, 2012 (% of households)"
+sdg2_2_cmc,"Chronic malnutrition in children (< 5 years), 2016 (%)"
+sdg2_2_oww,"Obesity in women (15-49 years), 2016 (%)"
+sdg2_4_pual,"Average area per Production Unit Agriculture and Livestock, 2013 (ha)"
+sdg2_4_td,"Tractor density, 2013 (per 1,000 UPAs)"
+sdg3_1_idca,"Institutional childbirth coverage, average 2008-2012 (%)"
+sdg3_2_imr,"Infant mortality rate (< 1 year), 2016 (per. 1,000 live births)"
+sdg3_2_mrc,"Children mortality rate in (< 5 years), 2016 (per. 1,000 live births)"
+sdg3_3_cdir,"Chagas disease infestation rate, 2017 (% of households)"
+sdg3_3_di,"Dengue incidence, 2018 (per 10,000 population)"
+sdg3_3_imr,"Malaria incidence, average 2014-17 (per 1,000 population)"
+sdg3_3_ti,"Tuberculosis incidence, 2017 (per 100,000 population)"
+sdg3_3_hivi,"HIV incidence, average 2014-17 (per 1,000,00 population)"
+sdg3_7_afr,"Adolescent fertility rate (15-19 years), 2012 (births per 1,000 women)"
+sdg4_1_ssdrm,"Secondary school dropout rate, male, 2017 (% of enrolled)"
+sdg4_1_ssdrf,"Secondary school dropout rate, females, 2017 (% of enrolled)"
+sdg4_4_phe,"Population with higher education (>= 19 years), 2012 (%)"
+sdg4_6_lr,"Literacy rate for (>= 15 years), 2012 (%)"
+sdg4_c_qti,"Qualified teachers at the initial level, 2016 (%)"
+sdg4_c_qts,"Qualified teachers at the secondary level, 2016"
+sdg5_1_gpsd,"Gender parity in school dropouts in  secondary school, 2017"
+sdg5_1_gpyp,"Gender parity in years of education of young people (25-35 years old), 2012. (25"
+sdg5_1_gpmpi,"Gender Parity in the Multidimensional Poverty Index, 2012"
+sdg5_5_gpop,"Gender parity in the overall participation rate (>=10 years), 2012"
+sdg6_1_dwc,"Drinking water coverage, 2017 (% of population)"
+sdg6_2_sc,"Sanitation coverage, 2017 (% of population)"
+sdg6_3_wwt,"Wastewater treatment, 2017 (% of wastewater) wastewater)"
+sdg7_1_ec,"Electricity coverage, 2012 (% of population) population)"
+sdg7_1_rec,"Residential electricity consumption per capita, 2016 (kWh/person/year)"
+sdg7_1_cce,"Clean cooking energy, 2012 (% of households)"
+sdg7_3_co2epc,"CO2 emissions per capita by energy, 2016. (tCO2/person/year)"
+sdg8_4_rem,"Residential electric meters with zero consumption, 2016 (%)"
+sdg8_5_oprm,"Overall participation rate males (>= 10 years), 2012 (%)"
+sdg8_5_ofrm,"Overall female participation rate (>= 10 years), 2012 (%)"
+sdg8_6_mlm,"Men who do not study or participate in the labor market (15-24 years), 2012 (%)"
+sdg8_6_wlm,"Women who do not study or participate in the labor market (15-24 years),2012 (%)"
+sdg8_10_dbb,"Density of bank branches, 2018 (per 100,000 inhabitants)"
+sdg8_11_idi,"Index of the degree of intermediation in migration, 2012"
+sdg9_1_routes,"Number of railways/primary roads entering/leaving the municipality, 2019"
+sdg9_5_cd,"Kuaa computers delivered, 2016 (per 100 school-age population, 6-19 years)"
+sdg9_5_eutf,"Educational units with technological floors, 2016 (%)"
+sdg9_c_mnc,"Fixed and mobile network coverage, 2012 (% of households)"
+sdg9_c_drb,"Density of radio bases, 2016 (number of radio bases per 1000 inhabitants)"
+sdg10_2_gcye,"GINI coefficient of years of education, 2012"
+sdg10_2_iec,"Inequality in electricity consumption, 2016"
+sdg10_2_nssp,"Non-Spanish speaking population (>= 3 years), 2012 (%)"
+sdg11_1_hocr,"Overcrowding rate, 2012 (% of households)"
+sdg11_1_hno,"Households that do not have a toilet, bathroom or latrine, 2012 (%) latrine, 201"
+sdg11_2_samt,"Seats available for mass transit, 2017 (per 1,000 inhabitants)"
+sdg13_1_ccvi,"Climate change vulnerability Index, 2015"
+sdg13_2_tco2e,"Total CO2 emissions per capita, 2016 (tCO2/person/year)"
+sdg13_2_dra,"Deforestation rate, average 2016-2018 (% of forest area 2015)"
+sdg15_1_pa,"Protected areas, 2019 (% of the municipality's land area) municipality)"
+sdg15_5_blr,"Biodiversity loss rate due to deforestation deforestation, average 2016-2018"
+sdg16_1_rhr,"Registered homicide rate, average 2015-2017. (per 100,000 inhabitants)"
+sdg16_6_pbec,"Programmed budget execution capacity, 2017 (%)"
+sdg16_9_cr,"Children registered in the civil registry (< 5 years), 2012 (%)"
+sdg17_1_pmtax,"Proportion of municipal revenues that come from local taxes, 2017 (%)"
+sdg17_5_pipc,"Public investment per capita, 2017 (Bs./person)"
+index_sdg1,SDG1 Index
+index_sdg2,SDG2 Index
+index_sdg3,SDG3 Index
+index_sdg4,SDG4 Index
+index_sdg5,SDG5 Index
+index_sdg6,SDG6 Index
+index_sdg7,SDG7 Index
+index_sdg8,SDG8 Index
+index_sdg9,SDG9 Index
+index_sdg10,SDG10 Index
+index_sdg11,SDG11 Index
+index_sdg13,SDG13 Index
+index_sdg15,SDG15 Index
+index_sdg16,SDG16 Index
+index_sdg17,SDG17 Index
+pop2001,Estimated population in 2001
+pop2002,Estimated population in 2002
+pop2003,Estimated population in 2003
+pop2004,Estimated population in 2004
+pop2005,Estimated population in 2005
+pop2006,Estimated population in 2006
+pop2007,Estimated population in 2007
+pop2008,Estimated population in 2008
+pop2009,Estimated population in 2009
+pop2010,Estimated population in 2010
+pop2011,Estimated population in 2011
+pop2012,Estimated population in 2012
+pop2013,Estimated population in 2013
+pop2014,Estimated population in 2014
+pop2015,Estimated population in 2015
+pop2016,Estimated population in 2016
+pop2017,Estimated population in 2017
+pop2018,Estimated population in 2018
+pop2019,Estimated population in 2019
+pop2020,Estimated population in 2020
+ln_NTLpc2012,Log NTL per capita in 2012
+ln_NTLpc2013,Log NTL per capita in 2013
+ln_NTLpc2014,Log NTL per capita in 2014
+ln_NTLpc2015,Log NTL per capita in 2015
+ln_NTLpc2016,Log NTL per capita in 2016
+ln_NTLpc2017,Log NTL per capita in 2017
+ln_NTLpc2018,Log NTL per capita in 2018
+ln_NTLpc2019,Log NTL per capita in 2019
+ln_NTLpc2020,Log NTL per capita in 2020
+ln_t400NTLpc2012,Trend log NTL per capita in 2012
+ln_t400NTLpc2013,Trend log NTL per capita in 2013
+ln_t400NTLpc2014,Trend log NTL per capita in 2014
+ln_t400NTLpc2015,Trend log NTL per capita in 2015
+ln_t400NTLpc2016,Trend log NTL per capita in 2016
+ln_t400NTLpc2017,Trend log NTL per capita in 2017
+ln_t400NTLpc2018,Trend log NTL per capita in 2018
+ln_t400NTLpc2019,Trend log NTL per capita in 2019
+ln_t400NTLpc2020,Trend log NTL per capita in 2020
+co2015,Estimated carbon dioxide in 2015
+co2016,Estimated carbon dioxide in 2016
+co2017,Estimated carbon dioxide in 2017
+co2018,Estimated carbon dioxide in 2018
+co2019,Estimated carbon dioxide in 2019
+co2020,Estimated carbon dioxide in 2020
+tr400_co2015,Trend estimated carbon dioxide in 2015
+tr400_co2016,Trend estimated carbon dioxide in 2016
+tr400_co2017,Trend estimated carbon dioxide in 2017
+tr400_co2018,Trend estimated carbon dioxide in 2018
+tr400_co2019,Trend estimated carbon dioxide in 2019
+tr400_co2020,Trend estimated carbon dioxide in 2020

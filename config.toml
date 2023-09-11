@@ -1,8 +1,0 @@
-baseURL = ''
-languageCode = 'en-us'
-title = 'Nagoya Usard'
-relativeURLs = true
-[params]
-  [params.taxonomies]
-    category = "categories"
-    tags = "tags"
