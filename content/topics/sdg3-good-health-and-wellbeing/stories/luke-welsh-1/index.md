@@ -29,3 +29,5 @@ Coord_X's correlation explains that the western side of Bolivia faces greater ch
 Finally, the remaining features offer insights to high correlations between Child Mortality Rate and low amounts of toilets, etc., less obesity in women, and high non-spanish speaking populations. We can estimate from this that populations facing the most child mortality will likely consist of low spanish speaking populations, low obesity rates, and low amounts of toilets in houses. 
 
 A glaring omitted variable that is likely playing a role in all of these correlations is wealth of the communities as wealthier communities often face more obesity, have more toilets, and may also speak more Spanish. However, it is interesting to note that none of the poverty variables had high correlations with Child Mortality, so maybe the variables listed above have a more closely connected relationship than poverty in general.
+
+I want to add a sentence here.
