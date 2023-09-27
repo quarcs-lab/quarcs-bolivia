@@ -19,3 +19,8 @@ params:
   taxonomies:
     category: categories
     tags: tags
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
