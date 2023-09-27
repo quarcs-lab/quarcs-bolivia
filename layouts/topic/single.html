@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "body" }}
-  {{ $rows := readFile "static/data/GeoDS4Bolivia/datadefinitions.csv" | transform.Unmarshal }}
+  {{ $rows := readFile "static/data/datadefinitions.csv" | transform.Unmarshal }}
   {{ $vars := .Params.vars }}
   {{ $choroplethVar := .Params.choroplethVar }}
   {{ $choroplethGrades := .Params.choroplethGrades }}
@@ -16,7 +16,7 @@
         data-lat='-16.2902'
         data-lng='-63.5887'
         data-zoom='6'
-        data-path='/data/GeoDS4Bolivia/GeoDS4Bolivia.geojson'
+        data-path='/data/GeoDS4Bolivia.geojson'
         data-vars='{{ jsonify $vars }}'
         data-choropleth-var='{{ $choroplethVar }}'
         data-choropleth-grades='{{ jsonify $choroplethGrades }}'
