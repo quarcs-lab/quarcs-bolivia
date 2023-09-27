@@ -1,28 +1,24 @@
-<nav>
-  <div class="nav-left" onclick="goBackHome()">
-    <img class="nav-logo" src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo"> 
-    <div class="nav-header">GeoDS4Bolivia Database</div>
+<nav class="flex items-stretch justify-between flex-shrink-0 w-full h-24">
+  <div class="flex flex-row items-center cursor-pointer" onclick="goBackHome()">
+    <img class="h-16" src="/images/nav-logo.png" alt="GeoDS4Bolivia Logo"> 
+    <div class="not-italic font-bold text-2xl text-gray-900 leading-[150%]">GeoDS4Bolivia Database</div>
   </div>
   
-  <div class="nav-right">
-    <a class="about-btn" href="/about">About</a>
-    <a class="how-to-contribute-btn" href="https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Stories">How to Contribute?</a>
+  <div class="flex flex-row items-center gap-3 my-0 ml-1 mr-4">
+    <a class="transition duration-300 ease-in-out transform hover:scale-110 border-solid border-2 border-[#192333] box-border flex flex-row justify-center items-center p-2 font-bold flex-none order-none flex-grow-0 rounded-lg cursor-pointer no-underline text-gray-800 bg-white" href="/about">About</a>
+    <a class="transition duration-300 ease-in-out transform hover:scale-110 border-solid border-2 border-[#192333] box-border flex flex-row justify-center items-center p-2 font-bold flex-none order-none flex-grow-0 rounded-lg cursor-pointer no-underline bg-gray-800 text-white" href="https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Stories">How to Contribute?</a>
   </div>
 </nav>
 
 <script>
-  
-
-  if("{{.Page.RelPermalink}}" === "/") {
+  if ("{{.Page.RelPermalink}}" === "/") {
     document.querySelector(".nav").style.background = "transparent";
   }
-  else{
+  else {
     document.querySelector(".nav").style.background = "white";
   }
 
   function goBackHome() {
     window.location.href = "/";
   }
-  
-
 </script>
