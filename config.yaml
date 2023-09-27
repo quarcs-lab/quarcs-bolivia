@@ -1,6 +1,6 @@
 baseURL: ''
 languageCode: en-us
-title: Nagoya University Student Accessible Research Database
+title: QuaRCS Bolivia
 relativeURLs: true
 params:
   hugoLeaflet:
