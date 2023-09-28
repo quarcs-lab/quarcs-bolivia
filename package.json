@@ -1,6 +1,6 @@
 {
   "name": "nagoya",
-  "description": "A dataset visualizer platform for exploring and developing stories of datasets",
+  "description": "A website to enable accessibility and visibility of a geographical Bolivia dataset",
   "version": "1.0.0",
   "scripts": {
     "dev": "concurrently \"npm run tw-dev\" \"npm run hugo\"",
