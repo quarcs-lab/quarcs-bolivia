@@ -3,126 +3,70 @@
   {{/*  Note: Change GeoDS4Bolivia Dataset once we have more datasets  */}}
   {{- partial "banner.html" (dict "fill" "#568CE1" "heading" "GeoDS4Bolivia Dataset") -}}
 
-  <section class = 'topics'>
-    <div class='filter-header'>Relevant Filters</div>
-    <div class='filters'></div>
-    <div class='topic-cards'>
+  <section class="box-border flex flex-col p-8">
+    <div class="text-base font-semibold">Relevant Filters</div>
+    <div id="filters" class="flex flex-row flex-wrap gap-2 py-2"></div>
+    <div id="cards" class="flex flex-wrap gap-4">
       {{ range where (where .Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
           {{ .Scratch.Set "title" .Params.title }}
           {{ .Scratch.Set "hideTitle" .Params.hideTitle }}
           {{ .Scratch.Set "description" .Params.description }}
           {{ .Scratch.Set "imageSource" .Params.imageSource }}
           {{ .Scratch.Set "url" .RelPermalink }}
-
           {{- partial "topic-card.html" . -}}
       {{ end }}
     </div>
   </section>
 
   <script>
-    const TOPIC_CARD_CLASS_NAME = "card";
-    const TAG_CLASS_NAME = "tag";
-    const FILTER_PARENT_CLASS_NAME = "filters";
-    const FILTER_BUTTON_CLASS_NAME = "filter-option";
-    const FILTER_BUTTON_SELECTED_CLASS_NAME = "filter-selected";
+    const cards = [...document.getElementById("cards").children];
 
-    const HIDE_CLASS_NAME = "hidden";
-
+    // construct dictionary mapping tags -> cards
     const tagsToCards = {};
-    let currentButton = null;
-
-    const cards = [...document.getElementsByClassName(TOPIC_CARD_CLASS_NAME)];
     cards.forEach(e => {
-      const tagNames = [...e.getElementsByClassName(TAG_CLASS_NAME)].map(t => t.innerText);
+      const tagNames = [...e.getElementsByClassName("tags")[0].children].map(t => t.innerText);
       tagNames.forEach(t => {
-        if (t in tagsToCards) tagsToCards[t] = [...tagsToCards[t], e]
+        if (t in tagsToCards) tagsToCards[t].push(e)
         else tagsToCards[t] = [e];
       })
     });
 
-    const tags = Object.keys(tagsToCards);
-
-    const hideAllTopics = () => cards.forEach(e => e.classList.add(HIDE_CLASS_NAME));
-    const showAllTopics = () => cards.forEach(e => e.classList.remove(HIDE_CLASS_NAME));
-
-    const filterTopics = newButton => {
-      if (currentButton) {
-        currentButton.classList.remove(FILTER_BUTTON_SELECTED_CLASS_NAME);
+    // Updates card visibility based on filter clicked
+    let currentFilter = null
+    const filterClicked = filterButton => {
+      // deselect the current filter button
+      if (currentFilter) {
+        currentFilter.setAttribute("aria-selected", false);
       }
 
-      // deselect if matching
-      if (currentButton === newButton) {
-        currentButton = null;
-        showAllTopics();
-        return;
+      // filter matches existing filter, deselect filer and reveal all cards
+      if (currentFilter === filterButton) {
+        currentFilter = null;
+        cards.forEach(e => e.setAttribute("aria-hidden", false));
       }
+      else {
+        // select the new filter
+        filterButton.setAttribute("aria-selected", true);
 
-      newButton.classList.add(FILTER_BUTTON_SELECTED_CLASS_NAME);
+        // hide all cards
+        cards.forEach(e => e.setAttribute("aria-hidden", true));
+        // reveal cards matching filter (tag) text
+        tagsToCards[filterButton.innerText].forEach(e => e.setAttribute("aria-hidden", false));
 
-      hideAllTopics();
-      tagsToCards[newButton.innerText].forEach(e => e.classList.remove(HIDE_CLASS_NAME));
-
-      currentButton = newButton;
+        currentFilter = filterButton;
+      }
     };
 
-    const filterParent = document.getElementsByClassName(FILTER_PARENT_CLASS_NAME)[0];
+    const filterParent = document.getElementById("filters");
+  
+    const tags = Object.keys(tagsToCards);
     tags.forEach(t => {
-      const button = document.createElement("button");
-      button.classList.add(FILTER_BUTTON_CLASS_NAME);
-      button.innerText = t;
-      button.onclick = () => filterTopics(button);
+      const filterButton = document.createElement("button");
+      filterButton.classList.add(..."p-2 text-base font-medium text-white transition delay-75 bg-blue-700 rounded cursor-pointer color-white hover:bg-blue-800 aria-selected:bg-blue-800".split(" "));
+      filterButton.innerText = t;
+      filterButton.onclick = () => filterClicked(filterButton);
 
-      filterParent.appendChild(button);
+      filterParent.appendChild(filterButton);
     });
   </script>
-
-  <style>
-    .topics {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      padding: 2rem;
-    }
-
-    .filters {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .filter-header {
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: -0.0125rem;
-      padding-bottom: 0.5rem;
-    }
-
-    .filter-option {
-      border-radius: 4px;
-      border-width: 0;
-      background: #3D6BB1;
-      color: white;
-      font-size: 1rem;
-      padding: 0.5rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .filter-option:hover {
-      background: rgb(25, 25, 172);
-      cursor: pointer;
-      transform: scale(1.1);
-    }
-
-    .filter-selected {
-      background: rgb(25, 25, 172);
-    }
-
-    .topic-cards {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-  </style>
 {{ end }}
