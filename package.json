@@ -3,8 +3,10 @@
   "description": "A dataset visualizer platform for exploring and developing stories of datasets",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npx tailwindcss -i ./styles/app.css -o ./static/css/app.css --watch",
-    "tw": "npx tailwindcss -i ./styles/app.css -o ./static/css/app.css"
+    "dev": "concurrently \"npm run tw-dev\" \"npm run hugo\"",
+    "tw-dev": "npx tailwindcss -i ./styles/app.css -o ./static/css/app.css --watch",
+    "tw": "npx tailwindcss -i ./styles/app.css -o ./static/css/app.css",
+    "hugo": "hugo server --forceSyncStatic --port 1313"
   },
   "repository": {
     "type": "git",
@@ -172,6 +174,7 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
+    "concurrently": "^8.2.1",
     "cypress": "^11.1.0",
     "tailwindcss": "^3.3.3"
   }
