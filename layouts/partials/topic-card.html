@@ -5,7 +5,7 @@
     {{ if (not (.Scratch.Get "hideTitle")) }}
       <div class="p-1 text-sm font-bold md:text-base lg:text-lg xl:text-xl">{{ .Scratch.Get "title" }}</div>      
     {{ end }}
-    <div class="p-1 text-xs font-medium md:text-sm lg:text-base xl:text-lg">{{ .Scratch.Get "description" }}</div>
+    <div class="p-1 text-xs font-light md:text-sm lg:text-base xl:text-lg">{{ .Scratch.Get "description" }}</div>
   </div>
 
   {{/*  tags class serves no purpose other than a hook for filtering  */}}

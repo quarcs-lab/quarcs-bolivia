@@ -1,65 +1,21 @@
 {{- define "body" -}}
   {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "About Us") -}}
 
-  <section class="about">
-    <div class="image-container">
-      <img src="/images/DSSD-Madison.svg" alt="DSSD Madison logo" class="logo">
-      <img src="/images/nav-logo.png" alt="Navigation logo" class="logo">
+  <section class="flex flex-col flex-wrap justify-center w-full px-16 align-center">
+    <div class="flex flex-row justify-center gap-16 p-8">
+      <img src="/images/DSSD-Madison.svg" alt="DSSD Madison logo" class="h-16 lg:h-64">
+      <img src="/images/nav-logo.png" alt="Navigation logo" class="h16 lg:h-64">
     </div>
-    <div class="about-text">
-      <p>This webpage was constructed by a team of students from <a href="https://madison.dssdglobal.org/" target="_blank" rel="noopener">DSSD Madison</a> 
+    <div class="text-left lg:text-lg max-w-11/12">
+      <p>This webpage was constructed by a team of students from <a class="underline transition cursor-pointer text-slate-600 duration-125 hover:text-slate-900" href="https://madison.dssdglobal.org/" target="_blank" rel="noopener">DSSD Madison</a> 
         and DSSD George Washington, in collaboration with Professor Mendez of Nagoya University. 
       </p>
       <p>
         We are passionate about creating software projects that contribute to the UN's sustainable development goals, which address environmental, economic, and social issues. As part of our mission, we work with global non-profits through our parent organization, and create a local impact through outreach programs. Our team also helps students build their careers by providing them with a platform to showcase their skills and collaborate with like-minded individuals. If you're interested in working with us or learning more about our initiatives, please feel free to reach out to us via email. 
       </p>  
       <p>
-        Additionally, you can find the Github repository for this webpage linked <a href="https://github.com/DSSD-Madison/Nagoya" target="_blank" rel="noopener">here</a>.
+        Additionally, you can find the Github repository for this webpage linked <a class="underline transition cursor-pointer text-slate-600 duration-125 hover:text-slate-900" href="https://github.com/DSSD-Madison/Nagoya">here</a>.
       </p>
     </div>
   </section>
-
-
-  <style>
-    .about {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 4rem 0;
-    }
-
-    .image-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 4rem;
-      padding-bottom: 2rem;
-    }
-
-    .logo {
-      height: 15rem;
-    }
-
-    .about-text {
-      text-align: left;
-      max-width: 90%;
-      font-weight: normal;
-    }
-
-    .about-text p {
-      font-size: 1.5rem;
-      margin-bottom: 0.25rem;
-    }
-
-    @media screen and (max-width: 427px){
-      .logo{
-        height: 8rem ;
-      }
-    }
-
-
-  </style>
 {{- end -}}
