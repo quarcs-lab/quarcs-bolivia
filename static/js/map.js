@@ -86,10 +86,10 @@ fetch(dataPath)
     const style = feature => {
         return {
             fillColor: getColor(feature.properties[choroplethVar]),
-            weight: 2,
-            opacity: 1,
-            color: 'white',
-            dashArray: '3',
+            weight: 1.5,
+            opacity: 0.7,
+            color: '#ddd',
+            dashArray: '2',
             fillOpacity: 0.7
         };
     }
@@ -104,7 +104,7 @@ fetch(dataPath)
     
         layer.setStyle({
             weight: 5,
-            color: '#666',
+            color: 'gray',
             dashArray: '',
             fillOpacity: 0.7
         });

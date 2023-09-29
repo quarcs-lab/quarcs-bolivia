@@ -54,9 +54,11 @@
       <div class="mb-2 text-sm lg:text-xl text-slate-700">Blog post-like tidbits written by people like you.</div>
       <div class="flex flex-col justify-center w-full max-w-screen-xl lg:w-4/6">
         <div class="box-border flex flex-col">
+          {{ $hasStories := 0 }}
           {{ range .Resources }}
             {{/* Story must have an author, title, and date to be visible */}}
             {{ if and .Params.title .Params.author .Params.date }}
+              {{ $hasStories = 1 }}
               <div class="px-4 py-2 my-2 rounded lg:my-4 lg:px-8 lg:py-4 bg-slate-50">
                 <div class="my-3">
                   <div class="text-lg font-semibold lg:text-2xl">{{ .Params.title }}</div>
@@ -85,10 +87,11 @@
                   {{ .Content }}
                 </article>
               </div>
-            {{end}}
+            {{ end }}
           {{ end }}
         </div>
       </div>
+      {{ if not $hasStories }}<div class="mb-2 text-xs lg:text-lg text-slate-500">(None here yet. You could be the first!)</div>{{ end}}
     </div>
   </section>
 {{ end }}

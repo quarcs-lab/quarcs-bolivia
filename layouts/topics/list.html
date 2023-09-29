@@ -1,72 +1,68 @@
 {{ define "body" }}
+<section class="box-border flex flex-col p-4 lg:p-8">
+  <div class="text-base font-semibold lg:text-xl">Tags</div>
+  <div id="filters" class="flex flex-row flex-wrap gap-2 py-2"></div>
+  <div id="cards" class="flex flex-wrap justify-center gap-4">
+    {{ range where (where .Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
+        {{ .Scratch.Set "title" .Params.title }}
+        {{ .Scratch.Set "hideTitle" .Params.hideTitle }}
+        {{ .Scratch.Set "description" .Params.description }}
+        {{ .Scratch.Set "imageSource" .Params.imageSource }}
+        {{ .Scratch.Set "url" .RelPermalink }}
+        {{- partial "topic-card.html" . -}}
+    {{ end }}
+  </div>
+</section>
 
-  {{/*  Note: Change GeoDS4Bolivia Dataset once we have more datasets  */}}
-  {{- partial "banner.html" (dict "fill" "#568CE1" "heading" "GeoDS4Bolivia Dataset") -}}
+<script>
+  const cards = [...document.getElementById("cards").children];
 
-  <section class="box-border flex flex-col p-4 lg:p-8">
-    <div class="text-base font-semibold">Relevant Filters</div>
-    <div id="filters" class="flex flex-row flex-wrap gap-2 py-2"></div>
-    <div id="cards" class="flex flex-wrap justify-center gap-4">
-      {{ range where (where .Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
-          {{ .Scratch.Set "title" .Params.title }}
-          {{ .Scratch.Set "hideTitle" .Params.hideTitle }}
-          {{ .Scratch.Set "description" .Params.description }}
-          {{ .Scratch.Set "imageSource" .Params.imageSource }}
-          {{ .Scratch.Set "url" .RelPermalink }}
-          {{- partial "topic-card.html" . -}}
-      {{ end }}
-    </div>
-  </section>
+  // construct dictionary mapping tags -> cards
+  const tagsToCards = {};
+  cards.forEach(e => {
+    const tagNames = [...e.getElementsByClassName("tags")[0].children].map(t => t.innerText);
+    tagNames.forEach(t => {
+      if (t in tagsToCards) tagsToCards[t].push(e)
+      else tagsToCards[t] = [e];
+    })
+  });
 
-  <script>
-    const cards = [...document.getElementById("cards").children];
+  // Updates card visibility based on filter clicked
+  let currentFilter = null
+  const filterClicked = filterButton => {
+    // deselect the current filter button
+    if (currentFilter) {
+      currentFilter.setAttribute("aria-selected", false);
+    }
 
-    // construct dictionary mapping tags -> cards
-    const tagsToCards = {};
-    cards.forEach(e => {
-      const tagNames = [...e.getElementsByClassName("tags")[0].children].map(t => t.innerText);
-      tagNames.forEach(t => {
-        if (t in tagsToCards) tagsToCards[t].push(e)
-        else tagsToCards[t] = [e];
-      })
-    });
+    // filter matches existing filter, deselect filer and reveal all cards
+    if (currentFilter === filterButton) {
+      currentFilter = null;
+      cards.forEach(e => e.setAttribute("aria-hidden", false));
+    }
+    else {
+      // select the new filter
+      filterButton.setAttribute("aria-selected", true);
 
-    // Updates card visibility based on filter clicked
-    let currentFilter = null
-    const filterClicked = filterButton => {
-      // deselect the current filter button
-      if (currentFilter) {
-        currentFilter.setAttribute("aria-selected", false);
-      }
+      // hide all cards
+      cards.forEach(e => e.setAttribute("aria-hidden", true));
+      // reveal cards matching filter (tag) text
+      tagsToCards[filterButton.innerText].forEach(e => e.setAttribute("aria-hidden", false));
 
-      // filter matches existing filter, deselect filer and reveal all cards
-      if (currentFilter === filterButton) {
-        currentFilter = null;
-        cards.forEach(e => e.setAttribute("aria-hidden", false));
-      }
-      else {
-        // select the new filter
-        filterButton.setAttribute("aria-selected", true);
+      currentFilter = filterButton;
+    }
+  };
 
-        // hide all cards
-        cards.forEach(e => e.setAttribute("aria-hidden", true));
-        // reveal cards matching filter (tag) text
-        tagsToCards[filterButton.innerText].forEach(e => e.setAttribute("aria-hidden", false));
+  const filterParent = document.getElementById("filters");
 
-        currentFilter = filterButton;
-      }
-    };
+  const tags = Object.keys(tagsToCards);
+  tags.forEach(t => {
+    const filterButton = document.createElement("button");
+    filterButton.classList.add(..."p-2 text-sm font-medium text-white transition duration-75 bg-blue-700 rounded cursor-pointer h-fit lg:p-2 lg:text-base color-white hover:bg-blue-800 aria-selected:bg-blue-800".split(" "));
+    filterButton.innerText = t;
+    filterButton.onclick = () => filterClicked(filterButton);
 
-    const filterParent = document.getElementById("filters");
-  
-    const tags = Object.keys(tagsToCards);
-    tags.forEach(t => {
-      const filterButton = document.createElement("button");
-      filterButton.classList.add(..."p-2 text-sm font-medium text-white transition duration-75 bg-blue-700 rounded cursor-pointer h-fit lg:p-2 lg:text-base color-white hover:bg-blue-800 aria-selected:bg-blue-800".split(" "));
-      filterButton.innerText = t;
-      filterButton.onclick = () => filterClicked(filterButton);
-
-      filterParent.appendChild(filterButton);
-    });
-  </script>
+    filterParent.appendChild(filterButton);
+  });
+</script>
 {{ end }}
