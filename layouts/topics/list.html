@@ -62,7 +62,7 @@
     const tags = Object.keys(tagsToCards);
     tags.forEach(t => {
       const filterButton = document.createElement("button");
-      filterButton.classList.add(..."p-2 text-base font-medium text-white transition delay-75 bg-blue-700 rounded cursor-pointer color-white hover:bg-blue-800 aria-selected:bg-blue-800".split(" "));
+      filterButton.classList.add(..."p-2 text-base font-medium text-white transition duration-75 bg-blue-700 rounded cursor-pointer color-white hover:bg-blue-800 aria-selected:bg-blue-800".split(" "));
       filterButton.innerText = t;
       filterButton.onclick = () => filterClicked(filterButton);
 
