@@ -1,40 +1,24 @@
-# Nagoya
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0251fa43-75ea-4387-a5a2-f5fea9fbc3e8/deploy-status)](https://app.netlify.com/sites/quarcs-data/deploys)
+# QuaRCS Bolivia
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0251fa43-75ea-4387-a5a2-f5fea9fbc3e8/deploy-status)](https://app.netlify.com/sites/quarcs-bolivia/deploys)
+### https://quarcs-data.netlify.app/.
 
-### Check out the site at https://quarcs-data.netlify.app/.
+QuaRCS Bolivia is a project developed by [DSSD](https://dssdglobal.org/) in conjunction with [QuaRCS lab](https://quarcs-lab.org/). The mission of the project is to allow researchers and university students to easily access and contribute to a Bolivia geographical dataset. 
 
-## Table of Contents:
-- [Contributing Stories](#contributing-stories)
-- [Contributing to the Project](#contributing-to-the-project)
-  - [Learning](#learning)
-  - [Project Management](#project-management)
-  - [Local Setup](#local-setup)
+This Bolivia geographical dataset sources from the [Municipal Atlas of the Sustainable Development Goals in Bolivia 2020](https://sdsnbolivia.org/Atlas/). 
+
+The QuaRCS lab have used this dataset in their research, and would like to extend this dataset's reach to others interested in contributing their own analysis towards this dataset. Links to their research can be found below:
+- https://quarcs-lab.org/research/mendez2020-human-capital-constraints-bolivia/
+- https://github.com/quarcs-lab/project2021o-notebook
+- https://carlos-mendez.org/publication/20210318-economia/
+- https://shorturl.at/evEFS
   
-# Contributing Stories
-Interested in contributing a story to the project? Check out the wiki documentation [here](https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Stories).
+## Contributing Research
+Interested in contributing your own research to the project? Check out the wiki documentation [here](https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Stories).
 
-# Contributing to the Project
-Interested in contributing to the project itself? Look below to familiarize with the project management/learning necessary to get started.
-
-## Learning
-Hugo is a static site generator that makes a lot of default decisions for programmers for project structure. 
-
-This project uses a combination of content and Templating with Hugo Modules. 
-
-Please read the link to the right to familiarize yourself with the project structure. - https://cloudcannon.com/blog/the-ultimate-guide-to-hugo-sections/ \
-The Hugo documentation may also be helpful - https://gohugo.io/
-
-## Project Management
-We will be using a [Github Project](https://github.com/orgs/DSSD-Madison/projects/3) with 3 sections: Backlog, In Progress, and Done. Issues in the Backlog will represent segments of work to get done, or problems that need to be fixed.
-
-To contribute to the project, assign an issue in the Backlog to yourself and move it to the In Progress section. Create a new branch off of main and implement the feature/fix/improvement, making commits after completing each subsection of the work. Push your code and move the issue(s) it adresses to Done. Create a pull request (PR) into main with a closing keyword in the description referencing the issue(s) that are addressed.
-
-On a Pull Request, a preview of your deploy will be available on the PR as a comment to review.
-
-PRs will be reviewed by at least one project member before merging. When a PR is merged into main, the new version will automatically be deployed to Netlify.
+## Contributing to the Project
+Interested in contributing to the project itself and extending its functionality? Check out the wiki documentation [here](https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Project).
 
 ## Local Setup
-
 Dependencies
 - Hugo, Go, Git, and Node (Tested with v18) - You'll need the extended version of Hugo - https://gohugo.io/installation/
 
