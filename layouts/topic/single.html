@@ -8,27 +8,28 @@
   {{ $choroplethVar := .Params.choroplethVar }}
   {{ $choroplethGrades := .Params.choroplethGrades }}
   {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "Topic: " "context" .) -}}
-  <section class="topic">
+  <section class="flex flex-col justify-center px-4 py-2 g-4">
     {{/*  Standard layout for topic page - must include map, header, and link to data  */}}
-    <div class="topic-content">
+    <div class="flex flex-col gap-4 text-left">
       <div 
-        id='map'
-        data-lat='-16.2902'
-        data-lng='-63.5887'
-        data-zoom='6'
-        data-path='/data/GeoDS4Bolivia/GeoDS4Bolivia.geojson'
-        data-vars='{{ jsonify $vars }}'
-        data-choropleth-var='{{ $choroplethVar }}'
-        data-choropleth-grades='{{ jsonify $choroplethGrades }}'
+        id="map"
+        class="w-11/12 h-[80vh] self-center"
+        data-lat="-16.2902"
+        data-lng="-63.5887"
+        data-zoom="6"
+        data-path="/data/GeoDS4Bolivia/GeoDS4Bolivia.geojson"
+        data-vars="{{ jsonify $vars }}"
+        data-choropleth-var="{{ $choroplethVar }}"
+        data-choropleth-grades="{{ jsonify $choroplethGrades }}"
       >
       </div>
-      <div class="topic-data-header">Variables and Data</div>
-      <a class="download-data-button" href="/data/GeoDS4Bolivia.geojson">Download data</a>
-      <table>
+      <div class="text-3xl font-bold">Variables and Data</div>
+      <a class="box-border block px-2 leading-8 text-center text-white no-underline transition rounded bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="/data/GeoDS4Bolivia.geojson">Download data</a>
+      <table class="border-collapse">
         {{ range $rows }}
           {{ if in $vars (index . 0) }}
-            <tr>
-              {{ range . }} <td>{{ . }}</td> {{ end }}
+            <tr class="even:bg-gray-50 odd:bg-white">
+              {{ range . }} <td class="p-2 text-left border-black border-solid border-1">{{ . }}</td> {{ end }}
             </tr>
           {{ end }}
         {{ end }}
@@ -37,26 +38,26 @@
 
     {{/*  List of stories under the topic  */}}
     <div>
-      <div class="stories-header">Stories</div>
-      <div class="stories-subheader">Blog post-like tidbits written by people like you.</div>
-      <div class="stories-container">
-        <div class="stories">
+      <div class="mt-4 mb-1 text-3xl font-bold leading-5">Stories</div>
+      <div class="mb-2 text-xl text-slate-700">Blog post-like tidbits written by people like you.</div>
+      <div class="grid place-items-center">
+        <div class="box-border flex flex-col justify-center w-11/12">
           {{ range .Resources }}
             {{/* Story must have an author, title, and date to be visible */}}
             {{ if and .Params.title .Params.author .Params.date }}
-              <div class="story">
-                <div class="story-header">
-                  <div class="story-title">{{ .Params.title }}</div>
-                  <div class="story-meta">
-                    <div class="story-info">
+              <div class="px-8 py-4 my-4 rounded bg-slate-50">
+                <div class="my-3">
+                  <div class="text-2xl font-semibold">{{ .Params.title }}</div>
+                  <div class="mt-2 mb-4">
+                    <div class="flex flex-row gap-8 my-2">
                       <div>By: {{ .Params.author }}</div>
                       <div>{{ .Params.date.Format "Jan 2, 2006" }}</div>
                     </div>
-                    <div class="story-button">
-                      {{ if .Params.data }}<a class="download-data-button" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
-                      {{ if .Params.deepnote }}<a class="download-data-button" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
+                    <div class="flex flex-row gap-2 my-2">
+                      {{ if .Params.data }}<a class="box-border block px-2 leading-8 text-center text-white no-underline transition rounded bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
+                      {{ if .Params.deepnote }}<a class="box-border block px-2 leading-8 text-center text-white no-underline transition rounded bg-slate-800 w-fit duration-125 hover:bg-slate-900" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
                     </div>
-                    <div class="story-categories">
+                    <div class="box-border flex flex-row flex-wrap w-full gap-2 py-2">
                       {{ range $category := .Params.categories }}
                         {{- partial "tag.html" $category -}}
                       {{- end -}}
@@ -64,7 +65,7 @@
                   </div>
                 </div>
                 
-                <div class="story-content">
+                <div class="text-lg">
                   {{ .Content }}
                 </div>
               </div>
@@ -74,149 +75,4 @@
       </div>
     </div>
   </section>
-
-  <style>
-    #map {
-      width: 100%; 
-      height: 80vh;
-      align-self: center;
-    }
-
-    .topic {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 2rem 4rem;
-    }
-
-    .topic-content {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      gap: 1rem;
-    }
-
-    .topic-data-header {
-      font-size: 2rem;
-      font-weight: bold;
-      line-height: 1.125;
-    }
-
-    .download-data-button {
-      display: block;
-      box-sizing: border-box;
-      color: white;
-      background-color: #394D6B;
-      border-radius: 4px;
-      min-width: 9rem;
-      max-width: fit-content;
-      text-align: center;
-      text-decoration: none;
-      line-height: 2rem;
-      color: white;
-      background-color: #2b394d;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      max-height: 2rem;
-    }
-
-    .download-data-button:hover {
-      background-color: #394D6B;
-    }
-
-    table {
-      border-collapse: collapse;
-    }
-
-    td, th {
-      border: 1px solid black;
-      text-align: left;
-      padding: 8px;
-    }
-
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }  
-
-
-    .stories-container {
-      display: grid;
-      place-items: center;
-    }
-
-    .stories {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-sizing: border-box;
-      max-width: min(80rem, 90%);
-    }
-
-    .stories-header {
-      font-size: 2rem;
-      font-weight: bold;
-      line-height: 1.125;
-      margin: 1rem 0 0.25rem 0;
-    }
-
-    .stories-subheader {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      color: #394D6B;
-    }
-
-    .story {
-      background-color: #fafafa;
-      padding: 1rem 2rem;
-      margin-top: 1rem;
-      border-radius: 4px;
-    }
-
-    .story-header {
-      margin: 1rem 0 2rem 0;
-    }
-
-    .story-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-
-    .story-button {
-      display: flex;
-      flex-direction: row;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
-    }
-
-    .story-categories {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      padding: 0.5rem 0;
-      width: 100%;
-    }
-
-    .story-meta {
-      margin: 0.45rem 0 1rem 0;
-      color: #394D6B;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .story-info {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
-      margin: 0.5rem 0;
-    }
-
-    .story-content {
-      font-size: 1.05rem;
-      letter-spacing: 0.0075rem;
-    }
-  </style>
 {{ end }}
