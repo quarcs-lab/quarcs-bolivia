@@ -1,5 +1,7 @@
 {{ define "head" }}
+  {{ if and .Params.vars .Params.choroplethVar .Params.choroplethGrades }}
   {{ partial "leaflet-loader" . }}
+  {{ end }}
 {{ end }}
 
 {{ define "body" }}
@@ -8,12 +10,14 @@
   {{ $choroplethVar := .Params.choroplethVar }}
   {{ $choroplethGrades := .Params.choroplethGrades }}
   {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "Topic: " "context" .) -}}
-  <section class="flex flex-col justify-center px-4 py-2 g-4">
-    {{/*  Standard layout for topic page - must include map, header, and link to data  */}}
+  <section class="flex flex-col justify-center px-4 py-2 lg:px-8">
+    {{/*  Graph and variables  */}}
+    {{ if or (and .Params.vars .Params.choroplethVar .Params.choroplethGrades) .Params.vars }}
     <div class="flex flex-col gap-4 text-left">
+      {{ if and .Params.vars .Params.choroplethVar .Params.choroplethGrades }}
       <div 
         id="map"
-        class="w-11/12 h-[80vh] self-center"
+        class="w-11/12 aspect-square max-h-[80vh] self-center"
         data-lat="-16.2902"
         data-lng="-63.5887"
         data-zoom="6"
@@ -23,49 +27,61 @@
         data-choropleth-grades="{{ jsonify $choroplethGrades }}"
       >
       </div>
-      <div class="text-3xl font-bold">Variables and Data</div>
-      <a class="box-border block px-2 leading-8 text-center text-white no-underline transition rounded bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="/data/GeoDS4Bolivia.geojson">Download data</a>
-      <table class="border-collapse">
-        {{ range $rows }}
-          {{ if in $vars (index . 0) }}
-            <tr class="even:bg-gray-50 odd:bg-white">
-              {{ range . }} <td class="p-2 text-left border-black border-solid border-1">{{ . }}</td> {{ end }}
-            </tr>
+      {{ end }}
+      {{ if .Params.vars }}
+        <div class="text-lg font-bold lg:text-3xl">Variables and Data</div>
+        <a class="box-border block px-2 text-sm leading-8 text-center text-white no-underline transition rounded lg:py-1 h-fit lg:text-base bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="/data/GeoDS4Bolivia.geojson">Download data</a>
+        <table class="w-full max-w-screen-xl border-collapse lg:w-4/6">
+          <tr class="even:bg-gray-50 odd:bg-white">
+            <th class="p-2 text-sm font-semibold text-left border-black border-solid lg:text-base border-1">Variable</td>
+            <th class="p-2 text-sm font-semibold text-left border-black border-solid lg:text-base border-1">Description</td>
+          </tr>
+          {{ range $rows }}
+            {{ if in $vars (index . 0) }}
+              <tr class="even:bg-gray-50 odd:bg-white">
+                {{ range . }} <td class="p-2 text-sm text-left border-black border-solid lg:text-base border-1">{{ . }}</td> {{ end }}
+              </tr>
+            {{ end }}
           {{ end }}
-        {{ end }}
-      </table>
+        </table>
+      {{ end }}
     </div>
+    {{ end }}
 
     {{/*  List of stories under the topic  */}}
     <div>
-      <div class="mt-4 mb-1 text-3xl font-bold leading-5">Stories</div>
-      <div class="mb-2 text-xl text-slate-700">Blog post-like tidbits written by people like you.</div>
-      <div class="grid place-items-center">
-        <div class="box-border flex flex-col justify-center w-11/12">
+      <div class="mt-4 mb-1 text-lg font-bold leading-5 lg:text-3xl">Stories</div>
+      <div class="mb-2 text-sm lg:text-xl text-slate-700">Blog post-like tidbits written by people like you.</div>
+      <div class="flex flex-col justify-center w-full max-w-screen-xl lg:w-4/6">
+        <div class="box-border flex flex-col">
           {{ range .Resources }}
             {{/* Story must have an author, title, and date to be visible */}}
             {{ if and .Params.title .Params.author .Params.date }}
-              <div class="px-8 py-4 my-4 rounded bg-slate-50">
+              <div class="px-4 py-2 my-2 rounded lg:my-4 lg:px-8 lg:py-4 bg-slate-50">
                 <div class="my-3">
-                  <div class="text-2xl font-semibold">{{ .Params.title }}</div>
+                  <div class="text-lg font-semibold lg:text-2xl">{{ .Params.title }}</div>
                   <div class="mt-2 mb-4">
                     <div class="flex flex-row gap-8 my-2">
-                      <div>By: {{ .Params.author }}</div>
-                      <div>{{ .Params.date.Format "Jan 2, 2006" }}</div>
+                      <div class="text-sm lg:text-base">By: {{ .Params.author }}</div>
+                      <div class="text-sm lg:text-base">{{ .Params.date.Format "Jan 2, 2006" }}</div>
                     </div>
-                    <div class="flex flex-row gap-2 my-2">
-                      {{ if .Params.data }}<a class="box-border block px-2 leading-8 text-center text-white no-underline transition rounded bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
-                      {{ if .Params.deepnote }}<a class="box-border block px-2 leading-8 text-center text-white no-underline transition rounded bg-slate-800 w-fit duration-125 hover:bg-slate-900" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
+                    {{ if or .Params.data .Params.deepnote }}
+                    <div class="flex flex-row gap-2 my-1 lg:my-2">
+                      {{ if .Params.data }}<a class="box-border block px-2 text-sm leading-8 text-center text-white no-underline transition rounded lg:py-1 h-fit lg:text-base bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
+                      {{ if .Params.deepnote }}<a class="box-border block px-2 text-sm leading-8 text-center text-white no-underline transition rounded lg:py-1 h-fit lg:text-base bg-slate-800 w-fit duration-125 hover:bg-slate-900" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
                     </div>
-                    <div class="box-border flex flex-row flex-wrap w-full gap-2 py-2">
-                      {{ range $category := .Params.categories }}
+                    {{end}}
+                    {{ with .Params.categories}}
+                    <div class="box-border flex flex-row flex-wrap w-full gap-2 my-2">
+                      {{ range $category := . }}
                         {{- partial "tag.html" $category -}}
                       {{- end -}}
                     </div>
+                    {{end}}
                   </div>
                 </div>
                 
-                <article class="prose prose-slate max-w-none">
+                <article class="overflow-hidden prose prose-slate max-w-none">
                   {{ .Content }}
                 </article>
               </div>
