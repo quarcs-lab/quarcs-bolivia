@@ -1,15 +1,15 @@
-<a class="flex flex-col w-64 p-0 overflow-hidden transition ease-in-out bg-white rounded shadow-lg cursor-pointer duration-125 aria-hidden:hidden hover:scale-110" href="{{ .Scratch.Get "url"}}">
+<a class="flex flex-col p-0 overflow-hidden transition ease-in-out bg-white rounded shadow-lg cursor-pointer w-36 lg:w-64 duration-125 aria-hidden:hidden hover:scale-110" href="{{ .Scratch.Get "url"}}">
     <img class="object-cover w-full aspect-square" src="{{ .Scratch.Get "imageSource" }}" alt="{{ .Scratch.Get "title" }}" />
   
-  <div class="p-1 flex-1 min-h-[8px]">
+  <div class="flex-1 p-1">
     {{ if (not (.Scratch.Get "hideTitle")) }}
-      <div class="p-1 text-lg font-bold">{{ .Scratch.Get "title" }}</div>      
+      <div class="p-1 text-sm font-bold md:text-base lg:text-lg xl:text-xl">{{ .Scratch.Get "title" }}</div>      
     {{ end }}
-    <div class="p-1 text-lg font-medium">{{ .Scratch.Get "description" }}</div>
+    <div class="p-1 text-xs font-medium md:text-sm lg:text-base xl:text-lg">{{ .Scratch.Get "description" }}</div>
   </div>
 
   {{/*  tags class serves no purpose other than a hook for filtering  */}}
-  <div class="box-border flex flex-row flex-wrap self-end flex-grow-0 w-full gap-1 p-2 tags">
+  <div class="box-border flex flex-row flex-wrap flex-grow-0 w-full gap-1 p-1 lg:p-2 tags">
     {{ $scratch := newScratch }}
     {{ range $tag := .Params.tags }}
       {{ $scratch.Set "tag" $tag }}

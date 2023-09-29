@@ -3,10 +3,10 @@
   {{/*  Note: Change GeoDS4Bolivia Dataset once we have more datasets  */}}
   {{- partial "banner.html" (dict "fill" "#568CE1" "heading" "GeoDS4Bolivia Dataset") -}}
 
-  <section class="box-border flex flex-col p-8">
+  <section class="box-border flex flex-col p-4 lg:p-8">
     <div class="text-base font-semibold">Relevant Filters</div>
     <div id="filters" class="flex flex-row flex-wrap gap-2 py-2"></div>
-    <div id="cards" class="flex flex-wrap gap-4">
+    <div id="cards" class="flex flex-wrap justify-center gap-4">
       {{ range where (where .Pages.ByWeight "Section" "topics" ) "Params.type" "==" "topic" }}
           {{ .Scratch.Set "title" .Params.title }}
           {{ .Scratch.Set "hideTitle" .Params.hideTitle }}
@@ -62,7 +62,7 @@
     const tags = Object.keys(tagsToCards);
     tags.forEach(t => {
       const filterButton = document.createElement("button");
-      filterButton.classList.add(..."p-2 text-base font-medium text-white transition duration-75 bg-blue-700 rounded cursor-pointer color-white hover:bg-blue-800 aria-selected:bg-blue-800".split(" "));
+      filterButton.classList.add(..."p-2 text-sm font-medium text-white transition duration-75 bg-blue-700 rounded cursor-pointer h-fit lg:p-2 lg:text-base color-white hover:bg-blue-800 aria-selected:bg-blue-800".split(" "));
       filterButton.innerText = t;
       filterButton.onclick = () => filterClicked(filterButton);
 
