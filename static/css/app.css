@@ -1234,6 +1234,10 @@ video {
   min-width: 44px;
 }
 
+.max-w-none {
+  max-width: none;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
