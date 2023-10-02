@@ -1104,6 +1104,10 @@ h1,
   position: absolute;
 }
 
+.sticky{
+  position: sticky;
+}
+
 .bottom-\[-20\%\]{
   bottom: -20%;
 }
@@ -1134,6 +1138,10 @@ h1,
 
 .z-20{
   z-index: 20;
+}
+
+.float-left{
+  float: left;
 }
 
 .m-0{
@@ -1173,6 +1181,10 @@ h1,
 
 .mb-8{
   margin-bottom: 2rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .mt-2{
@@ -1223,6 +1235,10 @@ h1,
   height: 4rem;
 }
 
+.h-5{
+  height: 1.25rem;
+}
+
 .h-\[100vh\]{
   height: 100vh;
 }
@@ -1250,6 +1266,10 @@ h1,
 
 .w-36{
   width: 9rem;
+}
+
+.w-5{
+  width: 1.25rem;
 }
 
 .w-\[40\%\]{
@@ -1291,6 +1311,22 @@ h1,
 
 .border-collapse{
   border-collapse: collapse;
+}
+
+.border-separate{
+  border-collapse: separate;
+}
+
+.border-spacing-2{
+  --tw-border-spacing-x: 0.5rem;
+  --tw-border-spacing-y: 0.5rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-1{
+  --tw-border-spacing-x: 0.25rem;
+  --tw-border-spacing-y: 0.25rem;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .transform{
@@ -1433,6 +1469,10 @@ h1,
 
 .bg-opacity-70{
   --tw-bg-opacity: 0.7;
+}
+
+.bg-opacity-80{
+  --tw-bg-opacity: 0.8;
 }
 
 .bg-clip-padding{
@@ -1661,6 +1701,10 @@ h1,
 
 .opacity-50{
   opacity: 0.5;
+}
+
+.opacity-70{
+  opacity: 0.7;
 }
 
 .shadow{
