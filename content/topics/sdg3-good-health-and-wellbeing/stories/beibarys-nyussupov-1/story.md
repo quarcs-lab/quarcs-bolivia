@@ -20,8 +20,7 @@ categories: ['Poverty', 'Healthcare', 'Childcare', 'Sustainable Development']
 A researchers tried to understand the difference in health area in cities with varying rates of sustainable development. Municipal Sustainable development index (imds) was used to identify 5 cities with highest and 5 cities with lowest levels of sustainable development in Bolivia. The bar plot was visualized and it was determined that cities with high sustainable development had scores from 70 to 80, while cities with low sustainable development had scores from 30 to 40, showing a significant difference in development.
 {{</ paragraph >}}
 
-
-{{< image class="medium" src="stories/beibarys-nyussupov-1/Image1.png" alt="Comparing Low and High sustainable Development index" >}}
+![Comparing Low and High sustainable Development index](stories/beibarys-nyussupov-1/Image1.png)
 
 
 {{< paragraph class="large" >}}
@@ -30,7 +29,7 @@ Furthemore it was also identified that both Children mortality and Chronic Malnu
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="stories/beibarys-nyussupov-1/image2.png" alt="Comparing Urbanization rate, Literacy rate & Electricity Coverage" >}}
+![Comparing Urbanization rate, Literacy rate & Electricity Coverage](stories/beibarys-nyussupov-1/image2.png)
 
 {{< paragraph class="large" >}}
 Two scatterplot diagrams were created to show the negative relationship between health care indicators (child mortality & malnutrition) and municipal sustainable development index in Bolivia.
@@ -39,14 +38,14 @@ Both scatterplot graphs also show strong negative correlation between healthcare
 
 
 
-{{< image class="large" src="stories/beibarys-nyussupov-1/image3.png" alt="Correlation Matrix" >}}
+![Correlation Matrix](stories/beibarys-nyussupov-1/image3.png)
 
 {{< paragraph class="large" >}}
 Barplot visualization was used to analyze the differences in patterns of health variables in 5 cities with the highest levels of sustainable development and 5 cities with the lowest levels of sustainable development. It was determined that there is a significant difference in instances of chronic malnutrition and mortality rates among children between highly developed and least developed cities in Bolivia. 
 Cities with the lowest rates of sustainable development have much higher rates of children mortality and chronic malnutrition than cities with the highest levels of sustainable development.
 {{</ paragraph >}}	
 
-{{< image class="large" src="stories/beibarys-nyussupov-1/image4.png" alt="Correlation Matrix" >}}
+![Correlation Matrix](stories/beibarys-nyussupov-1/image4.png)
 
 {{< paragraph class="large" >}}
 Next, researchers wanted to understand to what extent a lack of access to basic three services and high poverty rate causes a high instances of child mortality and chronic malnutrition in least developed cities of Bolivia. Furthermore, it was also important to understand if no-poverty and access to three basic services indexes are high in the most developed cities.
@@ -56,4 +55,4 @@ Using the bar plot visualization, it was showed that cities with the high sustai
 High poverty rates and lack of access to life-important services causes high instances of child mortality rates and chronic malnutrition rates in Bolivia areas with the lowest levels of sustainable development. Cities with the highest sustainable development levels have a high rates of access to three basic services and low poverty and therefore these cities do not have high rates of children chronic malnutrition and mortality. 
 {{</ paragraph >}}
 
-{{< image class="large" src="stories/beibarys-nyussupov-1/image5.png" alt="Correlation Matrix" >}}
+![Correlation Matrix](stories/beibarys-nyussupov-1/image5.png)

@@ -22,7 +22,7 @@ Bolivia is a country with diverse climate regions that present challenges for pr
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="stories/timur-1/CO2emission.png" alt="avg CO2 emission pre capita by department" >}}
+![avg CO2 emission pre capita by department](stories/timur-1/CO2emission.png)
 
 
 {{< paragraph class="large" >}}
@@ -30,7 +30,7 @@ Despite widespread access to electricity, power outages remain a challenge in Bo
 {{</ paragraph >}}
 
 
-{{< image class="medium" src="stories/timur-1/electcovar.png" alt="electrical coverage" >}}
+![electrical coverage](stories/timur-1/electcovar.png)
 
 
 {{< paragraph class="large" >}}
@@ -39,7 +39,7 @@ The geographical and climatic diversity in Bolivia present challenges in ensurin
 
 
 
-{{< image class="medium" src="stories/timur-1/elecconsum.png" alt="electrical consumption" >}}
+![electrical consumption](stories/timur-1/elecconsum.png)
 
 
 {{< paragraph class="large" >}}
