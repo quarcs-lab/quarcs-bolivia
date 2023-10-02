@@ -1,21 +1,21 @@
 {{ define "body" }}
-  <section class="absolute top-0 left-0 flex flex-row w-screen h-screen">
+  <section class="absolute top-0 left-0 flex flex-row w-screen h-screen overflow-hidden">
     <div class="z-10 flex flex-col items-center justify-center flex-1 gap-4 px-8 pt-8 lg:pt-0 lg:gap-16 lg:px-16">
-      <div class="text-4xl font-bold sm:text-5xl xl:text-6xl h-fit text-slate-900">
+      <div class="text-4xl font-bold sm:text-5xl xl:text-6xl h-fit text-neutral-900">
         Regional development through the lens of spatial data science
       </div>
-      <div class="bg-white bg-opacity-70 border-[16px] rounded bg-clip-padding border-solid border-white border-opacity-70">
-        <div class="text-xl font-light sm:text-3xl xl:text-4xl text-slate-900">
+      <div class="bg-neutral-10 bg-opacity-70 border-[16px] rounded bg-clip-padding border-solid border-neutral-10 border-opacity-70">
+        <div class="text-xl font-light sm:text-3xl xl:text-4xl text-neutral-900">
           An <span class="text-purple-300">accessible</span> and <span class="text-green-300">interactive</span> platform <span class="text-purple-300">open to contributions</span> from <span class="text-blue-300">researchers and university students</span>. 
         </div>
       </div>
-      <a class="font-semibold text-[3rem] sm:text-[5rem] xl:text-[7.5rem] py-4 leading-6 text-slate-900 transform duration-300 ease-in-out no-underline self-center hover:scale-110 cursor-pointer" href="/topics" > <u>Explore</u> ⟶ </a>
+      <a class="font-semibold text-[3rem] sm:text-[5rem] xl:text-[7.5rem] py-4 leading-6 text-neutral-900 transform duration-300 ease-in-out no-underline self-center hover:scale-110 cursor-pointer" href="/topics" > <u>Explore</u> ⟶ </a>
     </div>
     <div class="z-10 items-center justify-center flex-1 hidden bg-purple-300 lg:flex lg:flex-col">
       <img class="w-11/12" src="/images/cover.png" alt="homepage image"/>
     </div>
-    <div id="circle1" class="absolute w-[40%] aspect-square left-[-25%] bottom-[-20%] rounded-full bg-blue-300 opacity-50 transition-all ease-linear duration-500"></div>
-    <div id="circle2" class="absolute w-[40%] aspect-square left-[10%] bottom-[-50%] rounded-full bg-blue-300 opacity-50 transition-all ease-linear duration-500"></div>
+    <div id="circle1" class="absolute w-[40%] aspect-square left-[-25%] bottom-[-20%] rounded-full bg-blue-200 opacity-50 transition-all ease-linear duration-500"></div>
+    <div id="circle2" class="absolute w-[40%] aspect-square left-[10%] bottom-[-50%] rounded-full bg-blue-200 opacity-50 transition-all ease-linear duration-500"></div>
   </section>
 
   <script>
