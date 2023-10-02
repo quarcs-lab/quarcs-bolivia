@@ -4,28 +4,8 @@
     {{- partial "headers.html" . -}}
     {{- block "head" . }}{{- end}}
   </head>
-  <body>
+  <body class="flex flex-col h-[100vh] p-0 m-0">
     {{- partial "navbar.html" . -}}
     {{- block "body" . }}{{- end }}
   </body>
-
-  <style>
-    :root {
-      --main-family: "Inter", sans-serif;
-      --button-border-radius: 1rem;
-    }
-
-    html {
-      font-family: var(--main-family);
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
 </html>

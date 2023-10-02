@@ -8,7 +8,7 @@ This is an example story demonstrating Markdown as story content. Below is a lis
 - Heading
 - Text
 - Tables
-- *Image* - Requires adding a style to size correctly
+- Image
 - *Embeddings* - Requires shortcode
 - *HTML Formatting* - Requires shortcode, markdown within HTML not supported
 
@@ -34,7 +34,7 @@ Works out of the box.
 | q | r | s | t | u |
 
 ### Image
-The images work, but as you can see, images can extend off the of the page and don't resize.
+Images can be uploaded to the same folder as the story, and referenced from one folder before the story.
 
 ```text {linenos=true}
 ![Small Image](stories/geoffrey-xue-1/image.svg)
@@ -43,16 +43,6 @@ The images work, but as you can see, images can extend off the of the page and d
 
 ![Small Image](stories/geoffrey-xue-1/image.svg)
 ![Big Image](stories/geoffrey-xue-1/bigimage.jpg)
-
-You can add a style to the image to correctly format the size.
-
-```text {linenos=true}
-![Big Image](stories/geoffrey-xue-1/bigimage.jpg)
-{.img}
-```
-
-![Big Image](stories/geoffrey-xue-1/bigimage.jpg)
-{.img}
 
 ### Embedding
 HTML is considered unsafe when rendering the Markdown, so embeds don't work out of the box.

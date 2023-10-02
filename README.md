@@ -20,13 +20,13 @@ Interested in contributing to the project itself and extending its functionality
 
 ## Local Setup
 Dependencies
-- Hugo, Go, and Git
-> You'll need the extended version of Hugo - https://gohugo.io/installation/
+- Hugo, Go, Git, and Node (Tested with v18) - You'll need the extended version of Hugo - https://gohugo.io/installation/
 
 Clone this repo with one of these options:
 - Click the 'Use this template' button at the top of the page
 - Or via the command line `git clone https://github.com/DSSD-Madison/Nagoya.git`
 
+
 Start the Hugo server & check it out:
-- `hugo server -D`
+- `npm i && npm run dev`
 - go to [http://localhost:1313/](http://localhost:1313/)

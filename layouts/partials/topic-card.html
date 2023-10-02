@@ -1,16 +1,15 @@
-<a class="card" href="{{ .Scratch.Get "url"}}">
-  <img src="{{ .Scratch.Get "imageSource" }}" alt="{{ .Scratch.Get "title" }}" />
-
-  <div class="card-body">
+<a class="flex flex-col p-0 overflow-hidden transition ease-in-out bg-white rounded shadow-lg cursor-pointer w-36 lg:w-64 duration-125 aria-hidden:hidden hover:scale-110" href="{{ .Scratch.Get "url"}}">
+    <img class="object-cover w-full aspect-square" src="{{ .Scratch.Get "imageSource" }}" alt="{{ .Scratch.Get "title" }}" />
+  
+  <div class="flex-1 p-1">
     {{ if (not (.Scratch.Get "hideTitle")) }}
-      <div class="card-title">{{ .Scratch.Get "title" }}</div>
-      <div class="card-description">{{ .Scratch.Get "description" }}</div>
-    {{ else }}
-      <div class="card-description-large">{{ .Scratch.Get "description" }}</div>
+      <div class="p-1 text-sm font-bold md:text-base lg:text-lg xl:text-xl">{{ .Scratch.Get "title" }}</div>      
     {{ end }}
+    <div class="p-1 text-xs font-light md:text-sm lg:text-base xl:text-lg">{{ .Scratch.Get "description" }}</div>
   </div>
 
-  <div class="card-footer">
+  {{/*  tags class serves no purpose other than a hook for filtering  */}}
+  <div class="box-border flex flex-row flex-wrap flex-grow-0 w-full gap-1 p-1 lg:p-2 tags">
     {{ $scratch := newScratch }}
     {{ range $tag := .Params.tags }}
       {{ $scratch.Set "tag" $tag }}
