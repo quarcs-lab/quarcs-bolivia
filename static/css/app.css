@@ -1207,6 +1207,10 @@ h1,
   display: none;
 }
 
+.aspect-\[8\/7\]{
+  aspect-ratio: 8/7;
+}
+
 .aspect-square{
   aspect-ratio: 1 / 1;
 }
