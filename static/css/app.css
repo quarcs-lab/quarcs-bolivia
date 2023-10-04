@@ -1317,12 +1317,6 @@ h1,
   border-collapse: separate;
 }
 
-.border-spacing-2{
-  --tw-border-spacing-x: 0.5rem;
-  --tw-border-spacing-y: 0.5rem;
-  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
-}
-
 .border-spacing-1{
   --tw-border-spacing-x: 0.25rem;
   --tw-border-spacing-y: 0.25rem;

@@ -2,6 +2,9 @@
 title: Building out a Story
 author: Geoffrey Xue
 date: 2023-09-26
+links:
+  project: https://github.com/DSSD-Madison/Nagoya
+  second-link: https://www.google.com/
 ---
 
 This is an example story demonstrating Markdown as story content. Below is a list of features (and examples of them) that work:
