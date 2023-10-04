@@ -1751,6 +1751,11 @@ h1,
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.even\:bg-neutral-30:nth-child(even){
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 237 239 / var(--tw-bg-opacity));
+}
+
 .hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;

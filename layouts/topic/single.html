@@ -32,13 +32,13 @@
         <div class="text-lg font-bold lg:text-3xl">Variables and Data</div>
         <a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" download href="/data/GeoDS4Bolivia.geojson">Download data</a>
         <table class="w-full max-w-screen-xl border-collapse lg:w-4/6">
-          <tr class="even:bg-gray-50 odd:bg-neutral-0">
+          <tr class="even:bg-neutral-30 odd:bg-neutral-0">
             <th class="p-2 text-sm font-semibold text-left border-black border-solid lg:text-base border-1">Variable</td>
             <th class="p-2 text-sm font-semibold text-left border-black border-solid lg:text-base border-1">Description</td>
           </tr>
           {{ range $rows }}
             {{ if in $vars (index . 0) }}
-              <tr class="even:bg-gray-50 odd:bg-neutral-0">
+              <tr class="even:bg-neutral-30 odd:bg-neutral-0">
                 {{ range . }} <td class="p-2 text-sm text-left border-black border-solid lg:text-base border-1">{{ . }}</td> {{ end }}
               </tr>
             {{ end }}
