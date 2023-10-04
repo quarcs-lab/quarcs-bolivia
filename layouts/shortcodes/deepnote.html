@@ -1,6 +1,0 @@
-<iframe 
-  class='deepnote {{ if .Get "class" }}deepnote-{{ with .Get "class" }}{{.}}{{end}}{{end}}'
-  style='{{ if and (.Get "w") (.Get "h") }}aspect-ratio: {{ with .Get "w" }}{{.}}{{end}}/{{ with .Get "h" }}{{.}}{{end}}{{end}};'
-  title='embedded cell output'
-  src='{{ with .Get "src" }}{{.}}{{end}}'
-></iframe>

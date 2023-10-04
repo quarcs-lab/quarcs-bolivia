@@ -1,5 +1,5 @@
 <nav class="z-20 flex flex-col items-center w-full gap-2 mt-4 mb-3 h-fit lg:mb-2 lg:flex-row lg:justify-between">
-  <div class="flex flex-row items-center px-2 cursor-pointer" onclick="goBackHome()">
+  <a class="flex flex-row items-center px-2 cursor-pointer" href="/">
     <div class="grid p-2 pl-0 min-w-[44px] lg:min-w-[59px] h-full w-fit place-items-center">
       <img class="h-12 lg:h-16 " src="/images/nav-logo.png" alt="QuaRCS Logo"> 
     </div>
@@ -11,16 +11,3 @@
     <a class="box-border px-2 py-1 text-sm font-bold no-underline transition ease-in-out border-2 border-neutral-800 border-solid rounded shadow cursor-pointer lg:bg-opacity-80 lg:bg-neutral-0 lg:hover:shadow-lg lg:text-base w-fit duration-125 hover:scale-110" href="https://github.com/DSSD-Madison/Nagoya/wiki/How-to-Contribute:-Stories">How to Contribute?</a>
   </div>
 </nav>
-
-<script>
-  if ("{{.Page.RelPermalink}}" === "/") {
-    document.querySelector(".nav").style.background = "transparent";
-  }
-  else {
-    document.querySelector(".nav").style.background = "neutral-0";
-  }
-
-  function goBackHome() {
-    window.location.href = "/";
-  }
-</script>

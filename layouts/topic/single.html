@@ -67,10 +67,15 @@
                       <div class="text-sm lg:text-base">By: {{ .Params.author }}</div>
                       <div class="text-sm lg:text-base">{{ .Params.date.Format "Jan 2, 2006" }}</div>
                     </div>
-                    {{ if or .Params.data .Params.deepnote }}
+                    {{ if or .Params.data .Params.deepnote .Params.links }}
                     <div class="flex flex-row gap-2 my-1 lg:my-2">
                       {{ if .Params.data }}<a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
                       {{ if .Params.deepnote }}<a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
+                      {{ with .Params.links}}
+                        {{ range $name, $url := . }}
+                          <a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" href="{{ $url }}" target="_blank">Link to {{ title $name }}</a>
+                        {{- end -}}
+                      {{end}}
                     </div>
                     {{end}}
                     {{ with .Params.categories}}
