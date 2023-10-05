@@ -9,7 +9,7 @@
   {{ $vars := .Params.vars }}
   {{ $choroplethVar := .Params.choroplethVar }}
   {{ $choroplethGrades := .Params.choroplethGrades }}
-  {{- partial "banner.html" (dict "fill" "#6A589C" "heading" "Topic: " "context" .) -}}
+  {{- partial "banner.html" (dict "bg" "bg-purple-400" "heading" "Topic: " "context" .) -}}
   <section class="flex flex-col justify-center px-4 py-2 lg:px-8">
     {{/*  Graph and variables  */}}
     {{ if or (and .Params.vars .Params.choroplethVar .Params.choroplethGrades) .Params.vars }}
@@ -30,15 +30,15 @@
       {{ end }}
       {{ if .Params.vars }}
         <div class="text-lg font-bold lg:text-3xl">Variables and Data</div>
-        <a class="box-border block px-2 text-sm leading-8 text-center text-white no-underline transition rounded lg:py-1 h-fit lg:text-base bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="/data/GeoDS4Bolivia.geojson">Download data</a>
+        <a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" download href="/data/GeoDS4Bolivia.geojson">Download data</a>
         <table class="w-full max-w-screen-xl border-collapse lg:w-4/6">
-          <tr class="even:bg-gray-50 odd:bg-white">
+          <tr class="even:bg-neutral-30 odd:bg-neutral-0">
             <th class="p-2 text-sm font-semibold text-left border-black border-solid lg:text-base border-1">Variable</td>
             <th class="p-2 text-sm font-semibold text-left border-black border-solid lg:text-base border-1">Description</td>
           </tr>
           {{ range $rows }}
             {{ if in $vars (index . 0) }}
-              <tr class="even:bg-gray-50 odd:bg-white">
+              <tr class="even:bg-neutral-30 odd:bg-neutral-0">
                 {{ range . }} <td class="p-2 text-sm text-left border-black border-solid lg:text-base border-1">{{ . }}</td> {{ end }}
               </tr>
             {{ end }}
@@ -51,7 +51,7 @@
     {{/*  List of stories under the topic  */}}
     <div>
       <div class="mt-4 mb-1 text-lg font-bold leading-5 lg:text-3xl">Stories</div>
-      <div class="mb-2 text-sm lg:text-xl text-slate-700">Blog post-like tidbits written by people like you.</div>
+      <div class="mb-2 text-sm lg:text-xl text-neutral-700">Blog post-like tidbits written by people like you.</div>
       <div class="flex flex-col justify-center w-full max-w-screen-xl lg:pl-64 lg:w-4/6">
         <div class="box-border flex flex-col">
           {{ $hasStories := 0 }}
@@ -59,7 +59,7 @@
             {{/* Story must have an author, title, and date to be visible */}}
             {{ if and .Params.title .Params.author .Params.date }}
               {{ $hasStories = 1 }}
-              <div class="px-4 py-2 my-2 rounded lg:my-4 lg:px-8 lg:py-4 bg-slate-50">
+              <div class="px-4 py-2 my-2 rounded lg:my-4 lg:px-8 lg:py-4 bg-neutral-10">
                 <div class="my-3">
                   <div class="text-lg font-semibold lg:text-2xl">{{ .Params.title }}</div>
                   <div class="mt-2 mb-4">
@@ -69,11 +69,11 @@
                     </div>
                     {{ if or .Params.data .Params.deepnote .Params.links }}
                     <div class="flex flex-row gap-2 my-1 lg:my-2">
-                      {{ if .Params.data }}<a class="box-border block px-2 text-sm leading-8 text-center text-white no-underline transition rounded lg:py-1 h-fit lg:text-base bg-slate-800 w-fit duration-125 hover:bg-slate-900" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
-                      {{ if .Params.deepnote }}<a class="box-border block px-2 text-sm leading-8 text-center text-white no-underline transition rounded lg:py-1 h-fit lg:text-base bg-slate-800 w-fit duration-125 hover:bg-slate-900" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
+                      {{ if .Params.data }}<a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" download href="{{ .Params.data }}" target="_blank">Download Data</a>{{end}}
+                      {{ if .Params.deepnote }}<a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" href="{{ .Params.deepnote }}" target="_blank">Link to Deepnote</a>{{end}}
                       {{ with .Params.links}}
                         {{ range $name, $url := . }}
-                          <a class="box-border block px-2 text-sm leading-8 text-center text-white no-underline transition rounded lg:py-1 h-fit lg:text-base bg-slate-800 w-fit duration-125 hover:bg-slate-900" href="{{ $url }}" target="_blank">Link to {{ title $name }}</a>
+                          <a class="box-border block px-2 text-sm leading-8 text-center text-neutral-0 no-underline transition rounded lg:py-1 h-fit lg:text-base bg-neutral-800 w-fit duration-125 hover:bg-neutral-900" href="{{ $url }}" target="_blank">Link to {{ title $name }}</a>
                         {{- end -}}
                       {{end}}
                     </div>
@@ -96,7 +96,7 @@
           {{ end }}
         </div>
       </div>
-      {{ if not $hasStories }}<div class="mb-2 text-xs lg:text-lg text-slate-500">(None here yet. You could be the first!)</div>{{ end}}
+      {{ if not $hasStories }}<div class="mb-2 text-xs lg:text-lg text-neutral-500">(None here yet. You could be the first!)</div>{{ end}}
     </div>
   </section>
 {{ end }}
