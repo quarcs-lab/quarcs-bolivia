@@ -41,13 +41,13 @@ const map = L.map("map", {
 
 const tooltip = L.tooltip({
   sticky: true,
-  className: 'py-1 px-2 bg-white bg-opacity-80 shadow rounded',
+  className: 'py-1 px-2 bg-neutral-0 bg-opacity-80 shadow rounded',
   opacity: 0.95
 });
 
 (() => {
   const info = L.control({position: 'topright'});
-  const div = L.DomUtil.create('div', 'py-1 px-2 bg-white bg-opacity-80 shadow rounded');
+  const div = L.DomUtil.create('div', 'py-1 px-2 bg-neutral-0 bg-opacity-80 shadow rounded');
 
   info.onAdd = () => {
     div.innerHTML = `Choropleth on <b>${choroplethVar}</b>`;
@@ -59,7 +59,7 @@ const tooltip = L.tooltip({
 
 (() => {
   const legend = L.control({position: 'bottomright'});
-  const div = L.DomUtil.create('div', 'py-1 px-2 bg-white leading-5 bg-opacity-80 shadow rounded text-slate-600');
+  const div = L.DomUtil.create('div', 'py-1 px-2 bg-neutral-0 leading-5 bg-opacity-80 shadow rounded text-neutral-600');
 
   const updateLegend = grades => {
     div.innerHTML = "";
