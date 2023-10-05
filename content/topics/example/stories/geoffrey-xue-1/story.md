@@ -12,6 +12,7 @@ This is an example story demonstrating Markdown as story content. Below is a lis
 - Text
 - Tables
 - Image
+- LaTeX math equations
 - *Embeddings* - Requires shortcode
 - *HTML Formatting* - Requires shortcode, markdown within HTML not supported
 
@@ -46,6 +47,14 @@ Images can be uploaded to the same folder as the story, and referenced from one 
 
 ![Small Image](stories/geoffrey-xue-1/image.svg)
 ![Big Image](stories/geoffrey-xue-1/bigimage.jpg)
+
+
+### LaTeX Math Equations
+$$
+y = 5 + x
+$$
+
+This is an inline equation: $\sum_{i=0} = x$
 
 ### Embedding
 HTML is considered unsafe when rendering the Markdown, so embeds don't work out of the box.
