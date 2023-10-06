@@ -12,6 +12,7 @@ This is an example story demonstrating Markdown as story content. Below is a lis
 - Text
 - Tables
 - Image
+- Math and LaTeX
 - *Embeddings* - Requires shortcode
 - *HTML Formatting* - Requires shortcode, markdown within HTML not supported
 
@@ -46,6 +47,14 @@ Images can be uploaded to the same folder as the story, and referenced from one 
 
 ![Small Image](stories/geoffrey-xue-1/image.svg)
 ![Big Image](stories/geoffrey-xue-1/bigimage.jpg)
+
+### Math and LaTeX
+LaTeX is supported via KaTeX.
+$$
+\sum_{k=0}^n (k^2 + 1)
+$$
+
+This is an $i = n * l + i / n - e$ equation.
 
 ### Embedding
 HTML is considered unsafe when rendering the Markdown, so embeds don't work out of the box.
