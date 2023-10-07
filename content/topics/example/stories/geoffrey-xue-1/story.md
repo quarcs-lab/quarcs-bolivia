@@ -16,7 +16,6 @@ This is an example story demonstrating Markdown as story content. Below is a lis
 - *Embeddings* - Requires shortcode
 - *HTML Formatting* - Requires shortcode, markdown within HTML not supported
 
-
 ### Heading
 # H1
 ## H2
