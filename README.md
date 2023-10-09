@@ -1,5 +1,5 @@
 # QuaRCS Bolivia
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0251fa43-75ea-4387-a5a2-f5fea9fbc3e8/deploy-status)](https://app.netlify.com/sites/quarcs-bolivia/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/890651a7-d1d9-4d56-91a8-8a3d9419075e/deploy-status)](https://app.netlify.com/sites/quarcs-bolivia/deploys)
 ### https://quarcs-bolivia.netlify.app/.
 
 QuaRCS Bolivia is a project developed by [DSSD](https://dssdglobal.org/) in conjunction with [QuaRCS lab](https://quarcs-lab.org/). The mission of the project is to allow researchers and university students to easily access and contribute to a Bolivia geographical dataset. 
