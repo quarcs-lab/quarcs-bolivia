@@ -1,7 +1,8 @@
 {{ define "head" }}
   {{ if and .Params.vars .Params.choroplethVar .Params.choroplethGrades }}
-  {{ partial "leaflet-loader" . }}
+    {{ partial "loaders/leaflet-loader" . }}
   {{ end }}
+  {{ partial "loaders/katex-loader" . }}
 {{ end }}
 
 {{ define "body" }}
