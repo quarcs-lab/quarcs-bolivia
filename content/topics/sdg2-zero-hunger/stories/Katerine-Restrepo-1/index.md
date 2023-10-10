@@ -17,7 +17,6 @@ categories: ['Nutrition', 'Obesity', 'Childcare', 'Sustainable Development']
 
 
 
-{{< paragraph class="large" >}}
 The following two graphics illustrate the prevalence of chronic malnutrition among children and obesity in women, presented as percentages across Bolivia's various Departments. Oruro and Cochabamba exhibit the highest rates of chronic malnutrition among children, while Beni and Tarija stand out with the highest levels of obesity among women.
 
 ![chronic malnutrition deparments](stories/Katerine-Restrepo-1/Image1.png)
