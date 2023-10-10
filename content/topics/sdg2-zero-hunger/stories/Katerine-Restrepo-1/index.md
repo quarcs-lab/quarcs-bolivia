@@ -7,7 +7,7 @@ deepnote: "https://deepnote.com/workspace/nagoya-university-102f-072bbb53-844b-4
 categories: ['Nutrition', 'Obesity', 'Childcare', 'Sustainable Development']
 ---
 
-## **Varibles Used :**
+## **Variables Used :**
 | Variable Name | Description |
 | :-- | :-: |
 |<b>sdg2_2_cmc</b>|Chronic malnutrition in children (< 5 years), 2016 (%)|
