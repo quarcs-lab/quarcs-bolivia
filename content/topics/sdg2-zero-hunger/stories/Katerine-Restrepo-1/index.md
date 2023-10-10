@@ -3,7 +3,8 @@ title: Does the infant mortality rate in Bolivia exhibit correlations with nutri
 author: Katerine Restrepo
 date: 2023-10-04
 data: "/data/GeoDS4Bolivia.geojson"
-deepnote: "https://deepnote.com/workspace/nagoya-university-102f-072bbb53-844b-47b1-aa0d-c8654cf05167/project/Nutritional-Inequality-b5441f3b-b9ff-452a-a4cf-3a2ce6025e8d/notebook/Infant%20Mortality%20and%20Nutrition%20in%20Bolivia-84beb61d25a44593b6f174613c80f259"
+links:
+    deepnote: "https://deepnote.com/workspace/nagoya-university-102f-072bbb53-844b-47b1-aa0d- c8654cf05167/project/Nutritional-Inequality-b5441f3b-b9ff-452a-a4cf-3a2ce6025e8d/notebook/Infant%20Mortality%20and%20Nutrition%20in%20Bolivia-84beb61d25a44593b6f174613c80f259"
 categories: ['Nutrition', 'Obesity', 'Childcare', 'Sustainable Development']
 ---
 
