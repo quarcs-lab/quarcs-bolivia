@@ -8,11 +8,20 @@ deepnote: "https://deepnote.com/workspace/nagoya-37706a5f-ac0c-475f-a705-6cb1d48
 
 This story investigates how a few factors relate to child mortality rates.
 
-{{< columns 2 >}}
-{{< deepnote src="https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/aa4bd3c87d9b4222b0e3c03895374ef3?height=346.72918701171875" w=8 h=7 >}}
-||
-{{< deepnote src="https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/f1278fed86fd435c84419ea9a8457eef?height=274.3645935058594" w=8 h=7 >}}
-{{</ columns >}}
+{{< html >}}
+<div class="flex flex-row w-full gap-2">
+  <iframe 
+    class="flex-1 aspect-[8/7]"
+    title="embedded cell output"
+    src='https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/aa4bd3c87d9b4222b0e3c03895374ef3?height=346.72918701171875'
+  ></iframe>
+  <iframe 
+    class="flex-1 aspect-[8/7]"
+    title="embedded cell output"
+    src="https://embed.deepnote.com/0106b077-076a-4293-bd5e-ee96c5019ca7/b0a17adb60f14867b8dd621a1f3072d5/f1278fed86fd435c84419ea9a8457eef?height=274.3645935058594"
+  ></iframe>
+</div>
+{{</ html >}}
 
 I see a variety of features that are closely correlated. I can interpret these features in different groups.
 

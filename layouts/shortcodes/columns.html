@@ -1,9 +1,0 @@
-<div class="row">
-  {{- with .Inner -}}
-    {{- $inner := split . "||" -}}
-    {{- range $i, $e := $inner -}}
-      {{ $child := . }}
-      <div class="column">{{ $child | safeHTML -}}</div>
-    {{ end }}
-  {{- end -}}
-</div>

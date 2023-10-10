@@ -41,13 +41,13 @@ const map = L.map("map", {
 
 const tooltip = L.tooltip({
   sticky: true,
-  className: 'info',
+  className: 'py-1 px-2 bg-neutral-0 bg-opacity-80 shadow rounded',
   opacity: 0.95
 });
 
 (() => {
   const info = L.control({position: 'topright'});
-  const div = L.DomUtil.create('div', 'info');
+  const div = L.DomUtil.create('div', 'py-1 px-2 bg-neutral-0 bg-opacity-80 shadow rounded');
 
   info.onAdd = () => {
     div.innerHTML = `Choropleth on <b>${choroplethVar}</b>`;
@@ -59,14 +59,14 @@ const tooltip = L.tooltip({
 
 (() => {
   const legend = L.control({position: 'bottomright'});
-  const div = L.DomUtil.create('div', 'info legend');
+  const div = L.DomUtil.create('div', 'py-1 px-2 bg-neutral-0 leading-5 bg-opacity-80 shadow rounded text-neutral-600');
 
   const updateLegend = grades => {
     div.innerHTML = "";
 
     for (var i = 0; i < grades.length - 1; i++) {
       div.innerHTML +=
-          `<i style="background: ${getColor(grades[i] + 1)}"></i>${grades[i]}&ndash;${grades[i + 1]}<br>`;
+          `<i class="w-5 h-5 float-left mr-2 opacity-70" style="background: ${getColor(grades[i] + 1)}"></i>${grades[i]}&ndash;${grades[i + 1]}<br>`;
     }
   }
 
@@ -111,7 +111,7 @@ fetch(dataPath)
 
         layer.bringToFront();
 
-        let tooltipHtml = `<table>`;
+        let tooltipHtml = `<table class="border-separate border-spacing-1" >`;
 
         for (let variable of vars) {
           tooltipHtml += 
